@@ -1,0 +1,123 @@
+// Template file
+html,
+body {
+	height: 100%;
+}
+body {
+	position: relative;
+	font-family: $font;
+	color: $white;
+}
+
+// Typography
+h1, .h1 {
+	// font-size: px;
+}
+
+a {
+	color: $white;
+}
+
+
+// Pages
+.page {
+	height: 100vh;
+	padding: 7em 2em 2em;
+	position: relative;
+	// Hover over current page
+	&:hover {
+		.content-body {
+			width: 52vw;
+		}
+	}
+	.page-heading {
+		position: relative;
+		z-index: 10;
+	}
+	// Intro
+	&-intro {
+		.page-heading {
+			text-align: center;
+		}
+	}
+	// Page content
+	&-content {
+		position: relative;
+		z-index: 1;
+	}
+	// Page content side
+	&-content-left {
+
+	}
+	&-content-right {
+
+	}
+	// Text
+	&-desc {
+		p {
+			font-size: 1.1em;
+			font-weight: 300;
+		}
+	}
+}
+
+// Content split
+.page-split {
+	overflow: hidden;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	.content-body {
+		@include transition;
+		width: 50vw;
+		height: 100vh;
+		-webkit-transform: skew(-12deg);
+		-moz-transform: skew(-12deg);
+		-o-transform: skew(-12deg);
+		overflow: hidden;
+		background-color: rgba($black, 0.3);
+	}
+}
+
+// Tabs
+.nav-tabs {
+	border-bottom: 0;
+	& > li {
+		margin-bottom: 0;
+		& > a {
+			@include transition;
+			background-color: rgba($white, 0.3);
+			font-size: 1.2em;
+			font-weight: 500;
+			border: 0;
+			color: $black;
+			padding-left: 2em;
+			padding-right: 2em;
+			&:hover,
+			&:focus {
+				background-color: rgba($white, 0.4);
+
+			}
+		}
+		&.active {
+			a {
+				color: $black;
+				border: 0;
+				background-color: rgba($white, 0.5);
+				&:hover,
+				&:focus {
+					background-color: rgba($white, 0.5);
+					border: 0;
+				}
+			}
+		}
+	}
+}
+// Tab content
+.tab-content {
+	padding: 2em;
+	background-color: rgba($white, 0.5);
+}
