@@ -1,4 +1,6 @@
-<section class="page page-moving page-content-right" id="selidbe">
+<section class="page page-moving page-content-left" id="selidbe">
+	
+	@@include('modules/template/_page-split.html')
 	
 	<!-- PAGE HEADING -->
 	@@include('modules/template/_page-heading.html', {
@@ -7,19 +9,19 @@
 	})
 
 	<div class="page-content row">
-		<div class="page-desc col-md-6">
+		<a class="page-text-collapse btn-block" role="button" data-toggle="collapse" href="#collapse-moving-text" aria-expanded="false" aria-controls="collapse-moving-text">
+			Pročitajte više...
+		</a>
+		<div class="page-text collapse col-md-5" id="collapse-moving-text">
 			<p>U ProMC-u posebnu pažnju poklanjamo logističkoj razradi planova korporativnih i uredskih preseljenja, u koordinaciji s predstavnicima Vaše tvrtke. Preseljenje velikog broja zaposlenika u kratkom vremenskom roku iz jednog poslovnog prostora u drugi, uključujući arhivu naša je specijalnost. Bez obzira na opseg projekta garantiramo profesionalnu zaštitu sve elektroničke opreme, uredskog namještaja te svih koridora i liftova kojima bismo se prilikom preseljenja služili. Fleksibilnost radnog vremena te brzinu i kvalitetu usluge stavljamo na prvo mjesto i ispunjavamo sva Vaša očekivanja bez kompromisa jer smatramo da je naš posao završen tek sa zadovoljstvom našeg klijenta, sve dok i posljednja pomno uzgajana uredska biljka ne nađe svoje novo mjesto pod suncem.</p>
 		</div>
-		<!-- /.col-md-6 -->
-		<div class="page-media col-md-6">
+		<!-- /.text -->
+		<div class="page-media col-md-6 col-md-offset-1">
 			@@include('modules/page-media/_questionnaire.html')
 		</div>
-		<!-- /.col-md-6 -->
+		<!-- /.media -->
 	</div>
 	<!-- /.page-content -->
-
-
-	@@include('modules/template/_content-split.html')
 
 </section>
 <!-- /.page page-moving -->

@@ -1,6 +1,230 @@
 // Navbar
-.navbar-nav {
-	a {
-		font-weight: 500;
+.navbar {
+	min-height: 36px;
+	@include breakpoint(sm) {
+		min-height: 50px;
 	}
 }
+// Navbar default
+.navbar-default {
+	background-color: transparent;
+	border: 0;
+	// Clip the .navbar background by the width of the logo
+	.navbar-clip {
+		overflow: hidden;
+		position: absolute;
+		width: 100vw;
+		height: 36px;
+		top: 0;
+		right: 0;
+		z-index: 0;
+		@include breakpoint(sm) {
+			height: 50px;
+		}
+		&-body {
+			@include transition;
+			width: calc(100vw - 200px);
+			margin-left: 205px;
+			height: 36px;
+			-webkit-transform: skew(-12deg);
+			-moz-transform: skew(-12deg);
+			-o-transform: skew(-12deg);
+			overflow: hidden;
+			background-color: $brand-red;
+			@include breakpoint(sm) {
+				width: calc(100vw - 290px);
+				height: 50px;
+				margin-left: 300px;
+			}
+		}
+	}
+	.navbar-collapse {
+		background-color: $brand-red;
+		border-top: 0;
+		@include breakpoint(sm) {
+			background-color: transparent;
+		}
+	}
+}
+.navbar-fixed-top {
+	top: 10px;
+	@include breakpoint(sm){
+		top: 20px;
+	}
+}
+// Logo
+.navbar-brand {
+	padding: 0;
+	height: 36px;
+	line-height: 50px;
+	display: inline-block;
+	position: relative;
+	z-index: 10;
+	@include breakpoint(sm) {
+		height: 50px;
+	}
+	.logo {
+		display: block;
+		width: 200px;
+		@include breakpoint(sm) {
+			width: 300px;
+			height: 50px;
+		}
+	}
+}
+.navbar-nav {
+	margin-top: 0;
+	margin-bottom: 0;
+	& > li {
+		& > a {
+			@include transition;
+			color: $black !important;;
+			padding: 0 13px;
+			line-height: 40px;
+			font-weight: 500;
+			border-bottom-width: 1px; 
+			border-bottom-style: solid; 
+			border-bottom-color: transparent;
+			&:hover,
+			&:focus {
+				border-bottom-color: $white;
+			}
+			&:active:focus {
+				border-bottom-color: transparent;
+			}
+			@include breakpoint(sm){
+				line-height: 50px;
+			}
+		}
+		&.active {
+			& > a {
+				color: $white !important;
+				background-color: transparent !important;
+				border-bottom-color: $white;
+				#nav-intro {
+					fill: $white;
+				}
+			}
+		}
+	}
+}
+
+// Languages
+.dropdown-lang {
+	&.open {
+		.dropdown-toggle {
+			background-color: $brand-red !important;
+			color: $white !important;
+			border-bottom-color: $brand-red;
+		}
+	}
+	.dropdown-toggle {
+		min-width: 60px;
+		border-bottom: 0;
+	}
+	.dropdown-menu {
+		@include clearfix;
+		background-color: $brand-red-dark !important;
+		min-width: 60px;
+		margin-top: -1px;
+		margin-bottom: 0;
+		padding: 0;
+		border: 0;
+		@include breakpoint(sm) {
+			background-color: $brand-red !important;
+		}
+		li {
+			display: block;
+			float: left;
+			width: 33.33%;
+			text-align: center;
+			border-right: 1px solid $brand-red;
+			&:last-child {
+				background-color: transparent;
+			}
+			@include breakpoint(sm) {
+				border-right: 0;
+				width: auto;
+				display: block;
+			}
+		}
+		a {
+			color: $white !important;
+			line-height: 30px !important;
+			padding: 5px 15px !important;
+			&:hover,
+			&:focus {
+				background-color: $brand-red-dark;
+				color: $white;
+			}
+			@include breakpoint(sm) {
+				padding: 5px 25px !important;
+				line-height: initial !important;
+				.touch & {
+					line-height: 30px !important;
+				}
+			}
+		}
+	}
+}
+
+// Collapse
+.navbar-toggle {
+	padding: 0;
+	border: 0;
+	margin: 0;
+	max-height: 34px;
+	&:hover,
+	&:focus {
+		background-color: transparent !important;
+	}
+}
+#menu-icon {
+	width: 50px;
+	height: 34px;
+	cursor: pointer;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	path {
+		fill: none;
+		-webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.4, 0.0, 0.2, 1), stroke-dasharray 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+		-moz-transition: stroke-dashoffset 0.5s cubic-bezier(0.4, 0.0, 0.2, 1), stroke-dasharray 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+		-o-transition: stroke-dashoffset 0.5s cubic-bezier(0.4, 0.0, 0.2, 1), stroke-dasharray 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+		-ms-transition: stroke-dashoffset 0.5s cubic-bezier(0.4, 0.0, 0.2, 1), stroke-dasharray 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+		transition: stroke-dashoffset 0.5s cubic-bezier(0.4, 0.0, 0.2, 1), stroke-dasharray 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+		stroke-width: 40px;
+		stroke-linecap: round;
+		stroke: $white;
+		stroke-dashoffset: 0px;
+	}
+	path#top,
+	path#bottom {
+		stroke-dasharray: 240px 950px;
+	}
+	path#middle {
+		stroke-dasharray: 240px 240px;
+	}
+}
+.cross path#top,
+.cross path#bottom {
+	stroke-dashoffset: -650px;
+	stroke-dashoffset: -650px;
+}
+.cross path#middle {
+	stroke-dashoffset: -115px;
+	stroke-dasharray: 1px 220px;
+	opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+

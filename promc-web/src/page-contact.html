@@ -1,40 +1,37 @@
-<section class="page page-contact" id="kontakt">
+<section class="page page-contact page-content-right" id="kontakt">
 
 	<!-- PAGE HEADING -->
 	@@include('modules/template/_page-heading.html', {
 		"page-title": "Kontaktirajte nas", 
-		"page-lead": "Preselite se među naše klijente"
+		"page-lead": "Stojimo Vam na raspolaganju"
 	})
 
 	<div class="page-content row">
-		<div class="page-desc col-md-6">
-			<p>Pro Moving Company d.o.o.
-Dužice 12
-Zagreb 10000
-Hrvatska
-EU
-
-P: (+385) 1 6264 217
-M: (+385) 99 7501801
-M: (+385) 99 7501603
-E: "mailto:info@promc.hr" info@promc.hr
-OIB: 48758091861
-VAT: HR48758091861
-BANKA: Zagrebačka banka d.d.
-IBAN: HR2423600001102185815
-SWIFT: ESBCHR22
-</p>
+		<div class="page-media col-md-7"></div>
+		<!-- /.page-media -->
+		<div class="page-text col-md-5">
+			<address>
+				<strong>Pro Moving Company d.o.o.</strong><br>
+				Družice 12<br>
+				Zagreb 10000, Hrvatska EU<br>
+				<abbr title="Phone">P:</abbr> +385 1 6264 217<br>
+				<abbr title="Mobile">M:</abbr> +385 99 750 1801<br>
+				<abbr title="Mobile">M:</abbr> +385 99 750 1603<br>
+				<a href="mailto:info@promc.hr">info@promc.hr</a><br><br>
+				<abbr title="OIB">OIB:</abbr> 48758091861<br>
+				<abbr title="VAT">VAT:</abbr> HR48758091861<br>
+				BANKA: Zagrebačka banka d.d.<br>
+				<abbr title="IBAN">IBAN:</abbr> HR2423600001102185815<br>
+				<abbr title="SWIFT">SWIFT:</abbr> ESBCHR22
+			</address>
 		</div>
-		<!-- /.col-md-6 -->
-		<div class="page-media col-md-6">
-			@@include('modules/page-media/_contact-form.html')
-		</div>
-		<!-- /.col-md-6 -->
+		<!-- /.page-text -->
 	</div>
 	<!-- /.page-content -->
 
+	@@include('modules/page-media/_contact-map.html')
 
-	@@include('modules/template/_content-split.html')
+	@@include('modules/template/_page-split.html')
 	
 </section>
 <!-- /.page page-contact -->

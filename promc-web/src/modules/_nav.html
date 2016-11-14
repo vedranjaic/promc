@@ -1,27 +1,40 @@
 <nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
 	<div class="container-fluid">
 
+		<div class="navbar-clip">
+			<div class="navbar-clip-body"></div>
+		</div>
+		<!-- /.navbar-clip -->
+
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#">PRO Moving Company</a>
+			<a class="navbar-brand" href="/">
+				<img class="logo" src="assets/images/pmc-logo-white-red.svg" alt="PRO Moving Company">
+			</a>
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main-collapse" aria-expanded="false">
 				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
+				<svg viewBox="0 0 800 600" id="menu-icon">
+					<path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+					<path d="M300,320 L540,320" id="middle"></path>
+					<path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+				</svg>
 			</button>
 		</div>
 		<!-- /.navbar-header -->
 
 		<div class="collapse navbar-collapse" id="navbar-main-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="#uvod">Uvod</a></li>
+				<li class="active">
+					<a href="#uvod">
+						<i class="icon fa fa-reorder fa-rotate-90"></i>
+					</a>
+				</li>
 				<li><a href="#selidbe">Selidbe i skladištenje</a></li>
 				<li><a href="#klijenti">Klijenti</a></li>
 				<li><a href="#o-nama">O nama</a></li>
 				<li><a href="#kontakt">Kontakt</a></li>
-				<li class="dropdown">
+				<li class="dropdown dropdown-lang">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">HR <span class="caret"></span></a>
-					<ul class="dropdown-menu">
+					<ul class="dropdown-menu dropdown-menu-right">
 						<li><a href="#">HR</a></li>
 						<li><a href="#">EN</a></li>
 						<li><a href="#">DE</a></li>

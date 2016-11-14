@@ -15,25 +15,35 @@
 		top: 0;
 		left: 0;
 		display: block;
-		border: 2px solid $white;
+		border: 2px solid rgba($white, 0.3);
 		border-radius: 20px;
 	}
 	.wheel{
 		width: 4px;
 		height: 4px;
-		top: 10px;
 		left: 50%;
 		position: absolute;
 		background: $white;
 		display: block;
 		border-radius: 2px;
 		margin-left: -2px;
-		animation-name: scroll-wheel;
 		animation-duration: 2s;
 		animation-iteration-count: infinite;
 	}
+	.no-touch & {
+		.wheel {
+			top: 10px;
+			animation-name: scroll-wheel-no-touch;
+		}
+	}
+	.touch & {
+		.wheel {
+			top: 20px;
+			animation-name: scroll-wheel-touch;
+		}
+	}
 }
-@keyframes scroll-wheel{
+@keyframes scroll-wheel-no-touch{
 	0%{
         transform: translate3d(0, 0, 0);
         opacity: 0;
@@ -46,6 +56,22 @@
     }
     100%{
         transform: translate3d(0, 10px, 0);
+        opacity: 0;
+    }
+}
+@keyframes scroll-wheel-touch{
+	0%{
+        transform: translate3d(0, 0, 0);
+        opacity: 0;
+    }
+    5% {
+    	opacity: 1;
+    }
+    40% {
+        transform: translate3d(0, -10px, 0);
+    }
+    100%{
+        transform: translate3d(0, -10px, 0);
         opacity: 0;
     }
 }

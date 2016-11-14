@@ -13,6 +13,7 @@
 
 	<!-- styles / fonts -->
 	<link rel="stylesheet" href="style.css">
+	<script src="https://use.fontawesome.com/f0f0aa36b2.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700&amp;subset=latin-ext" rel="stylesheet">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet"> -->
 	
@@ -28,27 +29,40 @@
 	<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
 		<div class="container-fluid">
 
+			<div class="navbar-clip">
+				<div class="navbar-clip-body"></div>
+			</div>
+			<!-- /.navbar-clip -->
+
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">PRO Moving Company</a>
+				<a class="navbar-brand" href="/">
+					<img class="logo" src="assets/images/pmc-logo-white-red.svg" alt="PRO Moving Company">
+				</a>
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main-collapse" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+					<svg viewBox="0 0 800 600" id="menu-icon">
+						<path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+						<path d="M300,320 L540,320" id="middle"></path>
+						<path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+					</svg>
 				</button>
 			</div>
 			<!-- /.navbar-header -->
 
 			<div class="collapse navbar-collapse" id="navbar-main-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="#uvod">Uvod</a></li>
+					<li class="active">
+						<a href="#uvod">
+							<i class="icon fa fa-reorder fa-rotate-90"></i>
+						</a>
+					</li>
 					<li><a href="#selidbe">Selidbe i skladištenje</a></li>
 					<li><a href="#klijenti">Klijenti</a></li>
 					<li><a href="#o-nama">O nama</a></li>
 					<li><a href="#kontakt">Kontakt</a></li>
-					<li class="dropdown">
+					<li class="dropdown dropdown-lang">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">HR <span class="caret"></span></a>
-						<ul class="dropdown-menu">
+						<ul class="dropdown-menu dropdown-menu-right">
 							<li><a href="#">HR</a></li>
 							<li><a href="#">EN</a></li>
 							<li><a href="#">DE</a></li>
@@ -72,8 +86,25 @@
 		</header>
 		<!-- /.page-heading -->
 
-	
-
+		<div class="offers row">
+			<div class="col-sm-4 text-center">
+				<i class="icon fa fa-building"></i>
+				<h3>Selidba ureda</h3>
+			</div>
+			<!-- /.col-sm-4 -->
+			<div class="col-sm-4 text-center">
+				<i class="icon fa fa-home"></i>
+				<h3>Selidba stana</h3>
+			</div>
+			<!-- /.col-sm-4 -->
+			<div class="col-sm-4 text-center">
+				<i class="icon fa fa-archive"></i>
+				<h3>Skladištenje</h3>
+			</div>
+			<!-- /.col-sm-4 -->
+		</div>
+		<!-- /.row -->
+		
 
 		<!-- scroll-down -->
 		<div class="scroll-down">
@@ -88,7 +119,12 @@
 	</section>
 	<!-- /.page page-intro -->
 
-	<section class="page page-moving page-content-right" id="selidbe">
+	<section class="page page-moving page-content-left" id="selidbe">
+	
+		<div class="page-split">
+			<div class="page-split-body"></div>
+		</div>
+		<!-- /.page-split -->
 	
 		<!-- PAGE HEADING -->
 		<header class="page-heading">
@@ -98,38 +134,53 @@
 		<!-- /.page-heading -->
 
 		<div class="page-content row">
-			<div class="page-desc col-md-6">
+			<a class="page-text-collapse btn-block" role="button" data-toggle="collapse" href="#collapse-moving-text" aria-expanded="false" aria-controls="collapse-moving-text">
+				Pročitajte više...
+			</a>
+			<div class="page-text collapse col-md-5" id="collapse-moving-text">
 				<p>U ProMC-u posebnu pažnju poklanjamo logističkoj razradi planova korporativnih i uredskih preseljenja, u koordinaciji s predstavnicima Vaše tvrtke. Preseljenje velikog broja zaposlenika u kratkom vremenskom roku iz jednog poslovnog prostora u drugi, uključujući arhivu naša je specijalnost. Bez obzira na opseg projekta garantiramo profesionalnu zaštitu sve elektroničke opreme, uredskog namještaja te svih koridora i liftova kojima bismo se prilikom preseljenja služili. Fleksibilnost radnog vremena te brzinu i kvalitetu usluge stavljamo na prvo mjesto i ispunjavamo sva Vaša očekivanja bez kompromisa jer smatramo da je naš posao završen tek sa zadovoljstvom našeg klijenta, sve dok i posljednja pomno uzgajana uredska biljka ne nađe svoje novo mjesto pod suncem.</p>
 			</div>
-			<!-- /.col-md-6 -->
-			<div class="page-media col-md-6">
+			<!-- /.text -->
+			<div class="page-media col-md-6 col-md-offset-1">
 				<div class="questionnaire">
 
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs" role="tablist">
 						<li role="presentation" class="active">
-							<a href="#selidbe-ureda" role="tab" data-toggle="tab">Ured</a>
+							<a href="#selidbe-ureda" role="tab" data-toggle="tab">
+								<i class="icon fa fa-building visible-xs"></i>
+								<span class="hidden-xs">Ured</span>
+							</a>
 						</li>
 						<li role="presentation">
-							<a href="#selidbe-stana" role="selidbe-stana" data-toggle="tab">Stan</a>
+							<a href="#selidbe-stana" role="selidbe-stana" data-toggle="tab">
+								<i class="icon fa fa-home visible-xs"></i>
+								<span class="hidden-xs">Stan</span>
+							</a>
 						</li>
 						<li role="presentation">
-							<a href="#skladistenje" role="tab" data-toggle="tab">Skladištenje</a>
+							<a href="#skladistenje" role="tab" data-toggle="tab">
+								<i class="icon fa fa-archive visible-xs"></i>
+								<span class="hidden-xs">Skladištenje</span>
+							</a>
 						</li>
 					</ul>
 
 					<!-- Tab panes -->
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane active" id="selidbe-ureda">
-							1
+							1<br>
+							Upitnik za selidbe ureda
 						</div>
 						<!-- /#selidbe-ureda -->
 						<div role="tabpanel" class="tab-pane" id="selidbe-stana">
-							2
+							2<br>
+							Upitnik za selidbe stanova
 						</div>
 						<!-- /#selidbe-stana -->
 						<div role="tabpanel" class="tab-pane" id="skladistenje">
-							3
+							3<br>
+							Upitnik za skladištenje
 						</div>
 						<!-- /#skladistenje -->
 					</div>
@@ -137,20 +188,19 @@
 				</div>
 				<!-- /.questionnaire -->
 			</div>
-			<!-- /.col-md-6 -->
+			<!-- /.media -->
 		</div>
 		<!-- /.page-content -->
-
-
-		<div class="page-split">
-			<div class="content-body"></div>
-		</div>
-		<!-- /.page-split -->
 
 	</section>
 	<!-- /.page page-moving -->
 
-	<section class="page page-clients page-content-left" id="klijenti">
+	<section class="page page-clients page-content-right" id="klijenti">
+
+		<div class="page-split">
+			<div class="page-split-body"></div>
+		</div>
+		<!-- /.page-split -->
 
 		<!-- PAGE HEADING -->
 		<header class="page-heading">
@@ -159,33 +209,76 @@
 		</header>
 		<!-- /.page-heading -->
 
-		<div class="page-content row">
-			<div class="page-desc col-md-6">
-				<p>U ProMC-u posebnu pažnju poklanjamo logističkoj razradi planova korporativnih i uredskih preseljenja, u koordinaciji s predstavnicima Vaše tvrtke. Preseljenje velikog broja zaposlenika u kratkom vremenskom roku iz jednog poslovnog prostora u drugi, uključujući arhivu naša je specijalnost. Bez obzira na opseg projekta garantiramo profesionalnu zaštitu sve elektroničke opreme, uredskog namještaja te svih koridora i liftova kojima bismo se prilikom preseljenja služili. Fleksibilnost radnog vremena te brzinu i kvalitetu usluge stavljamo na prvo mjesto i ispunjavamo sva Vaša očekivanja bez kompromisa jer smatramo da je naš posao završen tek sa zadovoljstvom našeg klijenta, sve dok i posljednja pomno uzgajana uredska biljka ne nađe svoje novo mjesto pod suncem.</p>
-			</div>
-			<!-- /.col-md-6 -->
+		<div class="clients-grid">
+
+			<ul class="client-logos list-unstyled">
+				<li class="client-logo">
+					<img src="http://placehold.it/300x150?text=Klijent_01" alt="" class="img-responsive">
+				</li>
+				<li class="client-logo">
+					<img src="http://placehold.it/300x150?text=Klijent_02" alt="" class="img-responsive">
+				</li>
+				<li class="client-logo">
+					<img src="http://placehold.it/300x150?text=Klijent_03" alt="" class="img-responsive">
+				</li>
+				<li class="client-logo">
+					<img src="http://placehold.it/300x150?text=Klijent_04" alt="" class="img-responsive">
+				</li>
+				<li class="client-logo">
+					<img src="http://placehold.it/300x150?text=Klijent_05" alt="" class="img-responsive">
+				</li>
+				<li class="client-logo">
+					<img src="http://placehold.it/300x150?text=Klijent_06" alt="" class="img-responsive">
+				</li>
+			</ul>
+
+		</div>
+		<!-- /.clients-grid -->
+
+		<!-- !!! HIDDEN -->
+		<div class="page-content row hidden">
 			<div class="page-media col-md-6">
-				<div class="image-grid">
+				<div class="clients-grid">
 
-
+					<ul class="client-logos list-unstyled">
+						<li class="client-logo">
+							<img src="http://placehold.it/300x150?text=Klijent_01" alt="" class="img-responsive">
+						</li>
+						<li class="client-logo">
+							<img src="http://placehold.it/300x150?text=Klijent_02" alt="" class="img-responsive">
+						</li>
+						<li class="client-logo">
+							<img src="http://placehold.it/300x150?text=Klijent_03" alt="" class="img-responsive">
+						</li>
+						<li class="client-logo">
+							<img src="http://placehold.it/300x150?text=Klijent_04" alt="" class="img-responsive">
+						</li>
+						<li class="client-logo">
+							<img src="http://placehold.it/300x150?text=Klijent_05" alt="" class="img-responsive">
+						</li>
+						<li class="client-logo">
+							<img src="http://placehold.it/300x150?text=Klijent_06" alt="" class="img-responsive">
+						</li>
+					</ul>
 
 				</div>
-				<!-- /.questionnaire -->
+				<!-- /.clients-grid -->
 			</div>
-			<!-- /.col-md-6 -->
+			<!-- /.page-media -->
+			<div class="page-text col-md-6">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, ea natus praesentium minima sit ducimus animi adipisci in nemo sint officiis pariatur iure aperiam tempore asperiores porro accusantium, obcaecati quae.</p>
+			</div>
+			<!-- /.page-text -->
 		</div>
 		<!-- /.page-content -->
 
 
-		<div class="page-split">
-			<div class="content-body"></div>
-		</div>
-		<!-- /.page-split -->
+		
 	
 	</section>
 	<!-- /.page page-clients -->
 
-	<section class="page page-about-us" id="o-nama">
+	<section class="page page-about-us page-content-left" id="o-nama">
 	
 		<!-- PAGE HEADING -->
 		<header class="page-heading">
@@ -195,56 +288,67 @@
 		<!-- /.page-heading -->
 
 		<div class="page-content row">
-			<div class="page-desc col-md-6">
+			<div class="page-text col-md-5">
 				<p>Pro Moving Company d.o.o. je osnovan kao rezultat višegodišnjeg znanja i iskustva njenih osnivača u sektoru korporativnih i međunarodnih preseljenja te prijevoza teških tereta čime smo specijalizirani upravo za takvu vrstu djelatnosti. </p>
 				<p>Čine je pristupačni i stručni ljudi osposobljeni prema tradicijskim europskim standardima koje u praksi primijenjuju na domaćem i inozemnom tržištu.</p>
 			</div>
-			<!-- /.col-md-6 -->
-			<div class="page-media col-md-6">
-				<img src="http://placehold.it/400x400" alt="">
-			</div>
-			<!-- /.col-md-6 -->
+			<!-- /.page-text -->
+			<div class="page-media col-md-7"></div>
+			<!-- /.page-media -->
 		</div>
 		<!-- /.page-content -->
 
-
+			
+		
 		<div class="page-split">
-			<div class="content-body"></div>
+			<div class="page-split-body"></div>
 		</div>
 		<!-- /.page-split -->
 
 	</section>
 	<!-- /.page page-about-us -->
 
-	<section class="page page-contact" id="kontakt">
+	<section class="page page-contact page-content-right" id="kontakt">
 
 		<!-- PAGE HEADING -->
 		<header class="page-heading">
 			<h1 class="page-title">Kontaktirajte nas</h1>
-			<p class="page-lead lead">Preselite se među naše klijente</p>
+			<p class="page-lead lead">Stojimo Vam na raspolaganju</p>
 		</header>
 		<!-- /.page-heading -->
 
 		<div class="page-content row">
-			<div class="page-desc col-md-6">
-				<p>U ProMC-u posebnu pažnju poklanjamo logističkoj razradi planova korporativnih i uredskih preseljenja, u koordinaciji s predstavnicima Vaše tvrtke. Preseljenje velikog broja zaposlenika u kratkom vremenskom roku iz jednog poslovnog prostora u drugi, uključujući arhivu naša je specijalnost. Bez obzira na opseg projekta garantiramo profesionalnu zaštitu sve elektroničke opreme, uredskog namještaja te svih koridora i liftova kojima bismo se prilikom preseljenja služili. Fleksibilnost radnog vremena te brzinu i kvalitetu usluge stavljamo na prvo mjesto i ispunjavamo sva Vaša očekivanja bez kompromisa jer smatramo da je naš posao završen tek sa zadovoljstvom našeg klijenta, sve dok i posljednja pomno uzgajana uredska biljka ne nađe svoje novo mjesto pod suncem.</p>
+			<div class="page-media col-md-7"></div>
+			<!-- /.page-media -->
+			<div class="page-text col-md-5">
+				<address>
+					<strong>Pro Moving Company d.o.o.</strong><br>
+					Družice 12<br>
+					Zagreb 10000, Hrvatska EU<br>
+					<abbr title="Phone">P:</abbr> +385 1 6264 217<br>
+					<abbr title="Mobile">M:</abbr> +385 99 750 1801<br>
+					<abbr title="Mobile">M:</abbr> +385 99 750 1603<br>
+					<a href="mailto:info@promc.hr">info@promc.hr</a><br><br>
+					<abbr title="OIB">OIB:</abbr> 48758091861<br>
+					<abbr title="VAT">VAT:</abbr> HR48758091861<br>
+					BANKA: Zagrebačka banka d.d.<br>
+					<abbr title="IBAN">IBAN:</abbr> HR2423600001102185815<br>
+					<abbr title="SWIFT">SWIFT:</abbr> ESBCHR22
+				</address>
 			</div>
-			<!-- /.col-md-6 -->
-			<div class="page-media col-md-6">
-				<div class="image-grid">
-
-
-
-				</div>
-				<!-- /.questionnaire -->
-			</div>
-			<!-- /.col-md-6 -->
+			<!-- /.page-text -->
 		</div>
 		<!-- /.page-content -->
 
+		<div class="gmap">
+
+
+
+		</div>
+		<!-- /.questionnaire -->
 
 		<div class="page-split">
-			<div class="content-body"></div>
+			<div class="page-split-body"></div>
 		</div>
 		<!-- /.page-split -->
 	
