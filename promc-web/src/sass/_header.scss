@@ -41,6 +41,7 @@
 	.navbar-collapse {
 		background-color: $brand-red;
 		border-top: 0;
+		box-shadow: none;
 		@include breakpoint(sm) {
 			background-color: transparent;
 		}
@@ -85,12 +86,14 @@
 			border-bottom-width: 1px; 
 			border-bottom-style: solid; 
 			border-bottom-color: transparent;
-			&:hover,
-			&:focus {
-				border-bottom-color: $white;
-			}
+			&:active,
+			&:focus,
 			&:active:focus {
 				border-bottom-color: transparent;
+				-webkit-appearance: none;
+			}
+			&:hover {
+				border-bottom-color: $white;
 			}
 			@include breakpoint(sm){
 				line-height: 50px;

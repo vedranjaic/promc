@@ -7687,6 +7687,7 @@ a {
 .navbar-default .navbar-collapse {
   background-color: #e74c37;
   border-top: 0;
+  box-shadow: none;
 }
 @media (min-width: 768px) {
   .navbar-default .navbar-collapse {
@@ -7744,11 +7745,12 @@ a {
   border-bottom-style: solid;
   border-bottom-color: transparent;
 }
-.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
-  border-bottom-color: #ffffff;
-}
-.navbar-nav > li > a:active:focus {
+.navbar-nav > li > a:active, .navbar-nav > li > a:focus, .navbar-nav > li > a:active:focus {
   border-bottom-color: transparent;
+  -webkit-appearance: none;
+}
+.navbar-nav > li > a:hover {
+  border-bottom-color: #ffffff;
 }
 @media (min-width: 768px) {
   .navbar-nav > li > a {

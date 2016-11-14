@@ -35,15 +35,9 @@ $(document).on("click", ".scroll-to[href^='#']", function (e) {
 
 // --- [ Menu icon ]
 (function() {
-  var i, resize;
 
   $(".navbar-toggle").click(function() {
-    clearInterval(i);
     return $(".navbar-toggle").toggleClass("cross");
   });
-
-  $(window).resize(resize);
-
-  resize();
 
 }).call(this);
