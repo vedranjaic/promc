@@ -7881,12 +7881,40 @@ a {
   opacity: 0;
 }
 
-.page-intro .offers {
-  transform: translate(0, 50%);
+@media (min-width: 768px) {
+  .page-intro .offers {
+    transform: translate(0, 50%);
+  }
 }
-.page-intro .icon {
-  font-size: 50px;
+.page-intro .offer-list {
   text-align: center;
+}
+@media (min-width: 768px) {
+  .page-intro .offer-item {
+    display: inline-block;
+    width: 30%;
+  }
+}
+.page-intro .offer-item a {
+  transition: all 300ms;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.page-intro .offer-item a:hover, .page-intro .offer-item a:focus {
+  color: #cccccc;
+  text-decoration: none;
+}
+.page-intro .offer-item .icon {
+  display: inline;
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  .page-intro .offer-item .icon {
+    display: block;
+    font-size: 50px;
+    margin-bottom: 0.5em;
+  }
 }
 
 .page-clients .clients-grid {

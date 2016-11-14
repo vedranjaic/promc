@@ -17,7 +17,7 @@ controller.scrollTo(function (newpos) {
 });
 
 //  bind scroll to anchor links
-$(document).on("click", ".navbar-nav a[href^='#']", function (e) {
+$(document).on("click", ".scroll-to[href^='#']", function (e) {
 	var id = $(this).attr("href");
 	if ($(id).length > 0) {
 		e.preventDefault();

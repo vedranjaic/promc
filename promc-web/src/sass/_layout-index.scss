@@ -2,11 +2,36 @@
 // Intro
 .page-intro {
 	.offers {
-		transform: translate(0, 50%);
+		@include breakpoint(sm) {
+			transform: translate(0, 50%);
+		}
 	}
-	.icon {
-		font-size: 50px;
+	.offer-list {
 		text-align: center;
+	}
+	.offer-item {
+		@include breakpoint(sm) {
+			display: inline-block;
+			width: 30%;
+		}
+		a {
+			@include transition;
+			&:hover,
+			&:focus {
+				color: darken($white, 20%);
+				text-decoration: none;
+			}
+		}
+		.icon {
+			display: inline;
+			font-size: 30px;
+			@include breakpoint(sm) {
+				display: block;
+				font-size: 50px;
+				margin-bottom: 0.5em;
+			}
+		}
+		
 	}
 }
 
