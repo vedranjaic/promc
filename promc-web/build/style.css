@@ -7524,6 +7524,21 @@ a {
 .page .page-title {
   font-size: 26px;
 }
+@media (min-width: 768px) {
+  .page .page-title {
+    font-size: 28px;
+  }
+}
+@media (min-width: 992px) {
+  .page .page-title {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1200px) {
+  .page .page-title {
+    font-size: 36px;
+  }
+}
 .page-intro {
   height: 100vh;
 }
@@ -7925,11 +7940,18 @@ a {
 
 @media (min-width: 768px) {
   .page-intro .offers {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-top: 2em;
     width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .page-intro .offers {
+    padding-top: 3em;
+  }
+}
+@media (min-width: 1200px) {
+  .page-intro .offers {
+    padding-top: 4.5em;
   }
 }
 .page-intro .offer-list {
@@ -8014,6 +8036,16 @@ a {
   font-size: 20px;
   font-weight: 500;
 }
+@media (min-width: 768px) {
+  .page-intro .offer-item .offer-link .offer-title {
+    font-size: 22px;
+  }
+}
+@media (min-width: 992px) {
+  .page-intro .offer-item .offer-link .offer-title {
+    font-size: 24px;
+  }
+}
 .page-intro .offer-item .icon {
   display: inline;
   font-size: 30px;
@@ -8023,6 +8055,11 @@ a {
     display: block;
     font-size: 50px;
     margin-bottom: 0.5em;
+  }
+}
+@media (min-width: 992px) {
+  .page-intro .offer-item .icon {
+    font-size: 60px;
   }
 }
 

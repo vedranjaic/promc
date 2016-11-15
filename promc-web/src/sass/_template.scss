@@ -53,6 +53,15 @@ a {
 	}
 	.page-title {
 		font-size: 26px;
+		@include breakpoint(sm) {
+			font-size: 28px;
+		}
+		@include breakpoint(md) {
+			font-size: 32px;
+		}
+		@include breakpoint(lg) {
+			font-size: 36px;
+		}
 	}
 	// Intro
 	&-intro {
