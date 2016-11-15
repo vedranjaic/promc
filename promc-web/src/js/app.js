@@ -65,12 +65,19 @@ $('a#page-slide-archive, a#selidbe-skladistenje').click(function() {
 });
 
 // --- [ Carousel ]
-$('.carousel').carousel({
+$('.carousel-slides').carousel({
 	interval: false
 });
 
 
 
+// --- [ Clients ]
+$('#carousel-clients-1').carousel({interval: 3000});
+$('#carousel-clients-2').carousel({interval: 3000});
+$('#carousel-clients-3').carousel({interval: 3000});
+$('#carousel-clients-4').carousel({interval: 3000});
+$('#carousel-clients-5').carousel({interval: 3000});
+$('#carousel-clients-6').carousel({interval: 3000});
 
 
 
