@@ -1,27 +1,76 @@
-<section class="page page-moving page-content-left" id="selidbe">
+<section class="page page-moving page-slides page-content-left" id="selidbe">
 	
+	<!-- PAGE SPLIT -->
 	@@include('modules/template/_page-split.html')
 	
 	<!-- PAGE HEADING -->
 	@@include('modules/template/_page-heading.html', {
+		"page-class": "page-heading-office",
+		"page-status": "shown",
 		"page-title": "Selidbe ureda i arhive", 
 		"page-lead": "Specijalisti za korporativne selidbe"
 	})
+	@@include('modules/template/_page-heading.html', {
+		"page-class": "page-heading-home",
+		"page-status": "",
+		"page-title": "Selidbe stana/kuće", 
+		"page-lead": "Pedantno i sigurno"
+	})
+	@@include('modules/template/_page-heading.html', {
+		"page-class": "page-heading-international",
+		"page-status": "",
+		"page-title": "Međunarodna selidba", 
+		"page-lead": "Selidbe bez granica"
+	})
+	@@include('modules/template/_page-heading.html', {
+		"page-class": "page-heading-archive",
+		"page-status": "",
+		"page-title": "Skladištenje arhive, namještaja i osobnih stvari", 
+		"page-lead": "Zaštićeno, sigurno i brižno pohranjeno"
+	})
+
 
 	<div class="page-content row">
 		<a class="page-text-collapse btn-block" role="button" data-toggle="collapse" href="#collapse-moving-text" aria-expanded="false" aria-controls="collapse-moving-text">
 			Pročitajte više...
 		</a>
 		<div class="page-text collapse col-md-5" id="collapse-moving-text">
-			<p>U ProMC-u posebnu pažnju poklanjamo logističkoj razradi planova korporativnih i uredskih preseljenja, u koordinaciji s predstavnicima Vaše tvrtke. Preseljenje velikog broja zaposlenika u kratkom vremenskom roku iz jednog poslovnog prostora u drugi, uključujući arhivu naša je specijalnost. Bez obzira na opseg projekta garantiramo profesionalnu zaštitu sve elektroničke opreme, uredskog namještaja te svih koridora i liftova kojima bismo se prilikom preseljenja služili. Fleksibilnost radnog vremena te brzinu i kvalitetu usluge stavljamo na prvo mjesto i ispunjavamo sva Vaša očekivanja bez kompromisa jer smatramo da je naš posao završen tek sa zadovoljstvom našeg klijenta, sve dok i posljednja pomno uzgajana uredska biljka ne nađe svoje novo mjesto pod suncem.</p>
+
+			<div class="page-text-office shown">
+				<p>U ProMC-u posebnu pažnju poklanjamo logističkoj razradi planova korporativnih i uredskih preseljenja, u koordinaciji s predstavnicima Vaše tvrtke. Preseljenje velikog broja zaposlenika u kratkom vremenskom roku iz jednog poslovnog prostora u drugi, uključujući arhivu naša je specijalnost. Bez obzira na opseg projekta garantiramo profesionalnu zaštitu sve elektroničke opreme, uredskog namještaja te svih koridora i liftova kojima bismo se prilikom preseljenja služili. Fleksibilnost radnog vremena te brzinu i kvalitetu usluge stavljamo na prvo mjesto i ispunjavamo sva Vaša očekivanja bez kompromisa jer smatramo da je naš posao završen tek sa zadovoljstvom našeg klijenta, sve dok i posljednja pomno uzgajana uredska biljka ne nađe svoje novo mjesto pod suncem.</p>
+			</div>
+			<!-- /.page-text-office -->
+			<div class="page-text-home">
+				<p>Neovisno da li se selite privatno ili zbog promjene radnog mjesta te sami ili s obitelji obratite nam se s punim povjerenjem. Služeći se najnovnijim pakirnim materijalima i opremom, pružit ćemo Vam uslugu profesionalnog pakiranja i zaštite osobnih stvari, namještaja i umjetnina, prijevoz te raspakiravanje. A nakon što i posljednja Vaša stvar uđe u novi prostor možemo Vam ponudit uslugu montaže koju obavlja naš domar, bez obzira radi li se o električarskim, vodointalaterskim ili stolarskim poslovima. Naposlijetku, uslugu detaljnog čišćenja Vašeg novog doma nudimo kao posljednju etapu procesa kroz koji Vam uz uslugu  želimo takvu veliku životnu promjenu učiniti što manje stresnom.</p>
+				<p>Jer za nas nije važno selite li na drugi kraj ulice ili zemlje. Naš je cilj da Vas na kraju uselimo u prostor koji nećete nazivati stanom ili kućom već domom.</p>
+			</div>
+			<!-- /.page-text-home -->
+			<div class="page-text-international">
+				<p>Stanovnici Europske Unije sele se danas više nego ikada prije. Ako ste i Vi jedan od mnogih koji sele u Europu, neovisno radi li se o nekoliko kutija ili cijelom kućanstvu,  možemo Vam ponuditi sveobuhvatnu uslugu od vrata do vrata, u jednom potezu bez pretovara umanjujući broj rukovanja s Vašom robom, a time i rizik od oštećenja.  Zahvaljujući našem iskusnom i profesionalnom osoblju sva Vaša imovina i dragocjenosti biti će pažljivo zapakirane te zaštićene tijekom cijelog procesa preseljenja. To garantiramo svojim pristupom prema Vašim osobnim stvarima poštujući njihovu jedinstvenost i emociju koja vlasnika često veže u pojedine predmete.</p>
+				<p>Prije samog preseljena u dogovoru s Vama izrađujemo deteljan plan prilagođen Vašim potrebama navodeći sve pojedinosti prije i nakon preseljenja. Za Vas ćemo se pobrinuti za rješavanje i pravilno ispunjavanje sve popratne dokumentacije te u suradnji s našim vanjskim partnerima pomoći s carinskim pitanjima. Pružit ćemo Vam korisne informacije o samom procesu preseljenja te predradnjama koje bi bilo dobro odraditi prije dolaska našeg osoblja.</p>
+				<p>Omogućit ćemo Vam i privremeno ili dugotrajno pohranjivanje Vaših stvari u našem sigurnom skladištu ukoliko ih nemate potrebu sve preseliti i koristiti na novoj lokaciji.</p>
+				<p>Obratite nam se s povjerenjem.</p>
+			</div>
+			<!-- /.page-text-international -->
+			<div class="page-text-archive">
+				<p>Problem pohranjivanja arhive čest je među tvrtkama zbog visokih cijena najma poslovnih prostora ili neadekvatnog  i nedovoljno velikog prostora. U ProMC-u imamo upravo ono što Vam treba.  Unutar našeg zaštićenog skladišta imamo posebno odvojen prostor samo za pohranu arhive kapaciteta nekoliko tisuća registratora čime je mogućnost gubitka ili oštećenja Vaše dokumentacije svedena na minimum.</p>
+				<p>Vaša arhiva cijelo je vrijeme potpuno dostupna samo Vama u bilo koje doba dana kao da se nalazi u Vašem poslovnom prostoru samo bez plaćanja visoke cijene najma.</p>
+				<p>U našem skladištu možete potpuno sigurno i bez ikakve brige pohraniti namještaj te osobne stvari na dulje ili kraće periode, ovisno o Vašim potrebama. Pritom su sve pohranjene stvari adekvatno zapakirane i zaštićene od vanjskih utjecaja kako bi Vas dočekale u jednakom stanju u kakvom su pohranjene.</p>
+			</div>
+			<!-- /.page-text-archive -->
+
 		</div>
-		<!-- /.text -->
+		<!-- /.page-text -->
 		<div class="page-media col-md-6 col-md-offset-1">
 			@@include('modules/page-media/_questionnaire.html')
 		</div>
 		<!-- /.media -->
 	</div>
 	<!-- /.page-content -->
+
+	<!-- CAROUSEL -->
+	@@include('modules/_carousel.html')
+
 
 </section>
 <!-- /.page page-moving -->

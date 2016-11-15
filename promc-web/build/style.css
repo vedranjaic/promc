@@ -7490,6 +7490,13 @@ a {
   }
 }
 
+.bg-image {
+  width: 100vw;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
 .page {
   padding: 5em 1em 2em;
   position: relative;
@@ -7534,7 +7541,7 @@ a {
 }
 .page-content {
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 .page-text-collapse {
   padding: 1em;
@@ -7556,6 +7563,18 @@ a {
   font-size: 1.1em;
   font-weight: 300;
 }
+.page-slides .page-heading {
+  display: none;
+}
+.page-slides .page-heading.shown {
+  display: block;
+}
+.page-slides .page-text div {
+  display: none;
+}
+.page-slides .page-text div.shown {
+  display: block;
+}
 .no-touch .page:hover .page-split-body {
   width: 52vw;
 }
@@ -7567,7 +7586,7 @@ a {
   top: 0;
   left: 0;
   bottom: 0;
-  z-index: 0;
+  z-index: 1;
 }
 @media (min-width: 992px) {
   .page-split {
@@ -7599,11 +7618,32 @@ a {
   float: right;
 }
 
+.carousel-slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.carousel-slides .carousel-inner {
+  height: 100%;
+}
+.carousel-slides .carousel-inner .item {
+  height: 100%;
+}
+
 .nav-tabs {
   border-bottom: 0;
+  display: flex;
 }
 .nav-tabs > li {
+  flex-grow: 1;
   margin-bottom: 0;
+  text-align: center;
+}
+.nav-tabs > li:last-child a {
+  margin-right: 0;
 }
 .nav-tabs > li > a {
   transition: all 300ms;
@@ -7615,8 +7655,8 @@ a {
   font-weight: 500;
   border: 0;
   color: #161616;
-  padding-left: 1.7em;
-  padding-right: 1.7em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
   background-color: rgba(255, 255, 255, 0.4);
