@@ -7925,27 +7925,94 @@ a {
 
 @media (min-width: 768px) {
   .page-intro .offers {
-    transform: translate(0, 50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
   }
 }
 .page-intro .offer-list {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.page-intro .offer-list:before, .page-intro .offer-list:after {
+  content: " ";
+  display: table;
+}
+.page-intro .offer-list:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .page-intro .offer-list {
+    flex-direction: row;
+  }
+}
+.page-intro .offer-item {
+  padding-bottom: 10px;
 }
 @media (min-width: 768px) {
   .page-intro .offer-item {
-    display: inline-block;
-    width: 30%;
+    flex-grow: 1;
   }
 }
-.page-intro .offer-item a {
+.page-intro .offer-item .offer-link {
   transition: all 300ms;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  display: block;
+  position: relative;
 }
-.page-intro .offer-item a:hover, .page-intro .offer-item a:focus {
+.page-intro .offer-item .offer-link:hover, .page-intro .offer-item .offer-link:focus {
   color: #cccccc;
   text-decoration: none;
+}
+.page-intro .offer-item .offer-link:hover:after, .page-intro .offer-item .offer-link:focus:after {
+  color: #ffffff;
+}
+.page-intro .offer-item .offer-link:after {
+  transition: all 300ms;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  content: "\f107";
+  font-family: "FontAwesome";
+  position: absolute;
+  margin-left: -0.3em;
+  left: 50%;
+  color: transparent;
+  font-size: 20px;
+  bottom: -20px;
+}
+@media (min-width: 768px) {
+  .page-intro .offer-item .offer-link:after {
+    font-size: 30px;
+    bottom: -60px;
+  }
+}
+@media (min-width: 768px) {
+  .page-intro .offer-item .offer-link {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
+@media (min-width: 992px) {
+  .page-intro .offer-item .offer-link {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+}
+@media (min-width: 1200px) {
+  .page-intro .offer-item .offer-link {
+    padding-top: 4.5em;
+    padding-bottom: 4.5em;
+  }
+}
+.page-intro .offer-item .offer-link .offer-title {
+  font-size: 20px;
+  font-weight: 500;
 }
 .page-intro .offer-item .icon {
   display: inline;

@@ -29,40 +29,47 @@ $(document).on("click", ".scroll-to[href^='#']", function (e) {
 });
 
 
-// --- [ Carousel ]
-$('.carousel').carousel({
-	interval: false
-});
-
+// --- [ Intro links ]
 // Toggle page text with carousel indicators
-$('a#selidbe-ureda').click(function() {
+$('a#page-slide-office, a#selidbe-ureda').click(function() {
+	$('#selidbe-ureda').tab('show');
 	$('.page-heading').removeClass('shown');
 	$('.page-heading-office').addClass('shown');
 	$('.page-text div').removeClass('shown');
 	$('.page-text-office').addClass('shown');
 	$('.carousel').carousel(0);
 });
-$('a#selidbe-stana').click(function() {
+$('a#page-slide-home, a#selidbe-stana').click(function() {
+	$('#selidbe-stana').tab('show');
 	$('.page-heading').removeClass('shown');
 	$('.page-heading-home').addClass('shown');
 	$('.page-text div').removeClass('shown');
 	$('.page-text-home').addClass('shown');
 	$('.carousel').carousel(1);
 });
-$('a#selidbe-medjunarodno').click(function() {
+$('a#page-slide-international, a#selidbe-medjunarodno').click(function() {
+	$('#selidbe-medjunarodno').tab('show');
 	$('.page-heading').removeClass('shown');
 	$('.page-heading-international').addClass('shown');
 	$('.page-text div').removeClass('shown');
 	$('.page-text-international').addClass('shown');
 	$('.carousel').carousel(2);
 });
-$('a#selidbe-skladistenje').click(function() {
+$('a#page-slide-archive, a#selidbe-skladistenje').click(function() {
+	$('#selidbe-skladistenje').tab('show');
 	$('.page-heading').removeClass('shown');
 	$('.page-heading-archive').addClass('shown');
 	$('.page-text div').removeClass('shown');
 	$('.page-text-archive').addClass('shown');
 	$('.carousel').carousel(3);
 });
+
+// --- [ Carousel ]
+$('.carousel').carousel({
+	interval: false
+});
+
+
 
 
 

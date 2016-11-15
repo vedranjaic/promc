@@ -3,23 +3,69 @@
 .page-intro {
 	.offers {
 		@include breakpoint(sm) {
-			transform: translate(0, 50%);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
 		}
 	}
 	.offer-list {
+		@include clearfix;
 		text-align: center;
+		display: flex;
+		flex-direction: column;
+		@include breakpoint(sm) {
+			flex-direction: row;
+		}
 	}
 	.offer-item {
+		padding-bottom: 10px;
 		@include breakpoint(sm) {
-			display: inline-block;
-			width: 30%;
+			flex-grow: 1;
 		}
-		a {
+		.offer-link {
 			@include transition;
+			display: block;
+			position: relative;
 			&:hover,
 			&:focus {
 				color: darken($white, 20%);
 				text-decoration: none;
+				&:after {
+					color: $white;
+				}
+			}
+			&:after {
+				@include transition;
+				content: "\f107";
+				font-family: "FontAwesome";
+				position: absolute;
+				margin-left: -0.3em;
+				left: 50%;
+				color: transparent;
+				font-size: 20px;
+				bottom: -20px;
+				@include breakpoint(sm) {
+					font-size: 30px;
+					bottom: -60px;
+				}
+			}
+			@include breakpoint(sm) {
+				padding-top: 2em;
+				padding-bottom: 2em;
+			}
+			@include breakpoint(md) {
+				padding-top: 3em;
+				padding-bottom: 3em;
+			}
+			@include breakpoint(lg) {
+				padding-top: 4.5em;
+				padding-bottom: 4.5em;
+			}
+			.offer-title {
+				font-size: 20px;
+				font-weight: 500;
 			}
 		}
 		.icon {
@@ -31,13 +77,12 @@
 				margin-bottom: 0.5em;
 			}
 		}
-		
 	}
 }
 
 // Moving
 .page-moving {
-	
+
 }
 
 // Clients
