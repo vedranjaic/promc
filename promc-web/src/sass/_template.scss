@@ -330,6 +330,9 @@ a {
 }
 // Tab content
 .tab-content {
-	padding: 2em;
+	padding: 1.5em;
 	background-color: rgba($white, 0.7);
+	@include breakpoint(sm) {
+		padding: 2em;
+	}
 }
