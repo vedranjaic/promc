@@ -57,9 +57,9 @@
 
 			<div class="collapse navbar-collapse" id="navbar-main-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active">
+					<li class="active" id="scroll-to-top">
 						<a href="#uvod" class="scroll-to">
-							<i class="icon fa fa-reorder fa-rotate-90"></i> 
+							<i class="icon fa fa-chevron-up"></i> 
 							<span class="visible-xs-inline">Uvod</span>
 						</a>
 					</li>
@@ -182,7 +182,7 @@
 
 		<div class="page-content row">
 			<a class="page-text-collapse btn-block" role="button" data-toggle="collapse" href="#collapse-moving-text" aria-expanded="false" aria-controls="collapse-moving-text">
-				Pročitajte više...
+				<i class="icon fa fa-plus-circle"></i> Detalji usluge
 			</a>
 			<div class="page-text collapse col-md-5" id="collapse-moving-text">
 
@@ -241,24 +241,240 @@
 							</a>
 						</li>
 					</ul>
+	
+
+					<!-- ALERT -->
+					<div class="alert alert-danger alert-dismissible hidden" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<strong>Warning!</strong> Better check yourself, you're not looking too good.
+					</div>
+
 
 					<!-- Tab panes -->
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane active" id="tab-selidbe-ureda">
-							1<br>
-							Upitnik za selidbe ureda
+							<form action="#" id="form-office">
+	
+								<section class="form-section row">
+									<div class="form-group col-sm-6">
+										<label for="promc-office-name">Kontakt osoba <span class="required">*</span></label>
+										<input type="text" class="form-control" id="promc-office-name" placeholder="Ime prezime">
+									</div>
+									<div class="form-group col-sm-6">
+										<label for="promc-office-email">E-mail adresa: <span class="required">*</span></label>
+										<input type="email" class="form-control" id="promc-office-email" placeholder="ime@email.hr">
+									</div>
+									<div class="checkbox col-sm-6">
+										<label>
+											<input type="checkbox"> Preferiram poziv
+										</label>
+									</div>
+									<div class="form-group col-sm-6 hidden">
+										<label for="promc-office-number">Kontakt broj: <span class="prefer-call required">*</span></label>
+										<input type="number" pattern="[0-9]*" class="form-control" id="promc-office-number" placeholder="">
+									</div>
+								</section>
+								<!-- /.form-section -->
+
+								<a class="form-section-toggle" data-toggle="collapse" href="#promc-office-moving-details">
+									<i class="icon fa fa-plus"></i> 
+									Detalji selidbe
+								</a>
+
+								<section class="form-section collapse row" id="promc-office-moving-details">
+									<div class="form-group col-sm-8">
+										<label for="promc-office-address-start">Preseljenje iz:</label>
+										<input type="text" class="form-control" id="promc-office-address-start" placeholder="Adresa i kućni broj, grad">
+									</div>
+									<div class="form-group col-sm-4">
+										<label for="promc-office-date-start">Datum preseljenja:</label>
+										<input type="date" class="form-control" id="promc-office-date-start" placeholder="19/11/2016">
+									</div>
+									<div class="form-group col-sm-8">
+										<label for="promc-office-address-finish">Preseljenje u:</label>
+										<input type="text" class="form-control" id="promc-office-address-finish" placeholder="Adresa i kućni broj, grad">
+									</div>
+									<div class="form-group col-sm-4">
+										<label for="promc-office-employees">Broj radnih mjesta:</label>
+										<input type="number" pattern="[0-9]*" class="form-control" id="promc-office-employees" placeholder="">
+									</div>
+									<div class="form-group col-sm-12">
+										<a class="form-label-toggle" data-toggle="collapse" href="#promc-office-details">
+											<i class="icon fa fa-plus"></i> 
+											Dodatne informacije:
+										</a>
+										<div class="form-group-textarea collapse" id="promc-office-details">
+											<textarea class="form-control" rows="3"></textarea>
+										</div>
+									</div>
+								</section>
+								<!-- /.form-section -->
+
+								<div class="form-actions clearfix">
+									<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
+								</div>
+
+
+							</form>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="tab-selidbe-stana">
-							2<br>
-							Upitnik za selidbe stanova
+							<form action="#" id="form-office">
+	
+								<section class="form-section row">
+									<div class="form-group col-sm-6">
+										<label for="promc-office-name">Kontakt osoba <span class="required">*</span></label>
+										<input type="text" class="form-control" id="promc-office-name" placeholder="Ime prezime">
+									</div>
+									<div class="form-group col-sm-6">
+										<label for="promc-office-email">E-mail adresa: <span class="required">*</span></label>
+										<input type="email" class="form-control" id="promc-office-email" placeholder="ime@email.hr">
+									</div>
+									<div class="checkbox col-sm-6">
+										<label>
+											<input type="checkbox"> Preferiram poziv
+										</label>
+									</div>
+									<div class="form-group col-sm-6 hidden">
+										<label for="promc-office-number">Kontakt broj: <span class="prefer-call required">*</span></label>
+										<input type="number" pattern="[0-9]*" class="form-control" id="promc-office-number" placeholder="">
+									</div>
+								</section>
+								<!-- /.form-section -->
+
+								<a class="form-section-toggle" data-toggle="collapse" href="#promc-office-moving-details">
+									<i class="icon fa fa-plus"></i> 
+									Detalji selidbe
+								</a>
+
+								<section class="form-section collapse row" id="promc-office-moving-details">
+									<div class="form-group col-sm-8">
+										<label for="promc-office-address-start">Preseljenje iz:</label>
+										<input type="text" class="form-control" id="promc-office-address-start" placeholder="Adresa i kućni broj, grad">
+									</div>
+									<div class="form-group col-sm-4">
+										<label for="promc-office-date-start">Datum preseljenja:</label>
+										<input type="date" class="form-control" id="promc-office-date-start" placeholder="19/11/2016">
+									</div>
+									<div class="form-group col-sm-8">
+										<label for="promc-office-address-finish">Preseljenje u:</label>
+										<input type="text" class="form-control" id="promc-office-address-finish" placeholder="Adresa i kućni broj, grad">
+									</div>
+									<div class="form-group col-sm-4">
+										<label for="promc-office-employees">Broj radnih mjesta:</label>
+										<input type="number" pattern="[0-9]*" class="form-control" id="promc-office-employees" placeholder="">
+									</div>
+									<div class="form-group col-sm-12">
+										<a class="form-label-toggle" data-toggle="collapse" href="#promc-office-details">
+											<i class="icon fa fa-plus"></i> 
+											Dodatne informacije:
+										</a>
+										<div class="form-group-textarea collapse" id="promc-office-details">
+											<textarea class="form-control" rows="3"></textarea>
+										</div>
+									</div>
+								</section>
+								<!-- /.form-section -->
+
+								<div class="form-actions clearfix">
+									<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
+								</div>
+
+
+							</form>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="tab-selidbe-medjunarodno">
-							3<br>
-							Upitnik za međunarodne selidbe
+							<form action="#" id="form-office">
+	
+								<section class="form-section row">
+									<div class="form-group col-sm-6">
+										<label for="promc-office-name">Kontakt osoba <span class="required">*</span></label>
+										<input type="text" class="form-control" id="promc-office-name" placeholder="Ime prezime">
+									</div>
+									<div class="form-group col-sm-6">
+										<label for="promc-office-email">E-mail adresa: <span class="required">*</span></label>
+										<input type="email" class="form-control" id="promc-office-email" placeholder="ime@email.hr">
+									</div>
+									<div class="checkbox col-sm-6">
+										<label>
+											<input type="checkbox"> Preferiram poziv
+										</label>
+									</div>
+									<div class="form-group col-sm-6 hidden">
+										<label for="promc-office-number">Kontakt broj: <span class="prefer-call required">*</span></label>
+										<input type="number" pattern="[0-9]*" class="form-control" id="promc-office-number" placeholder="">
+									</div>
+								</section>
+								<!-- /.form-section -->
+
+								<a class="form-section-toggle" data-toggle="collapse" href="#promc-office-moving-details">
+									<i class="icon fa fa-plus"></i> 
+									Detalji selidbe
+								</a>
+
+								<section class="form-section collapse row" id="promc-office-moving-details">
+									<div class="form-group col-sm-8">
+										<label for="promc-office-address-start">Preseljenje iz:</label>
+										<input type="text" class="form-control" id="promc-office-address-start" placeholder="Adresa i kućni broj, grad">
+									</div>
+									<div class="form-group col-sm-4">
+										<label for="promc-office-date-start">Datum preseljenja:</label>
+										<input type="date" class="form-control" id="promc-office-date-start" placeholder="19/11/2016">
+									</div>
+									<div class="form-group col-sm-8">
+										<label for="promc-office-address-finish">Preseljenje u:</label>
+										<input type="text" class="form-control" id="promc-office-address-finish" placeholder="Adresa i kućni broj, grad">
+									</div>
+									<div class="form-group col-sm-4">
+										<label for="promc-office-employees">Broj radnih mjesta:</label>
+										<input type="number" pattern="[0-9]*" class="form-control" id="promc-office-employees" placeholder="">
+									</div>
+									<div class="form-group col-sm-12">
+										<a class="form-label-toggle" data-toggle="collapse" href="#promc-office-details">
+											<i class="icon fa fa-plus"></i> 
+											Dodatne informacije:
+										</a>
+										<div class="form-group-textarea collapse" id="promc-office-details">
+											<textarea class="form-control" rows="3"></textarea>
+										</div>
+									</div>
+								</section>
+								<!-- /.form-section -->
+
+								<div class="form-actions clearfix">
+									<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
+								</div>
+
+
+							</form>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="tab-selidbe-skladistenje">
-							4<br>
-							Upitnik za skladištenje
+							<form action="#" id="form-archive">
+	
+								<section class="form-section row">
+									<div class="form-group col-sm-6">
+										<label for="promc-archive-name">Kontakt osoba <span class="required">*</span></label>
+										<input type="text" class="form-control" id="promc-archive-name" placeholder="Ime prezime">
+									</div>
+									<div class="form-group col-sm-6">
+										<label for="promc-archive-number">Kontakt broj: <span class="prefer-call required">*</span></label>
+										<input type="number" pattern="[0-9]*" class="form-control" id="promc-archive-number" placeholder="">
+									</div>
+								</section>
+								<!-- /.form-section -->
+
+								<section class="form-section row">
+									<div class="form-group col-sm-12">
+										<label for="promc-archive-details"><i class="icon fa fa-plus"></i> Vrsta robe:</label>
+										<textarea class="form-control" rows="3" id="promc-archive-details"></textarea>
+									</div>
+									<div class="form-actions col-sm-12">
+										<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
+									</div>
+								</section>
+								<!-- /.form-section -->
+
+
+							</form>
 						</div>
 					</div>
 
@@ -315,78 +531,78 @@
 
 			<ul class="client-logos list-unstyled">
 				<li class="client-logo">
-					<div class="carousel carousel-clients slide" data-ride="carousel" id="carousel-clients-1">
+					<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-1">
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="http://placehold.it/300x150?text=Klijent_01" alt="" class="img-responsive">
+								<img src="http://placehold.it/600x300?text=HT" alt="" class="img-responsive">
 							</div>
 							<div class="item">
-								<img src="http://placehold.it/300x150?text=Klijent_02" alt="" class="img-responsive">
+								<img src="http://placehold.it/600x300?text=GENERALI" alt="" class="img-responsive">
 							</div>
 						</div>
 					</div>
 					<!-- /.carousel -->
 				</li>
 				<li class="client-logo">
-					<div class="carousel carousel-clients slide" data-ride="carousel" id="carousel-clients-2">
+					<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-2">
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="http://placehold.it/300x150?text=Klijent_03" alt="" class="img-responsive">
+								<img src="http://placehold.it/600x300?text=MODERNA" alt="" class="img-responsive">
 							</div>
 							<div class="item">
-								<img src="http://placehold.it/300x150?text=Klijent_04" alt="" class="img-responsive">
+								<img src="http://placehold.it/600x300?text=LUXOR" alt="" class="img-responsive">
 							</div>
 						</div>
 					</div>
 					<!-- /.carousel -->
 				</li>
 				<li class="client-logo">
-					<div class="carousel carousel-clients slide" data-ride="carousel" id="carousel-clients-3">
+					<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-3">
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="http://placehold.it/300x150?text=Klijent_05" alt="" class="img-responsive">
+								<img src="http://placehold.it/600x300?text=KONZUM" alt="" class="img-responsive">
 							</div>
 							<div class="item">
-								<img src="http://placehold.it/300x150?text=Klijent_06" alt="" class="img-responsive">
+								<img src="http://placehold.it/600x300?text=ERICSSON" alt="" class="img-responsive">
 							</div>
 						</div>
 					</div>
 					<!-- /.carousel -->
 				</li>
 				<li class="client-logo">
-					<div class="carousel carousel-clients slide" data-ride="carousel" id="carousel-clients-4">
+					<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-4">
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="http://placehold.it/300x150?text=Klijent_07" alt="" class="img-responsive">
+								<img src="http://placehold.it/600x300?text=ATALIAN" alt="" class="img-responsive">
 							</div>
 							<div class="item">
-								<img src="http://placehold.it/300x150?text=Klijent_08" alt="" class="img-responsive">
+								<img src="http://placehold.it/600x300?text=EUROGROUP" alt="" class="img-responsive">
 							</div>
 						</div>
 					</div>
 					<!-- /.carousel -->
 				</li>
 				<li class="client-logo">
-					<div class="carousel carousel-clients slide" data-ride="carousel" id="carousel-clients-5">
+					<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-5">
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="http://placehold.it/300x150?text=Klijent_09" alt="" class="img-responsive">
+								<img src="http://placehold.it/600x300?text=OMEGA" alt="" class="img-responsive">
 							</div>
 							<div class="item">
-								<img src="http://placehold.it/300x150?text=Klijent_10" alt="" class="img-responsive">
+								<img src="http://placehold.it/600x300?text=SMART" alt="" class="img-responsive">
 							</div>
 						</div>
 					</div>
 					<!-- /.carousel -->
 				</li>
 				<li class="client-logo">
-					<div class="carousel carousel-clients slide" data-ride="carousel" id="carousel-clients-6">
+					<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-6">
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="http://placehold.it/300x150?text=Klijent_11" alt="" class="img-responsive">
+								<img src="http://placehold.it/600x300?text=HYPO" alt="" class="img-responsive">
 							</div>
 							<div class="item">
-								<img src="http://placehold.it/300x150?text=Klijent_12" alt="" class="img-responsive">
+								<img src="http://placehold.it/600x300?text=CROSIG" alt="" class="img-responsive">
 							</div>
 						</div>
 					</div>
@@ -404,78 +620,78 @@
 
 					<ul class="client-logos list-unstyled">
 						<li class="client-logo">
-							<div class="carousel carousel-clients slide" data-ride="carousel" id="carousel-clients-1">
+							<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-1">
 								<div class="carousel-inner" role="listbox">
 									<div class="item active">
-										<img src="http://placehold.it/300x150?text=Klijent_01" alt="" class="img-responsive">
+										<img src="http://placehold.it/600x300?text=HT" alt="" class="img-responsive">
 									</div>
 									<div class="item">
-										<img src="http://placehold.it/300x150?text=Klijent_02" alt="" class="img-responsive">
+										<img src="http://placehold.it/600x300?text=GENERALI" alt="" class="img-responsive">
 									</div>
 								</div>
 							</div>
 							<!-- /.carousel -->
 						</li>
 						<li class="client-logo">
-							<div class="carousel carousel-clients slide" data-ride="carousel" id="carousel-clients-2">
+							<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-2">
 								<div class="carousel-inner" role="listbox">
 									<div class="item active">
-										<img src="http://placehold.it/300x150?text=Klijent_03" alt="" class="img-responsive">
+										<img src="http://placehold.it/600x300?text=MODERNA" alt="" class="img-responsive">
 									</div>
 									<div class="item">
-										<img src="http://placehold.it/300x150?text=Klijent_04" alt="" class="img-responsive">
+										<img src="http://placehold.it/600x300?text=LUXOR" alt="" class="img-responsive">
 									</div>
 								</div>
 							</div>
 							<!-- /.carousel -->
 						</li>
 						<li class="client-logo">
-							<div class="carousel carousel-clients slide" data-ride="carousel" id="carousel-clients-3">
+							<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-3">
 								<div class="carousel-inner" role="listbox">
 									<div class="item active">
-										<img src="http://placehold.it/300x150?text=Klijent_05" alt="" class="img-responsive">
+										<img src="http://placehold.it/600x300?text=KONZUM" alt="" class="img-responsive">
 									</div>
 									<div class="item">
-										<img src="http://placehold.it/300x150?text=Klijent_06" alt="" class="img-responsive">
+										<img src="http://placehold.it/600x300?text=ERICSSON" alt="" class="img-responsive">
 									</div>
 								</div>
 							</div>
 							<!-- /.carousel -->
 						</li>
 						<li class="client-logo">
-							<div class="carousel carousel-clients slide" data-ride="carousel" id="carousel-clients-4">
+							<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-4">
 								<div class="carousel-inner" role="listbox">
 									<div class="item active">
-										<img src="http://placehold.it/300x150?text=Klijent_07" alt="" class="img-responsive">
+										<img src="http://placehold.it/600x300?text=ATALIAN" alt="" class="img-responsive">
 									</div>
 									<div class="item">
-										<img src="http://placehold.it/300x150?text=Klijent_08" alt="" class="img-responsive">
+										<img src="http://placehold.it/600x300?text=EUROGROUP" alt="" class="img-responsive">
 									</div>
 								</div>
 							</div>
 							<!-- /.carousel -->
 						</li>
 						<li class="client-logo">
-							<div class="carousel carousel-clients slide" data-ride="carousel" id="carousel-clients-5">
+							<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-5">
 								<div class="carousel-inner" role="listbox">
 									<div class="item active">
-										<img src="http://placehold.it/300x150?text=Klijent_09" alt="" class="img-responsive">
+										<img src="http://placehold.it/600x300?text=OMEGA" alt="" class="img-responsive">
 									</div>
 									<div class="item">
-										<img src="http://placehold.it/300x150?text=Klijent_10" alt="" class="img-responsive">
+										<img src="http://placehold.it/600x300?text=SMART" alt="" class="img-responsive">
 									</div>
 								</div>
 							</div>
 							<!-- /.carousel -->
 						</li>
 						<li class="client-logo">
-							<div class="carousel carousel-clients slide" data-ride="carousel" id="carousel-clients-6">
+							<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-6">
 								<div class="carousel-inner" role="listbox">
 									<div class="item active">
-										<img src="http://placehold.it/300x150?text=Klijent_11" alt="" class="img-responsive">
+										<img src="http://placehold.it/600x300?text=HYPO" alt="" class="img-responsive">
 									</div>
 									<div class="item">
-										<img src="http://placehold.it/300x150?text=Klijent_12" alt="" class="img-responsive">
+										<img src="http://placehold.it/600x300?text=CROSIG" alt="" class="img-responsive">
 									</div>
 								</div>
 							</div>
@@ -509,7 +725,7 @@
 		<!-- PAGE HEADING -->
 		<header class="page-heading @@page-class @@page-status">
 			<h1 class="page-title">O nama</h1>
-			<p class="page-lead lead">Profesional movers</p>
+			<p class="page-lead lead">Professional movers</p>
 		</header>
 		<!-- /.page-heading -->
 
@@ -556,10 +772,10 @@
 					<strong>Pro Moving Company d.o.o.</strong><br>
 					Družice 12<br>
 					Zagreb 10000, Hrvatska EU<br>
-					<abbr title="Phone">P:</abbr> +385 1 6264 217<br>
+					<abbr title="Phone">T:</abbr> +385 1 6264 217<br>
 					<abbr title="Mobile">M:</abbr> +385 99 750 1801<br>
 					<abbr title="Mobile">M:</abbr> +385 99 750 1603<br>
-					<a href="mailto:info@promc.hr">info@promc.hr</a><br><br>
+					<abbr title="Email">E:</abbr> <a href="mailto:info@promc.hr">info@promc.hr</a><br><br>
 					<abbr title="OIB">OIB:</abbr> 48758091861<br>
 					<abbr title="VAT">VAT:</abbr> HR48758091861<br>
 					BANKA: Zagrebačka banka d.d.<br>

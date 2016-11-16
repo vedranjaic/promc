@@ -105,10 +105,11 @@
 .page-clients {
 	// Clients grid
 	.clients-grid {
+		padding-top: 2em;
 		position: relative;
 		z-index: 1;
 		margin-bottom: 2em;
-		max-width: 800px;
+		max-width: 1000px;
 		margin-left: auto;
 		margin-right: auto;
 	}

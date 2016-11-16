@@ -27,24 +27,28 @@
 			</a>
 		</li>
 	</ul>
+	
+
+	<!-- ALERT -->
+	<div class="alert alert-danger alert-dismissible hidden" role="alert">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<strong>Warning!</strong> Better check yourself, you're not looking too good.
+	</div>
+
 
 	<!-- Tab panes -->
 	<div class="tab-content">
 		<div role="tabpanel" class="tab-pane active" id="tab-selidbe-ureda">
-			1<br>
-			Upitnik za selidbe ureda
+			@@include('_form-office.html')
 		</div>
 		<div role="tabpanel" class="tab-pane" id="tab-selidbe-stana">
-			2<br>
-			Upitnik za selidbe stanova
+			@@include('_form-home.html')
 		</div>
 		<div role="tabpanel" class="tab-pane" id="tab-selidbe-medjunarodno">
-			3<br>
-			Upitnik za međunarodne selidbe
+			@@include('_form-international.html')
 		</div>
 		<div role="tabpanel" class="tab-pane" id="tab-selidbe-skladistenje">
-			4<br>
-			Upitnik za skladištenje
+			@@include('_form-archive.html')
 		</div>
 	</div>
 

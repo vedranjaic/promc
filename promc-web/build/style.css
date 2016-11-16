@@ -7490,6 +7490,15 @@ a {
   }
 }
 
+.alert {
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+}
+.alert-danger {
+  background-color: #f7c6c0;
+}
+
 .bg-image {
   width: 100vw;
   height: 100%;
@@ -7497,8 +7506,61 @@ a {
   background-position: center center;
 }
 
+.form-group label {
+  color: #636363;
+}
+.form-group .form-label-toggle {
+  color: #636363;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-section-toggle {
+  color: #636363;
+}
+@media (min-width: 768px) {
+  .form-section-toggle {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .form-section-toggle + .form-section.collapse {
+    display: block;
+  }
+}
+
+.form-actions .btn-submit {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .form-actions .btn-submit {
+    width: auto;
+    display: inline-block;
+  }
+}
+
+.btn {
+  transition: all 300ms;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0;
+}
+.btn-primary {
+  background-color: #e74c37;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #bb2a16;
+}
+
+.btn-lg, .btn-group-lg > .btn {
+  padding: 8px 25px;
+}
+
 .page {
-  padding: 5em 1em 2em;
+  padding: 5em 1.5em 2em;
   position: relative;
 }
 @media (min-width: 768px) {
@@ -7537,6 +7599,21 @@ a {
 @media (min-width: 1200px) {
   .page .page-title {
     font-size: 36px;
+  }
+}
+.page .page-lead {
+  text-transform: uppercase;
+  font-style: italic;
+  margin-bottom: 1.7em;
+}
+@media (min-width: 768px) {
+  .page .page-lead {
+    margin-bottom: 2em;
+  }
+}
+@media (min-width: 992px) {
+  .page .page-lead {
+    margin-bottom: 3em;
   }
 }
 .page-intro {
@@ -7590,8 +7667,10 @@ a {
 .page-slides .page-text div.shown {
   display: block;
 }
-.no-touch .page:hover .page-split-body {
-  width: 52vw;
+@media (min-width: 992px) {
+  .no-touch .page:hover .page-split-body {
+    width: 52vw;
+  }
 }
 
 .page-split {
@@ -7613,17 +7692,16 @@ a {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 120vw;
   height: 100%;
-  -webkit-transform: skew(-12deg);
-  -moz-transform: skew(-12deg);
-  -o-transform: skew(-12deg);
+  width: 100vw;
   overflow: hidden;
   background-color: rgba(22, 22, 22, 0.6);
-  margin-left: -16vw;
 }
 @media (min-width: 992px) {
   .page-split-body {
+    -webkit-transform: skew(-12deg);
+    -moz-transform: skew(-12deg);
+    -o-transform: skew(-12deg);
     margin-left: -3vw;
     width: 50vw;
     height: 100vh;
@@ -7648,6 +7726,27 @@ a {
   height: 100%;
 }
 
+.carousel-fade .carousel-inner .item {
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
 .nav-tabs {
   border-bottom: 0;
   display: flex;
@@ -7665,7 +7764,7 @@ a {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
   font-size: 1.2em;
   font-weight: 500;
   border: 0;
@@ -7679,16 +7778,16 @@ a {
 .nav-tabs > li.active a {
   color: #161616;
   border: 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .nav-tabs > li.active a:hover, .nav-tabs > li.active a:focus {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   border: 0;
 }
 
 .tab-content {
   padding: 2em;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .navbar {
@@ -7819,6 +7918,16 @@ a {
 }
 .navbar-nav > li.active > a #nav-intro {
   fill: #ffffff;
+}
+
+#scroll-to-top.active {
+  opacity: 0;
+}
+#scroll-to-top.active a {
+  color: #161616 !important;
+}
+#scroll-to-top a:hover, #scroll-to-top a:focus {
+  color: #ffffff !important;
 }
 
 .dropdown-lang.open .dropdown-toggle {
@@ -8064,10 +8173,11 @@ a {
 }
 
 .page-clients .clients-grid {
+  padding-top: 2em;
   position: relative;
   z-index: 1;
   margin-bottom: 2em;
-  max-width: 800px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }

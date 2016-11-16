@@ -112,6 +112,22 @@
 	}
 }
 
+// Scroll to top
+#scroll-to-top {
+	&.active {
+		a {
+			color: $black !important;
+		}
+		opacity: 0;
+	}
+	a {
+		&:hover,
+		&:focus {
+			color: $white !important;
+		}
+	}
+}
+
 // Languages
 .dropdown-lang {
 	&.open {

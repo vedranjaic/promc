@@ -24,6 +24,16 @@ a {
 	}
 }
 
+// Alerts
+.alert {
+	margin-bottom: 0;
+	border: 0;
+	border-radius: 0;
+	&-danger {
+		background-color: lighten($brand-red, 30%);
+	}
+}
+
 // Background images
 .bg-image {
 	width: 100vw; 
@@ -32,10 +42,60 @@ a {
 	background-position: center center;
 }
 
+// Forms
+.form-group {
+	label {
+		color: $grey;
+	}
+	.form-label-toggle {
+		color: $grey;
+		margin-bottom: 5px;
+		display: block;
+	}
+}
+.form-section-toggle {
+	color: $grey;
+	@include breakpoint(sm) {
+		display: none;
+	}
+	& + .form-section.collapse {
+		@include breakpoint(sm) {
+			display: block;
+		}
+	}
+}
+.form-actions {
+	.btn-submit {
+		display: block;
+		width: 100%;
+		text-transform: uppercase;
+		@include breakpoint(sm) {
+			width: auto;
+			display: inline-block;
+		}
+	}
+}
+
+// Buttons
+.btn {
+	@include transition;
+	border: 0;
+	&-primary {
+		background-color: $brand-red;
+		&:hover,
+		&:focus {
+			background-color: $brand-red-dark;
+		}
+	}
+}
+.btn-lg {
+	padding: 8px 25px;
+}
+
 // Pages
 .page {
 	// height: 100%;
-	padding: 5em 1em 2em;
+	padding: 5em 1.5em 2em;
 	position: relative;
 	@include breakpoint(sm) {
 		padding: 8em 3em 2em;
@@ -61,6 +121,17 @@ a {
 		}
 		@include breakpoint(lg) {
 			font-size: 36px;
+		}
+	}
+	.page-lead {
+		text-transform: uppercase;
+		font-style: italic;
+		margin-bottom: 1.7em;
+		@include breakpoint(sm) {
+			margin-bottom: 2em;
+		}
+		@include breakpoint(md) {
+			margin-bottom: 3em;
 		}
 	}
 	// Intro
@@ -133,7 +204,9 @@ a {
 		// Hover over current page
 		&:hover {
 			.page-split-body {
-				width: 52vw;
+				@include breakpoint(md) {
+					width: 52vw;
+				}
 			}
 		}
 	}
@@ -154,15 +227,14 @@ a {
 	}
 	&-body {
 		@include transition;
-		width: 120vw;
 		height: 100%;
-		-webkit-transform: skew(-12deg);
-		-moz-transform: skew(-12deg);
-		-o-transform: skew(-12deg);
+		width: 100vw;
 		overflow: hidden;
 		background-color: rgba($black, 0.6);
-		margin-left: -16vw;
 		@include breakpoint(md) {
+			-webkit-transform: skew(-12deg);
+			-moz-transform: skew(-12deg);
+			-o-transform: skew(-12deg);
 			margin-left: -3vw;
 			width: 50vw;
 			height: 100vh;
@@ -188,6 +260,31 @@ a {
 		}
 	}
 }
+// Carousel fade
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
 
 // Tabs
 .nav-tabs {
@@ -204,7 +301,7 @@ a {
 		}
 		& > a {
 			@include transition;
-			background-color: rgba($white, 0.3);
+			background-color: rgba($white, 0.5);
 			font-size: 1.2em;
 			font-weight: 500;
 			border: 0;
@@ -221,10 +318,10 @@ a {
 			a {
 				color: $black;
 				border: 0;
-				background-color: rgba($white, 0.5);
+				background-color: rgba($white, 0.7);
 				&:hover,
 				&:focus {
-					background-color: rgba($white, 0.5);
+					background-color: rgba($white, 0.7);
 					border: 0;
 				}
 			}
@@ -234,5 +331,5 @@ a {
 // Tab content
 .tab-content {
 	padding: 2em;
-	background-color: rgba($white, 0.5);
+	background-color: rgba($white, 0.7);
 }
