@@ -1,17 +1,17 @@
-<form action="#" id="form-archive">
+<form action="#" id="form-archive" name="form-archive">
 	
-	<section class="form-section form-section-contact row">
+	<div class="form-section form-section-contact row">
 		<div class="form-group col-sm-6">
 			<label for="promc-archive-name" class="control-label">Ime i prezime: <sup class="required"></sup></label>
-			<input type="text" class="form-control" id="promc-archive-name" placeholder="Ime prezime" required>
+			<input type="text" class="form-control" id="promc-archive-name" placeholder="Ime prezime">
 		</div>
 		<div class="form-group col-sm-6">
 			<label for="promc-archive-email" class="control-label">E-mail adresa: <sup class="required"></sup></label>
-			<input type="email" class="form-control" id="promc-archive-email" placeholder="email@adresa.hr" required>
+			<input type="email" class="form-control" id="promc-archive-email" placeholder="email@adresa.hr">
 		</div>
 		<div class="form-group col-sm-4 hidden form-group-number">
 			<label for="promc-archive-number" class="control-label">Kontakt broj: <sup class="prefer-call required"></sup></label>
-			<input type="number" pattern="[0-9]*" class="form-control" id="promc-archive-number" placeholder="" required>
+			<input type="text" pattern="[0-9]*" class="form-control" id="promc-archive-number">
 		</div>
 		<div class="col-sm-4">
 			<div class="checkbox">
@@ -19,10 +19,10 @@
 				<label for="promc-archive-prefer-call">Preferiram poziv</label>
 			</div>
 		</div>
-	</section>
+	</div>
 	<!-- /.form-section -->
 
-	<section class="form-section row">
+	<div class="form-section row">
 		<div class="form-group col-sm-12">
 			<a class="form-label-toggle" data-toggle="collapse" href="#promc-archive-type">
 				Vrsta robe:
@@ -32,12 +32,12 @@
 			</div>
 		</div>
 		<div class="form-actions col-sm-12">
-			<div id="loading">
+			<div class="loading">
 				<i class="spin large"></i> <span>Molimo pričekajte...</span>
 			</div>
 			<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
 		</div>
-	</section>
+	</div>
 	<!-- /.form-section -->
 
 

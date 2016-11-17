@@ -308,22 +308,13 @@ a {
 		&:hover {
 			.page-split-body {
 				@include breakpoint(md) {
-					// width: 52vw;
+					width: 52vw;
 				}
 			}
 		}
 	}
 }
-.no-touch .page-intro {
-	// Hover over current page
-	&:hover {
-		.page-split-body {
-			@include breakpoint(md) {
-				// width: auto;
-			}
-		}
-	}
-}
+
 
 // Page split
 .page-split {
@@ -338,7 +329,8 @@ a {
 	@include breakpoint(md) {
 		height: 100vh;
 	}
-	&-body {
+	&-body,
+	&-intro {
 		@include transition;
 		height: 100%;
 		width: 100vw;
@@ -357,7 +349,7 @@ a {
 		}
 	}
 	.page-intro & {
-		&-body {
+		&-intro {
 			width: 100vw;
 			background-color: rgba($black, 0.4);
 			@include breakpoint(md) {
