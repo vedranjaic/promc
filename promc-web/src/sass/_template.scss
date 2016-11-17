@@ -374,17 +374,17 @@ a {
 		}
 		.split-home {
 			@include breakpoint(md) {
-				width: 52vw;
+				width: 53vw;
 			}
 		}
 		.split-international {
 			@include breakpoint(md) {
-				width: 76vw;
+				width: 78vw;
 			}
 		}
 		.split-archive {
 			@include breakpoint(md) {
-				width: 100vw;
+				width: 103vw;
 			}
 		}
 	}

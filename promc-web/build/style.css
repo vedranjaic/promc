@@ -7903,17 +7903,17 @@ a {
 }
 @media (min-width: 992px) {
   .page-intro .page-split .split-home {
-    width: 52vw;
+    width: 53vw;
   }
 }
 @media (min-width: 992px) {
   .page-intro .page-split .split-international {
-    width: 76vw;
+    width: 78vw;
   }
 }
 @media (min-width: 992px) {
   .page-intro .page-split .split-archive {
-    width: 100vw;
+    width: 103vw;
   }
 }
 
