@@ -1,12 +1,23 @@
 // --- [ Index ]
 // Intro
 .page-intro {
-	.offers {
+	.lead {
 		@include breakpoint(sm) {
-			// position: absolute;
-			// top: 50%;
-			// left: 50%;
-			// transform: translate(-50%, -50%);
+			width: 70%;
+			margin: 0 auto;
+		}
+		@include breakpoint(md) {
+			width: 60%;
+			max-width: 550px;
+		}
+		@include breakpoint(lg) {
+			width: 50%;
+		}
+	}
+	.offers {
+		position: relative;
+		z-index: 10;
+		@include breakpoint(sm) {
 			padding-top: 2em;
 			width: 100%;
 		}
@@ -21,23 +32,29 @@
 		@include clearfix;
 		text-align: center;
 		display: flex;
-		flex-direction: column;
+		flex-wrap: wrap;
 		@include breakpoint(sm) {
 			flex-direction: row;
+			flex-wrap: nowrap;
 		}
 	}
 	.offer-item {
-		padding-bottom: 10px;
+		padding-bottom: 30px;
+		width: 46%;
+		flex-grow: 1;
+		padding-left: 2em;
+		padding-right: 2em;
 		@include breakpoint(sm) {
-			flex-grow: 1;
+			width: auto;
 		}
 		.offer-link {
 			@include transition;
 			display: block;
 			position: relative;
+			color: darken($white, 20%);
 			&:hover,
 			&:focus {
-				color: darken($white, 20%);
+				color: $white;
 				text-decoration: none;
 				&:after {
 					color: $white;
@@ -71,7 +88,7 @@
 				padding-bottom: 4.5em;
 			}
 			.offer-title {
-				font-size: 20px;
+				font-size: 12px;
 				font-weight: 500;
 				@include breakpoint(sm) {
 					font-size: 22px;
@@ -82,10 +99,10 @@
 			}
 		}
 		.icon {
-			display: inline;
+			display: block;
 			font-size: 30px;
 			@include breakpoint(sm) {
-				display: block;
+				// display: block;
 				font-size: 50px;
 				margin-bottom: 0.5em;
 			}
@@ -98,7 +115,82 @@
 
 // Moving
 .page-moving {
-
+	// Questionnaire
+	// Toggle form section
+	.form-section-toggle {
+		color: $grey;
+		display: block;
+		margin-bottom: 1em;
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+		&:before {
+			content: '\f067';
+			font-family: 'FontAwesome';
+		}
+		&[aria-expanded="true"] {
+			&:before {
+				content: '\f068';
+			}
+		}
+		@include breakpoint(sm) {
+			display: none;
+		}
+		& + .form-section.collapse {
+			@include breakpoint(sm) {
+				display: block;
+			}
+		}
+	}
+	// Toggle form element
+	.form-label-toggle {
+		font-weight: bold;
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+		&:before {
+			content: '\f067';
+			font-family: 'FontAwesome';
+		}
+		&[aria-expanded="true"] {
+			&:before {
+				content: '\f068';
+			}
+		}
+	}
+	.form-section {
+		.checkbox {
+			margin-top: 0;
+		}
+	}
+	// Moving section
+	.form-section-moving {
+		margin-left: -21px;
+		margin-right: -21px;
+		padding-left: 13px;
+		padding-right: 13px;
+		background-color: rgba($grey, 0.1);
+		padding-top: 1em;
+		margin-bottom: 1em;
+		@include breakpoint(sm) {
+			margin-left: -28px;
+			margin-right: -28px;
+		}
+	}
+	// Submit form
+	.form-actions {
+		.btn-submit {
+			display: block;
+			width: 100%;
+			text-transform: uppercase;
+			@include breakpoint(sm) {
+				width: auto;
+				display: inline-block;
+			}
+		}
+	}
 }
 
 // Clients

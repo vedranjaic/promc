@@ -19,7 +19,9 @@ a {
 }
 .lead {
 	margin-bottom: 10px;
+	font-size: 14px;
 	@include breakpoint(sm) {
+		font-size: 16px;
 		margin-bottom: 20px;
 	}
 }
@@ -29,8 +31,12 @@ a {
 	margin-bottom: 0;
 	border: 0;
 	border-radius: 0;
+	padding-left: 28px;
 	&-danger {
 		background-color: lighten($brand-red, 30%);
+	}
+	.close {
+		font-size: 24px;
 	}
 }
 
@@ -46,32 +52,109 @@ a {
 .form-group {
 	label {
 		color: $grey;
+		border-width: 2px;
 	}
 	.form-label-toggle {
 		color: $grey;
 		margin-bottom: 5px;
 		display: block;
 	}
-}
-.form-section-toggle {
-	color: $grey;
-	@include breakpoint(sm) {
-		display: none;
+	.required {
+		&:after {
+			content: '\f069';
+			font-family: 'FontAwesome';
+		}
+		color: $brand-red;
+		font-size: 8px;
 	}
-	& + .form-section.collapse {
+	input[type="date"] {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		line-height: 22px;
+	}
+	input,
+	textarea {
+		@include zoom();
+		border-radius: 2px;
+		border-color: transparent;
+		box-shadow: none;
+		font-size: 16px;
 		@include breakpoint(sm) {
-			display: block;
+			font-size: 14px;
+		}
+	}
+	// Validation states
+	&.has-error {
+		.control-label {
+			color: $brand-red;
+		}
+		.form-control {
+			border-width: 2px;
+			border-color: $brand-red;
+			box-shadow: none;
 		}
 	}
 }
-.form-actions {
-	.btn-submit {
-		display: block;
-		width: 100%;
-		text-transform: uppercase;
-		@include breakpoint(sm) {
-			width: auto;
+
+// Checkboxes
+.checkbox {
+	color: $grey;
+	padding-left: 18px;
+	input[type="checkbox"] {
+		cursor: pointer;
+		opacity: 0;
+		z-index: 1;
+		outline: none !important;
+		margin-left: 0;
+		&:checked {
+			& + label {
+				color: $brand-red;
+				&:before {
+					background-color: $brand-red;
+				}
+				&:after {
+					content: "\f00c";
+					font-family: 'FontAwesome';
+					color: $white;
+				}
+			}
+		}
+		&:focus {
+			& + label {
+				&:before {
+					background-color: $brand-red;
+				}
+			}
+		}
+	}
+	label {
+		display: inline-block;
+		padding-left: 5px;
+		// text-transform: uppercase;
+		line-height: 17px;
+		&:before {
+			@include transition;
+			content: "";
+			border-radius: 3px;
+			border: 0;
 			display: inline-block;
+			height: 16px;
+			width: 16px;
+			left: 0;
+			position: absolute;
+			background-color: $grey;
+			outline: none !important;
+		}
+		&:after {
+			position: absolute;
+			display: inline-block;
+			font-size: 10px;
+			height: 16px;
+			width: 16px;
+			top: 0;
+			left: 0;
+			padding-left: 3px;
+			padding-top: 0;
 		}
 	}
 }
@@ -80,6 +163,7 @@ a {
 .btn {
 	@include transition;
 	border: 0;
+	border-radius: 2px;
 	&-primary {
 		background-color: $brand-red;
 		&:hover,
@@ -164,6 +248,20 @@ a {
 	// Text
 	&-text-collapse {
 		padding: 1em;
+		&:hover,
+		&:focus {
+			color: $white;
+			text-decoration: none;
+		}
+		&:before {
+			content: '\f055';
+			font-family: 'FontAwesome';
+		}
+		&[aria-expanded="true"] {
+			&:before {
+				content: '\f056';
+			}
+		}
 		@include breakpoint(md) {
 			display: none;
 		}
@@ -199,14 +297,29 @@ a {
 			}
 		}
 	}
+	&-bg-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 	// Touch
 	.no-touch & {
 		// Hover over current page
 		&:hover {
 			.page-split-body {
 				@include breakpoint(md) {
-					width: 52vw;
+					// width: 52vw;
 				}
+			}
+		}
+	}
+}
+.no-touch .page-intro {
+	// Hover over current page
+	&:hover {
+		.page-split-body {
+			@include breakpoint(md) {
+				// width: auto;
 			}
 		}
 	}
@@ -241,6 +354,38 @@ a {
 		}
 		.page-content-right & {
 			float: right;
+		}
+	}
+	.page-intro & {
+		&-body {
+			width: 100vw;
+			background-color: rgba($black, 0.4);
+			@include breakpoint(md) {
+				width: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+		.split-office {
+			@include breakpoint(md) {
+				width: 28vw;
+			}
+		}
+		.split-home {
+			@include breakpoint(md) {
+				width: 52vw;
+			}
+		}
+		.split-international {
+			@include breakpoint(md) {
+				width: 76vw;
+			}
+		}
+		.split-archive {
+			@include breakpoint(md) {
+				width: 100vw;
+			}
 		}
 	}
 }
@@ -333,6 +478,6 @@ a {
 	padding: 1.5em;
 	background-color: rgba($white, 0.7);
 	@include breakpoint(sm) {
-		padding: 2em;
+		padding: 2em 2em 1em 2em;
 	}
 }

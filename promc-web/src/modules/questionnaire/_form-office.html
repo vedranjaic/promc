@@ -1,32 +1,32 @@
 <form action="#" id="form-office">
 	
-	<section class="form-section row">
-		<div class="form-group col-sm-6">
-			<label for="promc-office-name">Kontakt osoba <span class="required">*</span></label>
-			<input type="text" class="form-control" id="promc-office-name" placeholder="Ime prezime">
+	<section class="form-section form-section-contact row">
+		<div class="form-group col-sm-6 has-error">
+			<label for="promc-office-name" class="control-label">Kontakt osoba <sup class="required"></sup></label>
+			<input type="text" class="form-control" id="promc-office-name" placeholder="Ime prezime" required>
 		</div>
-		<div class="form-group col-sm-6">
-			<label for="promc-office-email">E-mail adresa: <span class="required">*</span></label>
-			<input type="email" class="form-control" id="promc-office-email" placeholder="ime@email.hr">
+		<div class="form-group col-sm-6 has-error">
+			<label for="promc-office-email" class="control-label">E-mail adresa: <sup class="required"></sup></label>
+			<input type="email" class="form-control" id="promc-office-email" placeholder="email@adresa.hr" required>
 		</div>
-		<div class="checkbox col-sm-6">
-			<label>
-				<input type="checkbox"> Preferiram poziv
-			</label>
+		<div class="form-group col-sm-4 has-error hidden form-group-number">
+			<label for="promc-office-number" class="control-label">Kontakt broj: <sup class="prefer-call required"></sup></label>
+			<input type="number" pattern="[0-9]*" class="form-control" id="promc-office-number" placeholder="" required>
 		</div>
-		<div class="form-group col-sm-6 hidden">
-			<label for="promc-office-number">Kontakt broj: <span class="prefer-call required">*</span></label>
-			<input type="number" pattern="[0-9]*" class="form-control" id="promc-office-number" placeholder="">
+		<div class="col-sm-4">
+			<div class="checkbox">
+				<input id="promc-office-prefer-call" class="prefer-call" type="checkbox">
+				<label for="promc-office-prefer-call">Preferiram poziv</label>
+			</div>
 		</div>
 	</section>
 	<!-- /.form-section -->
 
-	<a class="form-section-toggle" data-toggle="collapse" href="#promc-office-moving-details">
-		<i class="icon fa fa-plus"></i> 
+	<a class="form-section-toggle" data-toggle="collapse" href="#promc-office-moving-details" data-text=" Zatvori detalje selidbe">
 		Detalji selidbe
 	</a>
 
-	<section class="form-section collapse row" id="promc-office-moving-details">
+	<section class="form-section form-section-moving collapse row" id="promc-office-moving-details">
 		<div class="form-group col-sm-8">
 			<label for="promc-office-address-start">Preseljenje iz:</label>
 			<input type="text" class="form-control" id="promc-office-address-start" placeholder="Adresa i kućni broj, grad">
@@ -45,7 +45,6 @@
 		</div>
 		<div class="form-group col-sm-12">
 			<a class="form-label-toggle" data-toggle="collapse" href="#promc-office-details">
-				<i class="icon fa fa-plus"></i> 
 				Dodatne informacije:
 			</a>
 			<div class="form-group-textarea collapse" id="promc-office-details">
@@ -56,6 +55,9 @@
 	<!-- /.form-section -->
 
 	<div class="form-actions clearfix">
+		<div id="loading">
+			<i class="spin large"></i> <span>Molimo pričekajte...</span>
+		</div>
 		<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
 	</div>
 

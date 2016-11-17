@@ -14,7 +14,7 @@ controller.scrollTo(function (newpos) {
 	TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
 });
 
-//  bind scroll to anchor links
+// bind scroll to anchor links
 $(document).on("click", ".scroll-to[href^='#']", function (e) {
 	var id = $(this).attr("href");
 	if ($(id).length > 0) {
@@ -27,6 +27,24 @@ $(document).on("click", ".scroll-to[href^='#']", function (e) {
 		}
 	}
 });
+
+// --- [ Intro page splits ]
+$('#page-slide-office, .split-office').hover(
+	function(){ $('.split-office').css('width', '30vw') },
+	function(){ $('.split-office').css('width', '28vw') }
+);
+$('#page-slide-home, .split-home').hover(
+	function(){ $('.split-home').css('width', '54vw') },
+	function(){ $('.split-home').css('width', '52vw') }
+);
+$('#page-slide-international, .split-international').hover(
+	function(){ $('.split-international').css('width', '78vw') },
+	function(){ $('.split-international').css('width', '76vw') }
+);
+$('#page-slide-archive, .split-archive').hover(
+	function(){ $('.split-archive').css('width', '102vw') },
+	function(){ $('.split-archive').css('width', '100vw') }
+);
 
 
 // --- [ Intro links ]
@@ -64,11 +82,10 @@ $('a#page-slide-archive, a#selidbe-skladistenje').click(function() {
 	$('.carousel').carousel(3);
 });
 
-// --- [ Carousel ]
+// --- [ Carousel slides ]
 $('.carousel-slides').carousel({
 	interval: false
 });
-
 
 
 // --- [ Clients ]
@@ -79,6 +96,28 @@ $('#carousel-clients-4').carousel({interval: 3000});
 $('#carousel-clients-5').carousel({interval: 9000});
 $('#carousel-clients-6').carousel({interval: 5000});
 
+
+// --- [ Questionnaire ]
+$('.prefer-call:checkbox').change(function(){
+	if($(this).is(":checked")) {
+		$('.form-section-contact .form-group-number').removeClass("hidden");
+		$('.form-section-contact .form-group.col-sm-6').removeClass('col-sm-6').addClass('col-sm-4');
+	} else {
+		$('.form-section-contact .form-group-number').addClass("hidden");
+		$('.form-section-contact .form-group.col-sm-4').removeClass('col-sm-4').addClass('col-sm-6');
+	}
+});
+
+// --- [ Toggle more info ]
+$(".form-section-toggle, .page-text-collapse").on("click", function() {
+	var el = $(this);
+	if (el.text() == el.data("text")) {
+		el.text(el.data("text-original"));
+	} else {
+		el.data("text-original", el.text());
+		el.text(el.data("text"));
+	}
+});
 
 
 // --- [ Menu icon ]

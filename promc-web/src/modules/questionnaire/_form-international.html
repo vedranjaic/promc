@@ -1,54 +1,53 @@
-<form action="#" id="form-office">
+<form action="#" id="form-international">
 	
-	<section class="form-section row">
+	<section class="form-section form-section-contact row">
 		<div class="form-group col-sm-6">
-			<label for="promc-office-name">Kontakt osoba <span class="required">*</span></label>
-			<input type="text" class="form-control" id="promc-office-name" placeholder="Ime prezime">
+			<label for="promc-international-name">Ime i prezime: <sup class="required"></sup></label>
+			<input type="text" class="form-control" id="promc-international-name" placeholder="Ime prezime" required>
 		</div>
 		<div class="form-group col-sm-6">
-			<label for="promc-office-email">E-mail adresa: <span class="required">*</span></label>
-			<input type="email" class="form-control" id="promc-office-email" placeholder="ime@email.hr">
+			<label for="promc-international-email">E-mail adresa: <sup class="required"></sup></label>
+			<input type="email" class="form-control" id="promc-international-email" placeholder="email@adresa.hr" required>
 		</div>
-		<div class="checkbox col-sm-6">
-			<label>
-				<input type="checkbox"> Preferiram poziv
-			</label>
+		<div class="form-group col-sm-4 hidden form-group-number">
+			<label for="promc-international-number">Kontakt broj: <sup class="prefer-call required"></sup></label>
+			<input type="number" pattern="[0-9]*" class="form-control" id="promc-international-number" placeholder="" required>
 		</div>
-		<div class="form-group col-sm-6 hidden">
-			<label for="promc-office-number">Kontakt broj: <span class="prefer-call required">*</span></label>
-			<input type="number" pattern="[0-9]*" class="form-control" id="promc-office-number" placeholder="">
+		<div class="col-sm-4">
+			<div class="checkbox">
+				<input id="promc-international-prefer-call" class="prefer-call" type="checkbox">
+				<label for="promc-international-prefer-call">Preferiram poziv</label>
+			</div>
 		</div>
 	</section>
 	<!-- /.form-section -->
 
-	<a class="form-section-toggle" data-toggle="collapse" href="#promc-office-moving-details">
-		<i class="icon fa fa-plus"></i> 
+	<a class="form-section-toggle" data-toggle="collapse" href="#promc-international-moving-details" data-text=" Zatvori detalje selidbe">
 		Detalji selidbe
 	</a>
 
-	<section class="form-section collapse row" id="promc-office-moving-details">
+	<section class="form-section form-section-moving collapse row" id="promc-international-moving-details">
 		<div class="form-group col-sm-8">
-			<label for="promc-office-address-start">Preseljenje iz:</label>
-			<input type="text" class="form-control" id="promc-office-address-start" placeholder="Adresa i kućni broj, grad">
+			<label for="promc-international-address-start">Preseljenje iz:</label>
+			<input type="text" class="form-control" id="promc-international-address-start" placeholder="Adresa i kućni broj, grad, država">
 		</div>
 		<div class="form-group col-sm-4">
-			<label for="promc-office-date-start">Datum preseljenja:</label>
-			<input type="date" class="form-control" id="promc-office-date-start" placeholder="19/11/2016">
+			<label for="promc-international-date-start">Datum preseljenja:</label>
+			<input type="date" class="form-control" id="promc-international-date-start" placeholder="19/11/2016">
 		</div>
 		<div class="form-group col-sm-8">
-			<label for="promc-office-address-finish">Preseljenje u:</label>
-			<input type="text" class="form-control" id="promc-office-address-finish" placeholder="Adresa i kućni broj, grad">
+			<label for="promc-international-address-finish">Preseljenje u:</label>
+			<input type="text" class="form-control" id="promc-international-address-finish" placeholder="Adresa i kućni broj, grad, država">
 		</div>
 		<div class="form-group col-sm-4">
-			<label for="promc-office-employees">Broj radnih mjesta:</label>
-			<input type="number" pattern="[0-9]*" class="form-control" id="promc-office-employees" placeholder="">
+			<label for="promc-international-volume">Površina m<sup>2</sup>:</label>
+			<input type="number" pattern="[0-9]*" class="form-control" id="promc-international-volume" placeholder="">
 		</div>
 		<div class="form-group col-sm-12">
-			<a class="form-label-toggle" data-toggle="collapse" href="#promc-office-details">
-				<i class="icon fa fa-plus"></i> 
+			<a class="form-label-toggle" data-toggle="collapse" href="#promc-international-details">
 				Dodatne informacije:
 			</a>
-			<div class="form-group-textarea collapse" id="promc-office-details">
+			<div class="form-group-textarea collapse" id="promc-international-details">
 				<textarea class="form-control" rows="3"></textarea>
 			</div>
 		</div>
@@ -56,6 +55,9 @@
 	<!-- /.form-section -->
 
 	<div class="form-actions clearfix">
+		<div id="loading">
+			<i class="spin large"></i> <span>Molimo pričekajte...</span>
+		</div>
 		<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
 	</div>
 
