@@ -1,21 +1,21 @@
-<form action="#" id="form-international" name="form-international">
+<form action="#" id="form-international" name="Međunarodna selidba">
 	
 	<div class="form-section form-section-contact row">
 		<div class="form-group col-sm-6">
 			<label for="promc-international-name">Ime i prezime: <sup class="required"></sup></label>
-			<input type="text" class="form-control" id="promc-international-name" placeholder="Ime prezime">
+			<input name="Ime i prezime" type="text" class="form-control" id="promc-international-name" placeholder="Ime prezime">
 		</div>
 		<div class="form-group col-sm-6">
 			<label for="promc-international-email">E-mail adresa: <sup class="required"></sup></label>
-			<input type="email" class="form-control" id="promc-international-email" placeholder="email@adresa.hr">
+			<input name="E-mail adresa" type="email" class="form-control" id="promc-international-email" placeholder="email@adresa.hr">
 		</div>
 		<div class="form-group col-sm-4 hidden form-group-number">
 			<label for="promc-international-number">Kontakt broj: <sup class="prefer-call required"></sup></label>
-			<input type="text" pattern="[0-9]*" class="form-control" id="promc-international-number">
+			<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-international-number">
 		</div>
 		<div class="col-sm-4">
 			<div class="checkbox">
-				<input id="promc-international-prefer-call" class="prefer-call" type="checkbox">
+				<input name="Preferiram poziv" id="promc-international-prefer-call" class="prefer-call" type="checkbox">
 				<label for="promc-international-prefer-call">Preferiram poziv</label>
 			</div>
 		</div>
@@ -29,26 +29,26 @@
 	<div class="form-section form-section-moving collapse row" id="promc-international-moving-details">
 		<div class="form-group col-sm-8">
 			<label for="promc-international-address-start">Preseljenje iz:</label>
-			<input type="text" class="form-control" id="promc-international-address-start" placeholder="Adresa i kućni broj, grad, država">
+			<input name="Preseljenje iz" type="text" class="form-control" id="promc-international-address-start" placeholder="Adresa i kućni broj, grad, država">
 		</div>
 		<div class="form-group col-sm-4">
 			<label for="promc-international-date-start">Datum preseljenja:</label>
-			<input type="date" class="form-control" id="promc-international-date-start">
+			<input name="Datum preseljenja" type="date" class="form-control" id="promc-international-date-start">
 		</div>
 		<div class="form-group col-sm-8">
 			<label for="promc-international-address-finish">Preseljenje u:</label>
-			<input type="text" class="form-control" id="promc-international-address-finish" placeholder="Adresa i kućni broj, grad, država">
+			<input name="Preseljenje u" type="text" class="form-control" id="promc-international-address-finish" placeholder="Adresa i kućni broj, grad, država">
 		</div>
 		<div class="form-group col-sm-4">
 			<label for="promc-international-volume">Površina m<sup>2</sup>:</label>
-			<input type="text" pattern="[0-9]*" class="form-control" id="promc-international-volume" placeholder="">
+			<input name="Površina u m2" type="text" pattern="[0-9]*" class="form-control" id="promc-international-volume" placeholder="">
 		</div>
 		<div class="form-group col-sm-12">
 			<a class="form-label-toggle" data-toggle="collapse" href="#promc-international-details">
 				Dodatne informacije:
 			</a>
 			<div class="form-group-textarea collapse" id="promc-international-details">
-				<textarea class="form-control" rows="3"></textarea>
+				<textarea name="Dodatne informacije" class="form-control" rows="3"></textarea>
 			</div>
 		</div>
 	</div>
