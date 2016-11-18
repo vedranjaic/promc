@@ -13,17 +13,7 @@
 
 	<!-- styles / fonts -->
 	<link rel="stylesheet" href="style.css">
-	<script src="https://use.fontawesome.com/f0f0aa36b2.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700&amp;subset=latin-ext" rel="stylesheet">
-	<!-- <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet"> -->
-	
-	<!-- scripts -->
-	<script src="assets/js/vendors/modernizr.js"></script>
-
-	<!-- prefetch images -->
-	<link rel="prefetch" href="http://placehold.it/1400x1400?text=1440x1440_Selidba_stana">
-	<link rel="prefetch" href="http://placehold.it/1400x1400?text=1440x1440_Selidba_medjunarodno">
-	<link rel="prefetch" href="http://placehold.it/1400x1400?text=1440x1440_Selidba_skladistenje">
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani:300,500,700&amp;subset=latin-ext" rel="stylesheet">
 	
 </head>
 <body data-spy="scroll" data-target="#navbar-main">
@@ -131,9 +121,17 @@
 			</ul>
 		</div>
 		<!-- /.offers -->
-	
 
-		<!-- PAGE SPLIT -->
+	
+		<div class="scroll-down">
+			<a href="#selidbe" class="scroll-to">
+				<div class="mouse">
+					<div class="wheel"></div>
+				</div>
+			</a>
+		</div>
+		<!-- /.scroll-down -->
+
 		<div class="page-split">
 			<div class="page-split-intro split-office"></div>
 			<div class="page-split-intro split-home"></div>
@@ -143,19 +141,8 @@
 		</div>
 		<!-- /.page-split -->
 
-
 		
 		<div class="bg-image page-bg-image page-media-image" style="background-image: url(http://sanantoniomovingman.com/wp-content/uploads/2015/07/Hiring-a-Professional-Moving-Company.jpg);"></div>
-
-		<!-- scroll-down -->
-		<div class="scroll-down">
-			<a href="#selidbe" class="scroll-to">
-				<div class="mouse">
-					<div class="wheel"></div>
-				</div>
-			</a>
-		</div>
-		<!-- /.scroll-down -->
 
 	</section>
 	<!-- /.page page-intro -->
@@ -261,31 +248,31 @@
 					<!-- ALERT -->
 					<div class="alert alert-danger alert-dismissible" role="alert">
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<strong>Obvezna polja!</strong> Za kontakt potrebno je popuniti polja s kontaktnim podacima.
+						<strong><i class="icon fa fa-warning"></i> Obvezna polja!</strong> Za kontakt potrebno je popuniti polja s kontaktnim podacima.
 					</div>
 
 
 					<!-- Tab panes -->
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane active" id="tab-selidbe-ureda">
-							<form action="#" id="form-office" name="form-office">
+							<form action="#" id="form-office" name="Preseljenje ureda">
 	
 								<div class="form-section form-section-contact row">
 									<div class="form-group col-sm-6 has-error">
-										<label for="promc-office-name" class="control-label">Kontakt osoba <sup class="required"></sup></label>
-										<input type="text" class="form-control" id="promc-office-name" placeholder="Ime prezime">
+										<label for="promc-office-name" class="control-label">Kontakt osoba: <sup class="required"></sup></label>
+										<input name="Kontakt osoba" type="text" class="form-control" id="promc-office-name" placeholder="Ime prezime">
 									</div>
 									<div class="form-group col-sm-6 has-error">
 										<label for="promc-office-email" class="control-label">E-mail adresa: <sup class="required"></sup></label>
-										<input type="email" class="form-control" id="promc-office-email" placeholder="email@adresa.hr">
+										<input name="E-mail adresa" type="email" class="form-control" id="promc-office-email" placeholder="email@adresa.hr">
 									</div>
 									<div class="form-group col-sm-4 has-error hidden form-group-number">
 										<label for="promc-office-number" class="control-label">Kontakt broj: <sup class="prefer-call required"></sup></label>
-										<input type="text" pattern="[0-9]*" class="form-control" id="promc-office-number">
+										<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-office-number">
 									</div>
 									<div class="col-sm-4">
 										<div class="checkbox">
-											<input id="promc-office-prefer-call" class="prefer-call" type="checkbox">
+											<input name="Preferiram poziv" id="promc-office-prefer-call" class="prefer-call" type="checkbox">
 											<label for="promc-office-prefer-call">Preferiram poziv</label>
 										</div>
 									</div>
@@ -299,26 +286,26 @@
 								<div class="form-section form-section-moving collapse row" id="promc-office-moving-details">
 									<div class="form-group col-sm-8">
 										<label for="promc-office-address-start">Preseljenje iz:</label>
-										<input type="text" class="form-control" id="promc-office-address-start" placeholder="Adresa i kućni broj, grad">
+										<input name="Preseljenje iz" type="text" class="form-control" id="promc-office-address-start" placeholder="Adresa i kućni broj, grad">
 									</div>
 									<div class="form-group col-sm-4">
 										<label for="promc-office-date-start">Datum preseljenja:</label>
-										<input type="date" class="form-control" id="promc-office-date-start">
+										<input name="Datum preseljenja" type="date" class="form-control" id="promc-office-date-start">
 									</div>
 									<div class="form-group col-sm-8">
 										<label for="promc-office-address-finish">Preseljenje u:</label>
-										<input type="text" class="form-control" id="promc-office-address-finish" placeholder="Adresa i kućni broj, grad">
+										<input name="Preseljenje u" type="text" class="form-control" id="promc-office-address-finish" placeholder="Adresa i kućni broj, grad">
 									</div>
 									<div class="form-group col-sm-4">
 										<label for="promc-office-employees">Broj radnih mjesta:</label>
-										<input type="text" pattern="[0-9]*" class="form-control" id="promc-office-employees" placeholder="">
+										<input name="Broj radnih mjesta" type="text" pattern="[0-9]*" class="form-control" id="promc-office-employees" placeholder="">
 									</div>
 									<div class="form-group col-sm-12">
 										<a class="form-label-toggle" data-toggle="collapse" href="#promc-office-details">
 											Dodatne informacije:
 										</a>
 										<div class="form-group-textarea collapse" id="promc-office-details">
-											<textarea class="form-control" rows="3"></textarea>
+											<textarea name="Dodatne informacije" class="form-control" rows="3"></textarea>
 										</div>
 									</div>
 								</div>
@@ -335,24 +322,24 @@
 							</form>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="tab-selidbe-stana">
-							<form action="#" id="form-home" name="form-home">
+							<form action="#" id="form-home" name="Preseljenje stana/kuće">
 	
 								<div class="form-section form-section-contact row">
 									<div class="form-group col-sm-6">
 										<label for="promc-home-name" class="control-label">Ime i prezime: <sup class="required"></sup></label>
-										<input type="text" class="form-control" id="promc-home-name" placeholder="Ime prezime">
+										<input name="Ime i prezime" type="text" class="form-control" id="promc-home-name" placeholder="Ime prezime">
 									</div>
 									<div class="form-group col-sm-6">
 										<label for="promc-home-email" class="control-label">E-mail adresa: <sup class="required"></sup></label>
-										<input type="email" class="form-control" id="promc-home-email" placeholder="email@adresa.hr">
+										<input name="E-mail adresa" type="email" class="form-control" id="promc-home-email" placeholder="email@adresa.hr">
 									</div>
 									<div class="form-group col-sm-4 hidden form-group-number">
 										<label for="promc-home-number" class="control-label">Kontakt broj: <sup class="prefer-call required"></sup></label>
-										<input type="text" pattern="[0-9]*" class="form-control" id="promc-home-number">
+										<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-home-number">
 									</div>
 									<div class="col-sm-4">
 										<div class="checkbox">
-											<input id="promc-home-prefer-call" class="prefer-call" type="checkbox">
+											<input name="Preferiram poziv" id="promc-home-prefer-call" class="prefer-call" type="checkbox">
 											<label for="promc-home-prefer-call">Preferiram poziv</label>
 										</div>
 									</div>
@@ -366,26 +353,26 @@
 								<div class="form-section form-section-moving collapse row" id="promc-home-moving-details">
 									<div class="form-group col-sm-8">
 										<label for="promc-home-address-start">Preseljenje iz:</label>
-										<input type="text" class="form-control" id="promc-home-address-start" placeholder="Adresa i kućni broj, grad">
+										<input name="Preseljenje iz" type="text" class="form-control" id="promc-home-address-start" placeholder="Adresa i kućni broj, grad">
 									</div>
 									<div class="form-group col-sm-4">
 										<label for="promc-home-date-start">Datum preseljenja:</label>
-										<input type="date" class="form-control" id="promc-home-date-start">
+										<input name="Datum preseljenja" type="date" class="form-control" id="promc-home-date-start">
 									</div>
 									<div class="form-group col-sm-8">
 										<label for="promc-home-address-finish">Preseljenje u:</label>
-										<input type="text" class="form-control" id="promc-home-address-finish" placeholder="Adresa i kućni broj, grad">
+										<input name="Preseljenje u" type="text" class="form-control" id="promc-home-address-finish" placeholder="Adresa i kućni broj, grad">
 									</div>
 									<div class="form-group col-sm-4">
 										<label for="promc-home-volume">Površina m<sup>2</sup>:</label>
-										<input type="text" pattern="[0-9]*" class="form-control" id="promc-home-volume" placeholder="">
+										<input name="Površina u m2" type="text" pattern="[0-9]*" class="form-control" id="promc-home-volume" placeholder="">
 									</div>
 									<div class="form-group col-sm-12">
 										<a class="form-label-toggle" data-toggle="collapse" href="#promc-home-details">
 											Dodatne informacije:
 										</a>
 										<div class="form-group-textarea collapse" id="promc-home-details">
-											<textarea class="form-control" rows="3"></textarea>
+											<textarea name="Dodatne informacije" class="form-control" rows="3"></textarea>
 										</div>
 									</div>
 								</div>
@@ -402,24 +389,24 @@
 							</form>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="tab-selidbe-medjunarodno">
-							<form action="#" id="form-international" name="form-international">
+							<form action="#" id="form-international" name="Međunarodna selidba">
 	
 								<div class="form-section form-section-contact row">
 									<div class="form-group col-sm-6">
 										<label for="promc-international-name">Ime i prezime: <sup class="required"></sup></label>
-										<input type="text" class="form-control" id="promc-international-name" placeholder="Ime prezime">
+										<input name="Ime i prezime" type="text" class="form-control" id="promc-international-name" placeholder="Ime prezime">
 									</div>
 									<div class="form-group col-sm-6">
 										<label for="promc-international-email">E-mail adresa: <sup class="required"></sup></label>
-										<input type="email" class="form-control" id="promc-international-email" placeholder="email@adresa.hr">
+										<input name="E-mail adresa" type="email" class="form-control" id="promc-international-email" placeholder="email@adresa.hr">
 									</div>
 									<div class="form-group col-sm-4 hidden form-group-number">
 										<label for="promc-international-number">Kontakt broj: <sup class="prefer-call required"></sup></label>
-										<input type="text" pattern="[0-9]*" class="form-control" id="promc-international-number">
+										<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-international-number">
 									</div>
 									<div class="col-sm-4">
 										<div class="checkbox">
-											<input id="promc-international-prefer-call" class="prefer-call" type="checkbox">
+											<input name="Preferiram poziv" id="promc-international-prefer-call" class="prefer-call" type="checkbox">
 											<label for="promc-international-prefer-call">Preferiram poziv</label>
 										</div>
 									</div>
@@ -433,26 +420,26 @@
 								<div class="form-section form-section-moving collapse row" id="promc-international-moving-details">
 									<div class="form-group col-sm-8">
 										<label for="promc-international-address-start">Preseljenje iz:</label>
-										<input type="text" class="form-control" id="promc-international-address-start" placeholder="Adresa i kućni broj, grad, država">
+										<input name="Preseljenje iz" type="text" class="form-control" id="promc-international-address-start" placeholder="Adresa i kućni broj, grad, država">
 									</div>
 									<div class="form-group col-sm-4">
 										<label for="promc-international-date-start">Datum preseljenja:</label>
-										<input type="date" class="form-control" id="promc-international-date-start">
+										<input name="Datum preseljenja" type="date" class="form-control" id="promc-international-date-start">
 									</div>
 									<div class="form-group col-sm-8">
 										<label for="promc-international-address-finish">Preseljenje u:</label>
-										<input type="text" class="form-control" id="promc-international-address-finish" placeholder="Adresa i kućni broj, grad, država">
+										<input name="Preseljenje u" type="text" class="form-control" id="promc-international-address-finish" placeholder="Adresa i kućni broj, grad, država">
 									</div>
 									<div class="form-group col-sm-4">
 										<label for="promc-international-volume">Površina m<sup>2</sup>:</label>
-										<input type="text" pattern="[0-9]*" class="form-control" id="promc-international-volume" placeholder="">
+										<input name="Površina u m2" type="text" pattern="[0-9]*" class="form-control" id="promc-international-volume" placeholder="">
 									</div>
 									<div class="form-group col-sm-12">
 										<a class="form-label-toggle" data-toggle="collapse" href="#promc-international-details">
 											Dodatne informacije:
 										</a>
 										<div class="form-group-textarea collapse" id="promc-international-details">
-											<textarea class="form-control" rows="3"></textarea>
+											<textarea name="Dodatne informacije" class="form-control" rows="3"></textarea>
 										</div>
 									</div>
 								</div>
@@ -469,24 +456,24 @@
 							</form>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="tab-selidbe-skladistenje">
-							<form action="#" id="form-archive" name="form-archive">
+							<form action="#" id="form-archive" name="Skladištenje arhive">
 	
 								<div class="form-section form-section-contact row">
 									<div class="form-group col-sm-6">
 										<label for="promc-archive-name" class="control-label">Ime i prezime: <sup class="required"></sup></label>
-										<input type="text" class="form-control" id="promc-archive-name" placeholder="Ime prezime">
+										<input name="Ime i prezime" type="text" class="form-control" id="promc-archive-name" placeholder="Ime prezime">
 									</div>
 									<div class="form-group col-sm-6">
 										<label for="promc-archive-email" class="control-label">E-mail adresa: <sup class="required"></sup></label>
-										<input type="email" class="form-control" id="promc-archive-email" placeholder="email@adresa.hr">
+										<input name="E-mail adresa" type="email" class="form-control" id="promc-archive-email" placeholder="email@adresa.hr">
 									</div>
 									<div class="form-group col-sm-4 hidden form-group-number">
 										<label for="promc-archive-number" class="control-label">Kontakt broj: <sup class="prefer-call required"></sup></label>
-										<input type="text" pattern="[0-9]*" class="form-control" id="promc-archive-number">
+										<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-archive-number">
 									</div>
 									<div class="col-sm-4">
 										<div class="checkbox">
-											<input id="promc-archive-prefer-call" class="prefer-call" type="checkbox">
+											<input name="Preferiram poziv" id="promc-archive-prefer-call" class="prefer-call" type="checkbox">
 											<label for="promc-archive-prefer-call">Preferiram poziv</label>
 										</div>
 									</div>
@@ -499,7 +486,7 @@
 											Vrsta robe:
 										</a>
 										<div class="form-group-textarea collapse" id="promc-archive-type">
-											<textarea class="form-control" rows="3"></textarea>
+											<textarea name="Vrsta robe" class="form-control" rows="3"></textarea>
 										</div>
 									</div>
 									<div class="form-actions col-sm-12">
@@ -529,16 +516,16 @@
 			<!-- Slides -->
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
-					<div class="bg-image" style="background-image: url(http://placehold.it/1400x1400?text=1440x1440_Selidba_ureda);"></div>
+					<div class="bg-image" style="background-image: url(assets/images/1440x1440_Selidba_ureda.png);"></div>
 				</div>
 				<div class="item">
-					<div class="bg-image" style="background-image: url(http://placehold.it/1400x1400?text=1440x1440_Selidba_stana);"></div>
+					<div class="bg-image" style="background-image: url(assets/images/1440x1440_Selidba_stana.png);"></div>
 				</div>
 				<div class="item">
-					<div class="bg-image" style="background-image: url(http://placehold.it/1400x1400?text=1440x1440_Selidba_medjunarodno);"></div>
+					<div class="bg-image" style="background-image: url(assets/images/1440x1440_Selidba_medjunarodno.png);"></div>
 				</div>
 				<div class="item">
-					<div class="bg-image" style="background-image: url(http://placehold.it/1400x1400?text=1440x1440_Selidba_skladistenje);"></div>
+					<div class="bg-image" style="background-image: url(assets/images/1440x1440_Selidba_skladistenje.png);"></div>
 				</div>
 			</div>
 			<!-- /.carousel-inner -->
@@ -552,12 +539,6 @@
 
 	<section class="page page-clients page-content-right" id="klijenti">
 	
-		<!-- PAGE SPLIT -->
-		<div class="page-split">
-			<div class="page-split-body"></div>
-		</div>
-		<!-- /.page-split -->
-
 		<!-- PAGE HEADING -->
 		<header class="page-heading @@page-class @@page-status">
 			<h1 class="page-title">Naši klijenti</h1>
@@ -572,10 +553,10 @@
 					<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-1">
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="http://placehold.it/600x300?text=HT" alt="" class="img-responsive">
+								<img src="assets/images/clients/logo-hrvatski-telekom.svg" alt="Hrvatski Telekom" class="logo-client">
 							</div>
 							<div class="item">
-								<img src="http://placehold.it/600x300?text=GENERALI" alt="" class="img-responsive">
+								<img src="assets/images/clients/logo-generali-osiguranje.svg" alt="Generali Osiguranje" class="logo-client">
 							</div>
 						</div>
 					</div>
@@ -585,10 +566,10 @@
 					<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-2">
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="http://placehold.it/600x300?text=MODERNA" alt="" class="img-responsive">
+								<img src="assets/images/clients/logo-moderna-galerija.png" alt="Moderna galerija" class="logo-client">
 							</div>
 							<div class="item">
-								<img src="http://placehold.it/600x300?text=LUXOR" alt="" class="img-responsive">
+								<img src="assets/images/clients/logo-luxor-multiservis.png" alt="Luxor multiservis" class="logo-client">
 							</div>
 						</div>
 					</div>
@@ -598,10 +579,10 @@
 					<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-3">
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="http://placehold.it/600x300?text=KONZUM" alt="" class="img-responsive">
+								<img src="assets/images/clients/logo-konzum.svg" alt="Konzum" class="logo-client">
 							</div>
 							<div class="item">
-								<img src="http://placehold.it/600x300?text=ERICSSON" alt="" class="img-responsive">
+								<img src="assets/images/clients/logo-ericsson.svg" alt="Ericsson Nikola Tesla" class="logo-client">
 							</div>
 						</div>
 					</div>
@@ -611,10 +592,10 @@
 					<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-4">
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="http://placehold.it/600x300?text=ATALIAN" alt="" class="img-responsive">
+								<img src="assets/images/clients/logo-atalian-gs.png" alt="Atalian Global Services Croatia" class="logo-client">
 							</div>
 							<div class="item">
-								<img src="http://placehold.it/600x300?text=EUROGROUP" alt="" class="img-responsive">
+								<img src="http://placehold.it/600x300?text=EUROGROUP" alt="Eurogroup" class="logo-client">
 							</div>
 						</div>
 					</div>
@@ -624,10 +605,10 @@
 					<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-5">
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="http://placehold.it/600x300?text=OMEGA" alt="" class="img-responsive">
+								<img src="assets/images/clients/logo-omega-software.svg" alt="Omega software" class="logo-client">
 							</div>
 							<div class="item">
-								<img src="http://placehold.it/600x300?text=SMART" alt="" class="img-responsive">
+								<img src="assets/images/clients/logo-smart-net.png" alt="Smart net" class="logo-client">
 							</div>
 						</div>
 					</div>
@@ -637,10 +618,10 @@
 					<div class="carousel carousel-clients carousel-fade slide" data-ride="carousel" id="carousel-clients-6">
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img src="http://placehold.it/600x300?text=HYPO" alt="" class="img-responsive">
+								<img src="assets/images/clients/logo-hypo-aab.svg" alt="Hypo Alpe Adria Bank" class="logo-client">
 							</div>
 							<div class="item">
-								<img src="http://placehold.it/600x300?text=CROSIG" alt="" class="img-responsive">
+								<img src="assets/images/clients/logo-croatia-osiguranje.svg" alt="Croatia Osiguranje" class="logo-client">
 							</div>
 						</div>
 					</div>
@@ -660,17 +641,18 @@
 		</div>
 		<!-- /.page-content -->
 
+
+		<div class="page-split">
+			<div class="page-split-body"></div>
+		</div>
+		<!-- /.page-split -->
+
+		
 	
 	</section>
 	<!-- /.page page-clients -->
 
 	<section class="page page-about-us page-content-left" id="o-nama">
-	
-		<!-- PAGE SPLIT -->
-		<div class="page-split">
-			<div class="page-split-body"></div>
-		</div>
-		<!-- /.page-split -->
 
 		<!-- PAGE HEADING -->
 		<header class="page-heading @@page-class @@page-status">
@@ -693,7 +675,12 @@
 		</div>
 		<!-- /.page-content -->
 
-			
+	
+		<div class="page-split">
+			<div class="page-split-body"></div>
+		</div>
+		<!-- /.page-split -->
+
 		
 
 	</section>
@@ -702,10 +689,6 @@
 	<section class="page page-contact page-content-right" id="kontakt">
 
 		<!-- PAGE SPLIT -->
-		<div class="page-split">
-			<div class="page-split-body"></div>
-		</div>
-		<!-- /.page-split -->
 
 		<!-- PAGE HEADING -->
 		<header class="page-heading @@page-class @@page-status">
@@ -737,16 +720,33 @@
 		</div>
 		<!-- /.page-content -->
 
-		<div class="gmap">
 
-
-
+		<div class="page-split">
+			<div class="page-split-body"></div>
 		</div>
-		<!-- /.questionnaire -->
+		<!-- /.page-split -->
+
+		<div class="facebook-card">
+			<a href="https://www.facebook.com/promovingcompany" target="_blank">
+				<img class="icon" src="assets/images/icons/facebook.svg" alt="Facebook">
+			</a>
+			<div class="facebook-body">
+				<h2>Posjetite nas na Facebooku</h2>
+				<a class="lead btn-facebook" href="https://www.facebook.com/promovingcompany" target="_blank">
+					fb.com/PROMovingCompany
+				</a>
+			</div>
+		</div>
+		<!-- /.facebook-card -->
+
+		
 	
 	</section>
 	<!-- /.page page-contact -->
 
+
+	<script src="assets/js/vendors/modernizr.js"></script>
+	<script src="https://use.fontawesome.com/f0f0aa36b2.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="assets/js/vendors/jquery.min.js"><\/script>')</script>

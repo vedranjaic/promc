@@ -62,7 +62,8 @@ gulp.task('server', ['sass'], function() {
 gulp.task('sass', function () {
 
 	return sass(src.scss, {
-			style: 'expanded',
+			// style: 'expanded',
+			style: 'compressed',
 			sourcemap: true
 		})
 		.on('error', function (err) {

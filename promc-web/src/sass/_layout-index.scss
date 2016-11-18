@@ -58,6 +58,13 @@
 				text-decoration: none;
 				&:after {
 					color: $white;
+					transform: translate3d(0, -10px, 0);
+				}
+				.icon {
+					transform: scale(1.3);
+				}
+				.offer-title {
+					line-height: 1.2em;
 				}
 			}
 			&:after {
@@ -88,6 +95,7 @@
 				padding-bottom: 4.5em;
 			}
 			.offer-title {
+				display: block;
 				font-size: 12px;
 				font-weight: 500;
 				@include breakpoint(sm) {
@@ -97,17 +105,17 @@
 					font-size: 24px;
 				}
 			}
-		}
-		.icon {
-			display: block;
-			font-size: 30px;
-			@include breakpoint(sm) {
-				// display: block;
-				font-size: 50px;
-				margin-bottom: 0.5em;
-			}
-			@include breakpoint(md) {
-				font-size: 60px;
+			.icon {
+				@include transition;
+				display: block;
+				font-size: 30px;
+				@include breakpoint(sm) {
+					font-size: 50px;
+					margin-bottom: 0.5em;
+				}
+				@include breakpoint(md) {
+					font-size: 60px;
+				}
 			}
 		}
 	}
@@ -199,7 +207,7 @@
 	.clients-grid {
 		padding-top: 2em;
 		position: relative;
-		z-index: 1;
+		z-index: 10;
 		margin-bottom: 2em;
 		max-width: 1000px;
 		margin-left: auto;
@@ -220,6 +228,25 @@
 			@include breakpoint(md) {
 				width: 33%;
 			}
+			// Carousel
+			// .carousel-inner {
+			// 	-webkit-transform: skew(-12deg);
+			// 	-moz-transform: skew(-12deg);
+			// 	-o-transform: skew(-12deg);
+			// }
+			.item {
+				// position: relative;
+				background-color: rgba($white, 0.3);
+				height: 180px;
+				.logo-client {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					max-height: 70px;
+					max-width: 200px;
+				}
+			}
 		}
 	}
 }
@@ -235,4 +262,44 @@
 // Contact
 .page-contact {
 	height: 100vh;
+	.facebook-card {
+		@include clearfix;
+		width: 90%;
+		position: absolute;
+		right: 0;
+		bottom: 5%;
+		background-color: $social-facebook;
+		.icon {
+			float: left;
+			margin-left: -60px;
+			width: 120px;
+		}
+		.facebook-body {
+			padding-left: 80px;
+		}
+		.btn-facebook {
+			position: relative;
+			&:hover,
+			&:active {
+				text-decoration: none;
+				color: $white;
+				&:after {
+					opacity: 0.2;
+				}
+			}
+			&:after {
+				@include transition;
+				content: '\f061';
+				font-family: 'FontAwesome';
+				margin-left: 10px;
+				font-size: 1.5em;
+				position: absolute;
+				right: -40px;
+				top: -7px;
+				opacity: 0;
+			}
+		}
+	}
 }
+
+
