@@ -289,13 +289,13 @@
 			}
 			&:after {
 				@include transition;
-				content: '\f061';
+				content: '\f08e';
 				font-family: 'FontAwesome';
 				margin-left: 10px;
-				font-size: 1.5em;
+				font-size: 1em;
 				position: absolute;
-				right: -40px;
-				top: -7px;
+				right: -25px;
+				top: -1px;
 				opacity: 0;
 			}
 		}
