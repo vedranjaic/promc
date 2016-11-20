@@ -1,17 +1,25 @@
-// --- [ Scroll to top ]
+// --- [ SCROLL TO TOP ]
 // init controller
 var controller = new ScrollMagic.Controller();
 // build tween
 var tween = TweenMax.from("#animate", 0.5, {autoAlpha: 0, scale: 0.7});
 // build scene
-var scene = new ScrollMagic.Scene({triggerElement: "a#top", duration: 200, triggerHook: "onLeave"})
-				.setTween(tween)
-				// .addIndicators() // add indicators (requires plugin)
-				.addTo(controller);
+var scene = new ScrollMagic.Scene({
+	triggerElement: "a#top", 
+	duration: 200, 
+	triggerHook: "onLeave"
+})
+.setTween(tween)
+// .addIndicators() // add indicators (requires plugin)
+.addTo(controller);
 
 // change behaviour of controller to animate scroll instead of jump
 controller.scrollTo(function (newpos) {
-	TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
+	TweenMax.to(window, 0.5, {
+		scrollTo: {
+			y: newpos
+		}
+	});
 });
 
 // bind scroll to anchor links
@@ -27,6 +35,40 @@ $(document).on("click", ".scroll-to[href^='#']", function (e) {
 		}
 	}
 });
+
+
+
+// --- [ SCROLLSPY ]
+// Set duration to screen height
+var durationValueCache;
+function getDuration () {
+	return durationValueCache;
+}
+function updateDuration (e) {
+	durationValueCache = window.innerHeight;
+}
+$(window).on("resize", updateDuration); // update the duration when the window size changes
+$(window).triggerHandler("resize"); // set to initial value
+scene.duration(getDuration); // supply duration method
+
+// build scenes
+new ScrollMagic.Scene({triggerElement: "#uvod", duration: getDuration})
+	.setClassToggle("#scroll-to-top", "active") // add class toggle
+	.addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#selidbe", duration: getDuration})
+	.setClassToggle("#nav-selidbe", "active") // add class toggle
+	.addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#klijenti", duration: getDuration})
+	.setClassToggle("#nav-klijenti", "active") // add class toggle
+	.addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#o-nama", duration: getDuration})
+	.setClassToggle("#nav-o-nama", "active") // add class toggle
+	.addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#kontakt", duration: getDuration})
+	.setClassToggle("#nav-kontakt", "active") // add class toggle
+	.addTo(controller);
+
+
 
 // --- [ Intro page splits ]
 $('#page-slide-office, .split-office').hover(

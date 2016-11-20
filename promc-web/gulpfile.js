@@ -88,6 +88,7 @@ gulp.task('sass', function () {
 		}))
 		.pipe(gulp.dest(build.css))
 		.pipe(browserSync.stream({match: '**/*.css'}));
+		
 });
 // Sass min, Error handling, Autoprefixer
 gulp.task('sass-min', function () {
