@@ -71,19 +71,19 @@ new ScrollMagic.Scene({triggerElement: "#kontakt", duration: getDuration})
 
 
 // --- [ Intro page splits ]
-$('#page-slide-office, .split-office').hover(
+$('.no-touch #page-slide-office, .split-office').hover(
 	function(){ $('.split-office').css('width', '30vw') },
 	function(){ $('.split-office').css('width', '28vw') }
 );
-$('#page-slide-home, .split-home').hover(
+$('.no-touch #page-slide-home, .split-home').hover(
 	function(){ $('.split-home').css('width', '55vw') },
 	function(){ $('.split-home').css('width', '53vw') }
 );
-$('#page-slide-international, .split-international').hover(
+$('.no-touch #page-slide-international, .split-international').hover(
 	function(){ $('.split-international').css('width', '80vw') },
 	function(){ $('.split-international').css('width', '78vw') }
 );
-$('#page-slide-archive, .split-archive').hover(
+$('.no-touch #page-slide-archive, .split-archive').hover(
 	function(){ $('.split-archive').css('width', '105vw') },
 	function(){ $('.split-archive').css('width', '103vw') }
 );

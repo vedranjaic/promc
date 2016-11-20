@@ -351,7 +351,7 @@ a {
 	}
 	.page-intro & {
 		&-intro {
-			width: 100vw;
+			// width: 100vw;
 			background-color: rgba($black, 0.4);
 			@include breakpoint(md) {
 				width: 0;
@@ -378,6 +378,12 @@ a {
 		.split-archive {
 			@include breakpoint(md) {
 				width: 103vw;
+			}
+		}
+		.split-uvod {
+			width: 100vw;
+			@include breakpoint(sm) {
+				width: 0;
 			}
 		}
 	}
