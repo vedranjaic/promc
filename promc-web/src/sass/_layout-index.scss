@@ -220,10 +220,11 @@
 	}
 	.client-logos {
 		@include clearfix;
-		.client-logo {
+		.client-logo-set {
 			width: 50%;
 			float: left;
 			padding: 1px;
+			position: relative;
 			@include breakpoint(sm) {
 				width: 33.33%
 			}
@@ -233,27 +234,77 @@
 			@include breakpoint(md) {
 				width: 33%;
 			}
-			// Carousel
-			// .carousel-inner {
-			// 	-webkit-transform: skew(-12deg);
-			// 	-moz-transform: skew(-12deg);
-			// 	-o-transform: skew(-12deg);
-			// }
+			&:nth-of-type(odd) {
+				.item {
+					.logo-client {
+						&:nth-of-type(1){
+							animation-delay: 3s;
+						}
+						&:nth-of-type(2){
+							animation-delay: 8s;
+						}
+					}
+				}
+			}
 			.item {
-				// position: relative;
 				background-color: rgba($white, 0.3);
-				height: 180px;
+				width: 100%;
+				height: 90px;
+				@include breakpoint(sm) {
+					height: 140px;
+				}
+				@include breakpoint(md) {
+					height: 180px;
+				}
 				.logo-client {
+					@include transition;
 					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-					max-height: 70px;
-					max-width: 200px;
+					display: block;
+					width: 100%;
+					height: 100%;
+					opacity: 0;
+					overflow: hidden;
+					backface-visibility: hidden;
+					animation-name: clients-grid;
+					animation-duration: 10s;
+					animation-timing-function: linear;
+					animation-iteration-count: infinite;
+					img {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						max-height: 40px;
+						max-width: 100px;
+						transform: translate(-50%, -50%);
+						@include breakpoint(sm) {
+							max-height: 50px;
+							max-width: 150px;
+						}
+						@include breakpoint(md) {
+							max-height: 70px;
+							max-width: 200px;
+						}
+					}
+					&:nth-of-type(1){
+						animation-delay: 0s;
+					}
+					&:nth-of-type(2){
+						animation-delay: 5s;
+					}
 				}
 			}
 		}
 	}
+}
+
+@keyframes clients-grid {
+	0%{opacity:0; z-index:10;}
+	5%{opacity:1;}
+	
+	45%{opacity:1;}
+	50%{opacity:0; z-index:0;}
+	
+	100%{opacity:0;}
 }
 
 // About us
@@ -266,21 +317,36 @@
 
 // Contact
 .page-contact {
-	height: 100vh;
+	@include breakpoint(sm) {
+		height: 100vh;
+	}
+	.page-content {
+		padding-bottom: 150px;
+		@include breakpoint(md) {
+			padding-bottom: 0;
+		}
+	}
 	.facebook-card {
 		@include clearfix;
-		width: 90%;
 		position: absolute;
+		z-index: 2;
+		width: 90%;
 		right: 0;
 		bottom: 5%;
 		background-color: $social-facebook;
+		@include breakpoint(md) {
+			z-index: 0;
+		}
 		.icon {
 			float: left;
 			margin-left: -60px;
 			width: 120px;
 		}
 		.facebook-body {
-			padding-left: 80px;
+			padding-left: 0;
+			@include breakpoint(sm) {
+				padding-left: 80px;
+			}
 		}
 		.btn-facebook {
 			position: relative;

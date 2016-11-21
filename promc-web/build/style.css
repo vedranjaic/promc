@@ -8508,41 +8508,140 @@ a {
 .page-clients .client-logos:after {
   clear: both;
 }
-.page-clients .client-logos .client-logo {
+.page-clients .client-logos .client-logo-set {
   width: 50%;
   float: left;
   padding: 1px;
+  position: relative;
 }
 @media (min-width: 768px) {
-  .page-clients .client-logos .client-logo {
+  .page-clients .client-logos .client-logo-set {
     width: 33.33%;
   }
 }
 @media (min-width: 992px) {
-  .page-clients .client-logos .client-logo {
+  .page-clients .client-logos .client-logo-set {
     width: 50%;
   }
 }
 @media (min-width: 992px) {
-  .page-clients .client-logos .client-logo {
+  .page-clients .client-logos .client-logo-set {
     width: 33%;
   }
 }
-.page-clients .client-logos .client-logo .item {
-  background-color: rgba(255, 255, 255, 0.3);
-  height: 180px;
+.page-clients .client-logos .client-logo-set:nth-of-type(odd) .item .logo-client:nth-of-type(1) {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
 }
-.page-clients .client-logos .client-logo .item .logo-client {
+.page-clients .client-logos .client-logo-set:nth-of-type(odd) .item .logo-client:nth-of-type(2) {
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+}
+.page-clients .client-logos .client-logo-set .item {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 90px;
+}
+@media (min-width: 768px) {
+  .page-clients .client-logos .client-logo-set .item {
+    height: 140px;
+  }
+}
+@media (min-width: 992px) {
+  .page-clients .client-logos .client-logo-set .item {
+    height: 180px;
+  }
+}
+.page-clients .client-logos .client-logo-set .item .logo-client {
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation-name: clients-grid;
+  animation-name: clients-grid;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.page-clients .client-logos .client-logo-set .item .logo-client img {
   position: absolute;
   top: 50%;
   left: 50%;
+  max-height: 40px;
+  max-width: 100px;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  max-height: 70px;
-  max-width: 200px;
+}
+@media (min-width: 768px) {
+  .page-clients .client-logos .client-logo-set .item .logo-client img {
+    max-height: 50px;
+    max-width: 150px;
+  }
+}
+@media (min-width: 992px) {
+  .page-clients .client-logos .client-logo-set .item .logo-client img {
+    max-height: 70px;
+    max-width: 200px;
+  }
+}
+.page-clients .client-logos .client-logo-set .item .logo-client:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.page-clients .client-logos .client-logo-set .item .logo-client:nth-of-type(2) {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
 }
 
+@-webkit-keyframes clients-grid {
+  0% {
+    opacity: 0;
+    z-index: 10;
+  }
+  5% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    z-index: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes clients-grid {
+  0% {
+    opacity: 0;
+    z-index: 10;
+  }
+  5% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    z-index: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .page-media-image {
   position: absolute;
   top: 0;
@@ -8550,12 +8649,23 @@ a {
   width: 100%;
 }
 
-.page-contact {
-  height: 100vh;
+@media (min-width: 768px) {
+  .page-contact {
+    height: 100vh;
+  }
+}
+.page-contact .page-content {
+  padding-bottom: 150px;
+}
+@media (min-width: 992px) {
+  .page-contact .page-content {
+    padding-bottom: 0;
+  }
 }
 .page-contact .facebook-card {
-  width: 90%;
   position: absolute;
+  z-index: 2;
+  width: 90%;
   right: 0;
   bottom: 5%;
   background-color: #346da6;
@@ -8567,13 +8677,23 @@ a {
 .page-contact .facebook-card:after {
   clear: both;
 }
+@media (min-width: 992px) {
+  .page-contact .facebook-card {
+    z-index: 0;
+  }
+}
 .page-contact .facebook-card .icon {
   float: left;
   margin-left: -60px;
   width: 120px;
 }
 .page-contact .facebook-card .facebook-body {
-  padding-left: 80px;
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  .page-contact .facebook-card .facebook-body {
+    padding-left: 80px;
+  }
 }
 .page-contact .facebook-card .btn-facebook {
   position: relative;
