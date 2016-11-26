@@ -1,23 +1,17 @@
-<form action="#" id="form-archive" name="Skladištenje arhive">
-	
+<form action="#" id="form-archive" name="Skladištenje arhive" novalidate>
+
 	<div class="form-section form-section-contact row">
-		<div class="form-group col-sm-6">
+		<div class="form-group col-sm-4">
 			<label for="promc-archive-name" class="control-label">Ime i prezime: <sup class="required"></sup></label>
 			<input name="Ime i prezime" type="text" class="form-control" id="promc-archive-name" placeholder="Ime prezime">
 		</div>
-		<div class="form-group col-sm-6">
+		<div class="form-group col-sm-4">
 			<label for="promc-archive-email" class="control-label">E-mail adresa: <sup class="required"></sup></label>
 			<input name="E-mail adresa" type="email" class="form-control" id="promc-archive-email" placeholder="email@adresa.hr">
 		</div>
-		<div class="form-group col-sm-4 hidden form-group-number">
+		<div class="form-group col-sm-4 form-group-number">
 			<label for="promc-archive-number" class="control-label">Kontakt broj: <sup class="prefer-call required"></sup></label>
 			<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-archive-number">
-		</div>
-		<div class="col-sm-4">
-			<div class="checkbox">
-				<input name="Preferiram poziv" id="promc-archive-prefer-call" class="prefer-call" type="checkbox">
-				<label for="promc-archive-prefer-call">Preferiram poziv</label>
-			</div>
 		</div>
 	</div>
 	<!-- /.form-section -->
@@ -32,7 +26,7 @@
 			</div>
 		</div>
 		<div class="form-actions col-sm-12">
-			<div class="loading">
+			<div class="loading hidden">
 				<i class="spin large"></i> <span>Molimo pričekajte...</span>
 			</div>
 			<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>

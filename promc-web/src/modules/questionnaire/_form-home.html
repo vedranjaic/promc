@@ -1,23 +1,17 @@
-<form action="#" id="form-home" name="Preseljenje stana/kuće">
-	
+<form action="#" id="form-home" name="Preseljenje stana/kuće" novalidate>
+
 	<div class="form-section form-section-contact row">
-		<div class="form-group col-sm-6">
+		<div class="form-group col-sm-4">
 			<label for="promc-home-name" class="control-label">Ime i prezime: <sup class="required"></sup></label>
 			<input name="Ime i prezime" type="text" class="form-control" id="promc-home-name" placeholder="Ime prezime">
 		</div>
-		<div class="form-group col-sm-6">
+		<div class="form-group col-sm-4">
 			<label for="promc-home-email" class="control-label">E-mail adresa: <sup class="required"></sup></label>
 			<input name="E-mail adresa" type="email" class="form-control" id="promc-home-email" placeholder="email@adresa.hr">
 		</div>
-		<div class="form-group col-sm-4 hidden form-group-number">
+		<div class="form-group col-sm-4 form-group-number">
 			<label for="promc-home-number" class="control-label">Kontakt broj: <sup class="prefer-call required"></sup></label>
 			<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-home-number">
-		</div>
-		<div class="col-sm-4">
-			<div class="checkbox">
-				<input name="Preferiram poziv" id="promc-home-prefer-call" class="prefer-call" type="checkbox">
-				<label for="promc-home-prefer-call">Preferiram poziv</label>
-			</div>
 		</div>
 	</div>
 	<!-- /.form-section -->
@@ -55,7 +49,7 @@
 	<!-- /.form-section -->
 
 	<div class="form-actions clearfix">
-		<div class="loading">
+		<div class="loading hidden">
 			<i class="spin large"></i> <span>Molimo pričekajte...</span>
 		</div>
 		<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
