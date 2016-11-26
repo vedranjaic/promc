@@ -234,15 +234,63 @@
 			@include breakpoint(md) {
 				width: 33%;
 			}
-			&:nth-of-type(odd) {
-				.item {
-					.logo-client {
-						&:nth-of-type(1){
-							animation-delay: 3s;
-						}
-						&:nth-of-type(2){
-							animation-delay: 8s;
-						}
+			&:nth-of-type(1) {
+				.logo-client {
+					&:nth-of-type(1){
+						animation-delay: 3s;
+					}
+					&:nth-of-type(2){
+						animation-delay: 13s;
+					}
+				}
+			}
+			&:nth-of-type(2) {
+				.logo-client {
+					&:nth-of-type(1){
+						animation-delay: 1s;
+					}
+					&:nth-of-type(2){
+						animation-delay: 11s;
+					}
+				}
+			}
+			&:nth-of-type(3) {
+				.logo-client {
+					&:nth-of-type(1){
+						animation-delay: 5s;
+					}
+					&:nth-of-type(2){
+						animation-delay: 15s;
+					}
+				}
+			}
+			&:nth-of-type(4) {
+				.logo-client {
+					&:nth-of-type(1){
+						animation-delay: 2s;
+					}
+					&:nth-of-type(2){
+						animation-delay: 12s;
+					}
+				}
+			}
+			&:nth-of-type(5) {
+				.logo-client {
+					&:nth-of-type(1){
+						animation-delay: 0s;
+					}
+					&:nth-of-type(2){
+						animation-delay: 10s;
+					}
+				}
+			}
+			&:nth-of-type(6) {
+				.logo-client {
+					&:nth-of-type(1){
+						animation-delay: 4s;
+					}
+					&:nth-of-type(2){
+						animation-delay: 14s;
 					}
 				}
 			}
@@ -266,7 +314,7 @@
 					overflow: hidden;
 					backface-visibility: hidden;
 					animation-name: clients-grid;
-					animation-duration: 10s;
+					animation-duration: 20s;
 					animation-timing-function: linear;
 					animation-iteration-count: infinite;
 					img {
@@ -285,12 +333,12 @@
 							max-width: 200px;
 						}
 					}
-					&:nth-of-type(1){
-						animation-delay: 0s;
-					}
-					&:nth-of-type(2){
-						animation-delay: 5s;
-					}
+					// &:nth-of-type(1){
+					// 	animation-delay: 0s;
+					// }
+					// &:nth-of-type(2){
+					// 	animation-delay: 5s;
+					// }
 				}
 			}
 		}
@@ -308,6 +356,42 @@
 }
 
 // About us
+.page-about-us {
+	.progress-number,
+	.progress-title {
+		text-align: center;
+		@include breakpoint(sm) {
+			text-align: left;
+		}
+	}
+	.progress-number {
+		font-weight: bold;
+		font-size: 4em;
+		line-height: 0.7em;
+		margin-top: 0;
+		@include breakpoint(sm) {
+			font-size: 6em;
+		}
+	}
+	.progress-title {
+		font-size: 1.6em;
+		@include breakpoint(sm) {
+			font-size: 2em;
+		}
+	}
+	// Progress office
+	.progress-office {
+		margin-bottom: 2em;
+		@include breakpoint(sm) {
+			.progress-number,
+			.progress-title {
+				padding-right: 40px;
+				text-align: right;
+			}
+		}
+	}
+}
+
 .page-media-image {
 	position: absolute;
 	top: 0;
@@ -326,10 +410,46 @@
 			padding-bottom: 0;
 		}
 	}
+	// Phone
+	.contact-phone,
+	.contact-linkedin {
+		font-size: 1.7em;
+		margin-bottom: 0.3em;
+		display: block;
+		@include breakpoint(sm) {
+			margin-bottom: 0.7em;
+		}
+		@include breakpoint(md) {
+			margin-bottom: 1em;
+		}
+		.icon {
+			margin-right: 3px;
+		}
+	}
+	// Linkedin
+	.contact-linkedin {
+		.fa-linkedin-square {
+			color: $social-linkedin;
+			font-size: 1.1em;
+			@include breakpoint(sm) {
+				font-size: 1.2em;
+			}
+		}
+		.fa-square {
+			font-size: 0.9em;
+			color: $white;
+		}
+	}
+	.fa-stack {
+		width: 1em;
+		height: 1em;
+		line-height: 0.8em;
+	}
+	// Facebook
 	.facebook-card {
 		@include clearfix;
 		position: absolute;
-		z-index: 2;
+		z-index: 11;
 		width: 90%;
 		right: 0;
 		bottom: 5%;
@@ -346,6 +466,13 @@
 			padding-left: 0;
 			@include breakpoint(sm) {
 				padding-left: 80px;
+			}
+			.facebook-title {
+				font-size: 26px;
+				line-height: 1.1em;
+				@include breakpoint(sm) {
+					font-size: 32px;
+				}
 			}
 		}
 		.btn-facebook {

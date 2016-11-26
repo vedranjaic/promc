@@ -16,6 +16,12 @@ h1, .h1 {
 
 a {
 	color: $white;
+	&:hover,
+	&:focus,
+	&:active {
+		color: inherit;
+		text-decoration: none;
+	}
 }
 .lead {
 	margin-bottom: 10px;

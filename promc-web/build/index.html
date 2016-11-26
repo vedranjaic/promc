@@ -53,7 +53,7 @@
 							<span class="visible-xs-inline">Uvod</span>
 						</a>
 					</li>
-					<li id="nav-selidbe"><a href="#selidbe" class="scroll-to">Selidbe i skladištenje</a></li>
+					<li id="nav-selidbe"><a href="#selidbe" class="scroll-to">Usluge</a></li>
 					<li id="nav-klijenti"><a href="#klijenti" class="scroll-to">Klijenti</a></li>
 					<li id="nav-o-nama"><a href="#o-nama" class="scroll-to">O nama</a></li>
 					<li id="nav-kontakt"><a href="#kontakt" class="scroll-to">Kontakt</a></li>
@@ -629,7 +629,21 @@
 				<p>Slijedom toga, naša je misija da kontinuirano radimo na provedbi logističkih rješenja kroz preseljenja, dostave i skladištenja, služeći se specijaliziranom opremom te vodeći brigu o propisanim standardima i unutar dogovorenog roka – što je apsolutni imperativ.</p>
 			</div>
 			<!-- /.page-text -->
-			<div class="page-media col-md-7"></div>
+			<div class="page-media col-md-7">
+				<div class="row">
+					<div class="progress-office col-sm-6">
+						<h1 class="progress-number" id="progress-office">0</h1>
+						<p class="progress-title">Preseljenih ureda</p>
+					</div>
+					<!-- /.progress-office -->
+					<div class="progress-home col-sm-6">
+						<h1 class="progress-number" id="progress-home">0</h1>
+						<p class="progress-title">Preseljenih stanova</p>
+					</div>
+					<!-- /.progress-home -->
+				</div>
+				<!-- /.row -->
+			</div>
 			<!-- /.page-media -->
 		</div>
 		<!-- /.page-content -->
@@ -660,11 +674,11 @@
 			<div class="page-media col-md-7"></div>
 			<!-- /.page-media -->
 			<div class="page-text col-md-5">
+				<span class="contact-phone"><i class="icon fa fa-phone-square"></i> +385 1 6264 217</span><br>
 				<address>
 					<strong>Pro Moving Company d.o.o.</strong><br>
 					Družice 12<br>
 					Zagreb 10000, Hrvatska EU<br>
-					<abbr title="Phone">T:</abbr> +385 1 6264 217<br>
 					<abbr title="Mobile">M:</abbr> +385 99 750 1801<br>
 					<abbr title="Mobile">M:</abbr> +385 99 750 1603<br>
 					<abbr title="Email">E:</abbr> <a href="mailto:info@promc.hr">info@promc.hr</a><br><br>
@@ -674,6 +688,12 @@
 					<abbr title="IBAN">IBAN:</abbr> HR2423600001102185815<br>
 					<abbr title="SWIFT">SWIFT:</abbr> ESBCHR22
 				</address>
+				<a href="#" target="_blank" class="contact-linkedin">
+					<span class="icon fa-stack">
+					  <i class="fa fa-square fa-stack-1x"></i>
+					  <i class="fa fa-linkedin-square fa-stack-1x"></i>
+					</span> Linkedin
+				</a>
 			</div>
 			<!-- /.page-text -->
 		</div>
@@ -690,7 +710,7 @@
 				<img class="icon" src="assets/images/icons/facebook.svg" alt="Facebook">
 			</a>
 			<div class="facebook-body">
-				<h2>Posjetite nas na Facebooku</h2>
+				<h2 class="facebook-title">Posjetite nas na Facebooku</h2>
 				<a class="lead btn-facebook" href="https://www.facebook.com/promovingcompany" target="_blank">
 					fb.com/PROMovingCompany
 				</a>
@@ -714,6 +734,7 @@
 	<script src="assets/js/vendors/TweenMax.min.js"></script>
 	<script src="assets/js/vendors/plugins/animation.gsap.min.js"></script>
 	<script src="assets/js/vendors/ScrollToPlugin.min.js"></script>
+	<script src="assets/js/vendors/jquery.animateNumber.min.js"></script>
 	<script src="assets/js/app.js"></script>
 
 </body>
