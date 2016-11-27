@@ -170,6 +170,20 @@ new ScrollMagic.Scene({triggerElement: "#kontakt", duration: getDuration})
 	.addTo(controller);
 
 
+// --- [ ABOUT US COUNTER ]
+var scene = new ScrollMagic.Scene({triggerElement: "#o-nama", duration: 200})
+	.addTo(controller)
+	.on("enter", function () {
+		$('#progress-office').animateNumber({
+				number: 3645,
+				easing: 'easeInQuad'
+			}, 1500);
+		$('#progress-home').animateNumber({
+				number: 1789,
+				easing: 'easeInQuad'
+			}, 1500);
+	});
+
 
 // --- [ Intro page splits ]
 $('.no-touch #page-slide-office, .split-office').hover(
@@ -232,12 +246,6 @@ $('.carousel-slides').carousel({
 
 
 // --- [ Clients ]
-$('#carousel-clients-1').carousel({interval: 13000});
-$('#carousel-clients-2').carousel({interval: 7000});
-$('#carousel-clients-3').carousel({interval: 11000});
-$('#carousel-clients-4').carousel({interval: 3000});
-$('#carousel-clients-5').carousel({interval: 9000});
-$('#carousel-clients-6').carousel({interval: 5000});
 
 
 
@@ -271,3 +279,9 @@ $(".form-section-toggle, .page-text-collapse").on("click", function() {
 		return $(".navbar-toggle").toggleClass("cross");
 	});
 }).call(this);
+
+// --- [ Menu close on chosen section ]
+$(".scroll-to").click(function() {
+	$('#navbar-main-collapse').collapse('hide')
+	return $(".navbar-toggle").toggleClass("cross");
+});
