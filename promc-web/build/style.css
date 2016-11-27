@@ -7579,11 +7579,12 @@ a:hover, a:focus, a:active {
   margin-bottom: 0;
   border: 0;
   border-radius: 0;
-  padding-left: 28px;
+  padding-left: 1.5em;
 }
 @media (min-width: 768px) {
   .alert {
     margin: -2em -2em 1em -2em;
+    padding-left: 2em;
   }
 }
 .alert-danger {
