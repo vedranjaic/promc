@@ -75,7 +75,22 @@ $("[id^='form-']").submit(function(event) {
                        {token: "a4c57989-f03c-4300-9a78-3a3b408d17ca"}),
       jsonpCallback: function() {
         loading.addClass("hidden");
-        // form.remove(); // vidjet sta se tu doda a sta mice
+        form.addClass("hidden");
+        form.next().removeClass("hidden");
+
+        // send mail to customer
+        $.ajax({
+          dataType: "jsonp",
+          url: createEmail("info@promc.hr",
+                           formData[1].value,
+                           $(this).attr("name"),
+                           dataString,
+                           {token: "a4c57989-f03c-4300-9a78-3a3b408d17ca"}),
+          jsonpCallback: function() {
+            return "OK";
+          }
+        });
+
         return "OK";
       }
     });
@@ -95,6 +110,11 @@ function showAlertDismissible(show, errorTarget) {
     errorTarget.addClass("hidden");
   }
 }
+
+$(".btn-send-another").on("click", function(e) {
+  $(e.currentTarget).parent().parent().addClass("hidden"); // thank you message
+  $(e.currentTarget).parent().parent().prev().removeClass("hidden"); // form
+});
 
 // --- [ SCROLL TO TOP ]
 // init controller
