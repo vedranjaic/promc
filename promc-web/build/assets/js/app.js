@@ -43,7 +43,6 @@ $("[id^='form-']").submit(function(event) {
   }
 
   var number = $(this).find("[id$='-number']");
-  console.log(number[0].validity);
   if ($.trim(number.val()) === "" || number[0].validity.patternMismatch) {
     validationUnsuccessful = true;
     number.parent().addClass("has-error");
@@ -52,9 +51,9 @@ $("[id^='form-']").submit(function(event) {
   }
 
   if (validationUnsuccessful) {
-    showAlertDismissible(true);
+    showAlertDismissible(true, form.find(".alert.alert-danger.alert-dismissible"));
   } else {
-    showAlertDismissible(false);
+    showAlertDismissible(false, form.find(".alert.alert-danger.alert-dismissible"));
 
     var loading = form.find('.loading');
     loading.removeClass("hidden");
@@ -85,17 +84,15 @@ $("[id^='form-']").submit(function(event) {
   event.preventDefault();
 });
 
-// maknut 'data-dismiss="alert"' za alert
-// trenutno je jedan alert
-$(".alert.alert-danger.alert-dismissible .close").on("click", function() {
-  showAlertDismissible(false);
+$(".alert.alert-danger.alert-dismissible .close").on("click", function(e) {
+  showAlertDismissible(false, $(e.currentTarget).parent());
 });
 
-function showAlertDismissible(show) {
+function showAlertDismissible(show, errorTarget) {
   if (show) {
-    $(".alert.alert-danger.alert-dismissible").removeClass("hidden");
+    errorTarget.removeClass("hidden");
   } else {
-    $(".alert.alert-danger.alert-dismissible").addClass("hidden");
+    errorTarget.addClass("hidden");
   }
 }
 
