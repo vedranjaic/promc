@@ -34,10 +34,15 @@ a {
 
 // Alerts
 .alert {
+	@include transition;
+	margin: -1.5em -1.5em 1.5em -1.5em;
 	margin-bottom: 0;
 	border: 0;
 	border-radius: 0;
 	padding-left: 28px;
+	@include breakpoint(sm) {
+		margin: -2em -2em 1em -2em;
+	}
 	&-danger {
 		background-color: lighten($brand-red, 30%);
 	}

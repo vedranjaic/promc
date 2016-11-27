@@ -1,3 +1,104 @@
+/* SmtpJS.com */
+function createEmail(t, e, o, n, d, r, c) {
+  var a = Math.floor(1e6 * Math.random() + 1);
+  var m = "http://smtpjs.com/smtp.aspx?";
+  m += "From=" + t;
+  m += "&to=" + e;
+  m += "&Subject=" + encodeURIComponent(o);
+  m += "&Body=" + encodeURIComponent(n);
+
+  if (void 0 == d.token) {
+    m += "&Host=" + d;
+    m += "&Username=" + r;
+    m += "&Password=" + c;
+    m += "&Action=Send";
+  } else {
+		m += "&SecureToken=" + d.token;
+		m += "&Action=SendFromStored";
+	}
+
+  m += "&cachebuster=" + a;
+  return m;
+};
+
+// dodat na tag form novalidate
+$("[id^='form-']").submit(function(event) {
+  var form = $(this);
+  var validationUnsuccessful = false;
+
+  var name = $(this).find("[id$='-name']");
+  if ($.trim(name.val()) === "") {
+    validationUnsuccessful = true;
+    name.parent().addClass("has-error");
+  } else if ($.trim(name.val()) !== "") {
+    name.parent().removeClass("has-error");
+  }
+
+  var email = $(this).find("[id$='-email']");
+  if ($.trim(email.val()) === "" || email[0].validity.typeMismatch) {
+    validationUnsuccessful = true;
+    email.parent().addClass("has-error");
+  } else if ($.trim(email.val()) !== "") {
+    email.parent().removeClass("has-error");
+  }
+
+  var number = $(this).find("[id$='-number']");
+  console.log(number[0].validity);
+  if ($.trim(number.val()) === "" || number[0].validity.patternMismatch) {
+    validationUnsuccessful = true;
+    number.parent().addClass("has-error");
+  } else if ($.trim(number.val()) !== "") {
+    number.parent().removeClass("has-error");
+  }
+
+  if (validationUnsuccessful) {
+    showAlertDismissible(true);
+  } else {
+    showAlertDismissible(false);
+
+    var loading = form.find('.loading');
+    loading.removeClass("hidden");
+
+    var formData = $(this).serializeArray();
+    // console.log(formData);
+
+    var dataString = "";
+    $(formData).each(function(index, obj){
+      dataString += obj.name + ": " + obj.value + "\n";
+    });
+
+    $.ajax({
+      dataType: "jsonp",
+      url: createEmail("info@promc.hr",
+                       "info@promc.hr",
+                       $(this).attr("name"),
+                       dataString,
+                       {token: "a4c57989-f03c-4300-9a78-3a3b408d17ca"}),
+      jsonpCallback: function() {
+        loading.addClass("hidden");
+        // form.remove(); // vidjet sta se tu doda a sta mice
+        return "OK";
+      }
+    });
+  }
+
+  event.preventDefault();
+});
+
+// maknut 'data-dismiss="alert"' za alert
+// trenutno je jedan alert
+$(".alert.alert-danger.alert-dismissible .close").on("click", function() {
+  showAlertDismissible(false);
+});
+
+function showAlertDismissible(show) {
+  if (show) {
+    $(".alert.alert-danger.alert-dismissible").removeClass("hidden");
+  } else {
+    $(".alert.alert-danger.alert-dismissible").addClass("hidden");
+  }
+}
+
 // --- [ SCROLL TO TOP ]
 // init controller
 var controller = new ScrollMagic.Controller();
@@ -5,8 +106,8 @@ var controller = new ScrollMagic.Controller();
 var tween = TweenMax.from("#animate", 0.5, {autoAlpha: 0, scale: 0.7});
 // build scene
 var scene = new ScrollMagic.Scene({
-	triggerElement: "a#top", 
-	duration: 200, 
+	triggerElement: "a#top",
+	duration: 200,
 	triggerHook: "onLeave"
 })
 .setTween(tween)
@@ -82,7 +183,7 @@ var scene = new ScrollMagic.Scene({triggerElement: "#o-nama", duration: 200})
 				easing: 'easeInQuad'
 			}, 1500);
 	});
-					
+
 
 // --- [ Intro page splits ]
 $('.no-touch #page-slide-office, .split-office').hover(
@@ -149,15 +250,16 @@ $('.carousel-slides').carousel({
 
 
 // --- [ Questionnaire ]
-$('.prefer-call:checkbox').change(function(){
-	if($(this).is(":checked")) {
-		$('.form-section-contact .form-group-number').removeClass("hidden");
-		$('.form-section-contact .form-group.col-sm-6').removeClass('col-sm-6').addClass('col-sm-4');
-	} else {
-		$('.form-section-contact .form-group-number').addClass("hidden");
-		$('.form-section-contact .form-group.col-sm-4').removeClass('col-sm-4').addClass('col-sm-6');
-	}
-});
+// $('.prefer-call:checkbox').change(function(){
+//   // MOZE SE MAKNUT OVO
+// 	if($(this).is(":checked")) {
+// 		$('.form-section-contact .form-group-number').removeClass("hidden");
+// 		$('.form-section-contact .form-group.col-sm-6').removeClass('col-sm-6').addClass('col-sm-4');
+// 	} else {
+// 		$('.form-section-contact .form-group-number').addClass("hidden");
+// 		$('.form-section-contact .form-group.col-sm-4').removeClass('col-sm-4').addClass('col-sm-6');
+// 	}
+// });
 
 // --- [ Toggle more info ]
 $(".form-section-toggle, .page-text-collapse").on("click", function() {
@@ -177,6 +279,7 @@ $(".form-section-toggle, .page-text-collapse").on("click", function() {
 		return $(".navbar-toggle").toggleClass("cross");
 	});
 }).call(this);
+
 // --- [ Menu close on chosen section ]
 $(".scroll-to").click(function() {
 	$('#navbar-main-collapse').collapse('hide')

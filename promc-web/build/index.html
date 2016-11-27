@@ -245,36 +245,30 @@
 					</ul>
 	
 
-					<!-- ALERT -->
-					<div class="alert alert-danger alert-dismissible" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<strong><i class="icon fa fa-warning"></i> Obvezna polja!</strong> Za kontakt potrebno je popuniti polja s kontaktnim podacima.
-					</div>
-
-
 					<!-- Tab panes -->
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane active" id="tab-selidbe-ureda">
-							<form action="#" id="form-office" name="Preseljenje ureda">
-	
+							<form action="#" id="form-office" name="Preseljenje ureda" novalidate>
+
+								<!-- ALERT -->
+								<div class="alert alert-danger alert-dismissible hidden" role="alert">
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<strong><i class="icon fa fa-warning"></i> Obvezna polja!</strong> Za kontakt potrebno je popuniti polja s kontaktnim podacima.
+								</div>
+
+
 								<div class="form-section form-section-contact row">
-									<div class="form-group col-sm-6 has-error">
+									<div class="form-group col-sm-4">
 										<label for="promc-office-name" class="control-label">Kontakt osoba: <sup class="required"></sup></label>
 										<input name="Kontakt osoba" type="text" class="form-control" id="promc-office-name" placeholder="Ime prezime">
 									</div>
-									<div class="form-group col-sm-6 has-error">
+									<div class="form-group col-sm-4">
 										<label for="promc-office-email" class="control-label">E-mail adresa: <sup class="required"></sup></label>
 										<input name="E-mail adresa" type="email" class="form-control" id="promc-office-email" placeholder="email@adresa.hr">
 									</div>
-									<div class="form-group col-sm-4 has-error hidden form-group-number">
+									<div class="form-group col-sm-4 form-group-number">
 										<label for="promc-office-number" class="control-label">Kontakt broj: <sup class="prefer-call required"></sup></label>
 										<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-office-number">
-									</div>
-									<div class="col-sm-4">
-										<div class="checkbox">
-											<input name="Preferiram poziv" id="promc-office-prefer-call" class="prefer-call" type="checkbox">
-											<label for="promc-office-prefer-call">Preferiram poziv</label>
-										</div>
 									</div>
 								</div>
 								<!-- /.form-section -->
@@ -312,7 +306,7 @@
 								<!-- /.form-section -->
 
 								<div class="form-actions clearfix">
-									<div class="loading">
+									<div class="loading hidden">
 										<i class="spin large"></i> <span>Molimo pričekajte...</span>
 									</div>
 									<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
@@ -320,28 +314,30 @@
 
 
 							</form>
+
 						</div>
 						<div role="tabpanel" class="tab-pane" id="tab-selidbe-stana">
-							<form action="#" id="form-home" name="Preseljenje stana/kuće">
-	
+							<form action="#" id="form-home" name="Preseljenje stana/kuće" novalidate>
+
+								<!-- ALERT -->
+								<div class="alert alert-danger alert-dismissible hidden" role="alert">
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<strong><i class="icon fa fa-warning"></i> Obvezna polja!</strong> Za kontakt potrebno je popuniti polja s kontaktnim podacima.
+								</div>
+
+
 								<div class="form-section form-section-contact row">
-									<div class="form-group col-sm-6">
+									<div class="form-group col-sm-4">
 										<label for="promc-home-name" class="control-label">Ime i prezime: <sup class="required"></sup></label>
 										<input name="Ime i prezime" type="text" class="form-control" id="promc-home-name" placeholder="Ime prezime">
 									</div>
-									<div class="form-group col-sm-6">
+									<div class="form-group col-sm-4">
 										<label for="promc-home-email" class="control-label">E-mail adresa: <sup class="required"></sup></label>
 										<input name="E-mail adresa" type="email" class="form-control" id="promc-home-email" placeholder="email@adresa.hr">
 									</div>
-									<div class="form-group col-sm-4 hidden form-group-number">
+									<div class="form-group col-sm-4 form-group-number">
 										<label for="promc-home-number" class="control-label">Kontakt broj: <sup class="prefer-call required"></sup></label>
 										<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-home-number">
-									</div>
-									<div class="col-sm-4">
-										<div class="checkbox">
-											<input name="Preferiram poziv" id="promc-home-prefer-call" class="prefer-call" type="checkbox">
-											<label for="promc-home-prefer-call">Preferiram poziv</label>
-										</div>
 									</div>
 								</div>
 								<!-- /.form-section -->
@@ -379,7 +375,7 @@
 								<!-- /.form-section -->
 
 								<div class="form-actions clearfix">
-									<div class="loading">
+									<div class="loading hidden">
 										<i class="spin large"></i> <span>Molimo pričekajte...</span>
 									</div>
 									<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
@@ -387,28 +383,30 @@
 
 
 							</form>
+
 						</div>
 						<div role="tabpanel" class="tab-pane" id="tab-selidbe-medjunarodno">
-							<form action="#" id="form-international" name="Međunarodna selidba">
-	
+							<form action="#" id="form-international" name="Međunarodna selidba" novalidate>
+
+								<!-- ALERT -->
+								<div class="alert alert-danger alert-dismissible hidden" role="alert">
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<strong><i class="icon fa fa-warning"></i> Obvezna polja!</strong> Za kontakt potrebno je popuniti polja s kontaktnim podacima.
+								</div>
+
+
 								<div class="form-section form-section-contact row">
-									<div class="form-group col-sm-6">
+									<div class="form-group col-sm-4">
 										<label for="promc-international-name">Ime i prezime: <sup class="required"></sup></label>
 										<input name="Ime i prezime" type="text" class="form-control" id="promc-international-name" placeholder="Ime prezime">
 									</div>
-									<div class="form-group col-sm-6">
+									<div class="form-group col-sm-4">
 										<label for="promc-international-email">E-mail adresa: <sup class="required"></sup></label>
 										<input name="E-mail adresa" type="email" class="form-control" id="promc-international-email" placeholder="email@adresa.hr">
 									</div>
-									<div class="form-group col-sm-4 hidden form-group-number">
+									<div class="form-group col-sm-4 form-group-number">
 										<label for="promc-international-number">Kontakt broj: <sup class="prefer-call required"></sup></label>
 										<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-international-number">
-									</div>
-									<div class="col-sm-4">
-										<div class="checkbox">
-											<input name="Preferiram poziv" id="promc-international-prefer-call" class="prefer-call" type="checkbox">
-											<label for="promc-international-prefer-call">Preferiram poziv</label>
-										</div>
 									</div>
 								</div>
 								<!-- /.form-section -->
@@ -446,7 +444,7 @@
 								<!-- /.form-section -->
 
 								<div class="form-actions clearfix">
-									<div class="loading">
+									<div class="loading hidden">
 										<i class="spin large"></i> <span>Molimo pričekajte...</span>
 									</div>
 									<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
@@ -454,28 +452,30 @@
 
 
 							</form>
+
 						</div>
 						<div role="tabpanel" class="tab-pane" id="tab-selidbe-skladistenje">
-							<form action="#" id="form-archive" name="Skladištenje arhive">
-	
+							<form action="#" id="form-archive" name="Skladištenje arhive" novalidate>
+
+								<!-- ALERT -->
+								<div class="alert alert-danger alert-dismissible hidden" role="alert">
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<strong><i class="icon fa fa-warning"></i> Obvezna polja!</strong> Za kontakt potrebno je popuniti polja s kontaktnim podacima.
+								</div>
+
+
 								<div class="form-section form-section-contact row">
-									<div class="form-group col-sm-6">
+									<div class="form-group col-sm-4">
 										<label for="promc-archive-name" class="control-label">Ime i prezime: <sup class="required"></sup></label>
 										<input name="Ime i prezime" type="text" class="form-control" id="promc-archive-name" placeholder="Ime prezime">
 									</div>
-									<div class="form-group col-sm-6">
+									<div class="form-group col-sm-4">
 										<label for="promc-archive-email" class="control-label">E-mail adresa: <sup class="required"></sup></label>
 										<input name="E-mail adresa" type="email" class="form-control" id="promc-archive-email" placeholder="email@adresa.hr">
 									</div>
-									<div class="form-group col-sm-4 hidden form-group-number">
+									<div class="form-group col-sm-4 form-group-number">
 										<label for="promc-archive-number" class="control-label">Kontakt broj: <sup class="prefer-call required"></sup></label>
 										<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-archive-number">
-									</div>
-									<div class="col-sm-4">
-										<div class="checkbox">
-											<input name="Preferiram poziv" id="promc-archive-prefer-call" class="prefer-call" type="checkbox">
-											<label for="promc-archive-prefer-call">Preferiram poziv</label>
-										</div>
 									</div>
 								</div>
 								<!-- /.form-section -->
@@ -490,7 +490,7 @@
 										</div>
 									</div>
 									<div class="form-actions col-sm-12">
-										<div class="loading">
+										<div class="loading hidden">
 											<i class="spin large"></i> <span>Molimo pričekajte...</span>
 										</div>
 										<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
@@ -500,6 +500,7 @@
 
 
 							</form>
+
 						</div>
 					</div>
 

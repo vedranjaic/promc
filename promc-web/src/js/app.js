@@ -250,16 +250,16 @@ $('.carousel-slides').carousel({
 
 
 // --- [ Questionnaire ]
-$('.prefer-call:checkbox').change(function(){
-  // MOZE SE MAKNUT OVO
-	if($(this).is(":checked")) {
-		$('.form-section-contact .form-group-number').removeClass("hidden");
-		$('.form-section-contact .form-group.col-sm-6').removeClass('col-sm-6').addClass('col-sm-4');
-	} else {
-		$('.form-section-contact .form-group-number').addClass("hidden");
-		$('.form-section-contact .form-group.col-sm-4').removeClass('col-sm-4').addClass('col-sm-6');
-	}
-});
+// $('.prefer-call:checkbox').change(function(){
+//   // MOZE SE MAKNUT OVO
+// 	if($(this).is(":checked")) {
+// 		$('.form-section-contact .form-group-number').removeClass("hidden");
+// 		$('.form-section-contact .form-group.col-sm-6').removeClass('col-sm-6').addClass('col-sm-4');
+// 	} else {
+// 		$('.form-section-contact .form-group-number').addClass("hidden");
+// 		$('.form-section-contact .form-group.col-sm-4').removeClass('col-sm-4').addClass('col-sm-6');
+// 	}
+// });
 
 // --- [ Toggle more info ]
 $(".form-section-toggle, .page-text-collapse").on("click", function() {
