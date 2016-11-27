@@ -204,6 +204,26 @@
 			}
 		}
 	}
+	// Thank you message
+	.thankyou-message {
+		@include clearfix;
+		color: $grey;
+		.thankyou-title {
+			margin-top: 0;
+		}
+		.lead {
+			font-size: 18px;
+		}
+		.btn-send-another {
+			display: block;
+			width: 100%;
+			text-transform: uppercase;
+			@include breakpoint(sm) {
+				width: auto;
+				display: inline-block;
+			}
+		}
+	}
 }
 
 // Clients
