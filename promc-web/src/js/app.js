@@ -70,7 +70,7 @@ $("[id^='form-']").submit(function(event) {
       dataType: "jsonp",
       url: createEmail("info@promc.hr",
                        "vedranjaic@icloud.com",
-                       $(this).attr("name"),
+                       form.attr("name"),
                        dataString,
                        {token: "a4c57989-f03c-4300-9a78-3a3b408d17ca"}),
       jsonpCallback: function() {
@@ -83,7 +83,7 @@ $("[id^='form-']").submit(function(event) {
           dataType: "jsonp",
           url: createEmail("info@promc.hr",
                            formData[1].value,
-                           $(this).attr("name"),
+                           form.attr("name"),
                            dataString,
                            {token: "a4c57989-f03c-4300-9a78-3a3b408d17ca"}),
           jsonpCallback: function() {
