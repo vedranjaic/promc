@@ -191,14 +191,22 @@ new ScrollMagic.Scene({triggerElement: "#kontakt", duration: getDuration})
 var scene = new ScrollMagic.Scene({triggerElement: "#o-nama", duration: 200})
 	.addTo(controller)
 	.on("enter", function () {
-		$('#progress-office').animateNumber({
-				number: 3645,
-				easing: 'easeInQuad'
-			}, 1500);
-		$('#progress-home').animateNumber({
-				number: 1789,
-				easing: 'easeInQuad'
-			}, 1500);
+		$('#progress-ormara').animateNumber({
+			number: 1576,
+			easing: 'easeInQuad'
+		}, 2500);
+		$('#progress-kutija').animateNumber({
+			number: 22164,
+			easing: 'easeInQuad'
+		}, 2500);
+		$('#progress-stolica').animateNumber({
+			number: 4725,
+			easing: 'easeInQuad'
+		}, 2500);
+		$('#progress-cvijeca').animateNumber({
+			number: 1092,
+			easing: 'easeInQuad'
+		}, 2500);
 	});
 
 

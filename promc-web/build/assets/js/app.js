@@ -69,8 +69,8 @@ $("[id^='form-']").submit(function(event) {
     $.ajax({
       dataType: "jsonp",
       url: createEmail("info@promc.hr",
-                       "vedranjaic@icloud.com",
-                       $(this).attr("name"),
+                       "info@promc.hr",
+                       form.attr("name"),
                        dataString,
                        {token: "a4c57989-f03c-4300-9a78-3a3b408d17ca"}),
       jsonpCallback: function() {
@@ -83,7 +83,7 @@ $("[id^='form-']").submit(function(event) {
           dataType: "jsonp",
           url: createEmail("info@promc.hr",
                            formData[1].value,
-                           $(this).attr("name"),
+                           form.attr("name"),
                            dataString,
                            {token: "a4c57989-f03c-4300-9a78-3a3b408d17ca"}),
           jsonpCallback: function() {
@@ -191,14 +191,22 @@ new ScrollMagic.Scene({triggerElement: "#kontakt", duration: getDuration})
 var scene = new ScrollMagic.Scene({triggerElement: "#o-nama", duration: 200})
 	.addTo(controller)
 	.on("enter", function () {
-		$('#progress-office').animateNumber({
-				number: 3645,
-				easing: 'easeInQuad'
-			}, 1500);
-		$('#progress-home').animateNumber({
-				number: 1789,
-				easing: 'easeInQuad'
-			}, 1500);
+		$('#progress-ormara').animateNumber({
+			number: 1576,
+			easing: 'easeInQuad'
+		}, 2500);
+		$('#progress-kutija').animateNumber({
+			number: 22164,
+			easing: 'easeInQuad'
+		}, 2500);
+		$('#progress-stolica').animateNumber({
+			number: 4725,
+			easing: 'easeInQuad'
+		}, 2500);
+		$('#progress-cvijeca').animateNumber({
+			number: 1092,
+			easing: 'easeInQuad'
+		}, 2500);
 	});
 
 
