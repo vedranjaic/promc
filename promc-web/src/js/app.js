@@ -116,6 +116,13 @@ $(".btn-send-another").on("click", function(e) {
   $(e.currentTarget).parent().parent().prev().removeClass("hidden"); // form
 });
 
+
+
+// --- [ l10n.js ]
+var l = function (string) {
+	return string.toLocaleString();
+};
+
 // --- [ SCROLL TO TOP ]
 // init controller
 var controller = new ScrollMagic.Controller();

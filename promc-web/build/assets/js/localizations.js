@@ -1,13 +1,140 @@
 String.toLocaleString({
 	"en": {
 		"%title": "PRO Moving Company | Profesional movers",
-		"%info": "TODO",
+		"%info": "Međunarodna selidba ureda i arhive - Specijalisti za korporativne selidbe",
 		"nav": {
 			"%intro": "Intro",
 			"%services": "Services",
 			"%clients": "Clients",
 			"%aboutus": "About us",
 			"%contact": "Contact"
+		},
+		"page": {
+			"intro": {
+				"%title": "Professional movers",
+				"%lead": "Profesionalan i korektan odnos prema klijentima za nas je stabilan i održiv način poslovanja."
+			},
+			"services": {
+				"%details": "Detalji usluge",
+				"office": {
+					"%title": "Corporate relocation",
+					"%lead": "Specialists in corporate removals",
+					"%p1": "Here at Pro Moving Company we pay special attention to developing logistics plans for corporate and office moves, in coordination with representatives of your company.",
+					"%p2": "Moving a large number of employees in a short period of time from one work place to another is our specialty. Regardless of the scope of the project, we guarantee that all electronic equipment and office furniture as well as the corridors and elevators which would be used during the process is prefessionally packed, protected and handled with care.",
+					"%p3": "We put speed and quality of our service, as well as flexible working hours at the top of our priority list in order to fulfill clients expectations without compromise. Because we believe that our work is done only with the satisfaction of our customer, until the last carefully grown office plant finds its new place under the sun."
+				},
+				"home": {
+					"%title": "Household moving",
+					"%lead": "Precise and safe",
+					"%p1": "Whether you are moving privately or your company is relocating you and your family to another part of  the country , that't the moment to contact us with full confidence.",
+					"%p2": "Using the latest packaging materials and equipment, we can offer you professional packing and protection of personal belongings, furniture and artwork with transportation and unpacking. And after we bring the last item through your front door our handyman can  offer you assembly services, regardless of whether it is electrical, plumbing or carpentry work.",
+					"%p3": "Finally, thorough cleaning of your new home is  the last stage of the removing process that we can assist you with, making such a big life change less stressful.",
+					"%p4": "Moving from one home to another is never easy, but we try very hard to look that way."
+				},
+				"international": {
+					"%title": "International moving",
+					"%lead": "Moving without borders",
+					"%p1": "Nowdays, Europeans are moving more than ever before. If you're one of many people in need of relocation services, regardless of whether it's just a couple of boxes or entire household, we can offer a comprehensive service from door to door, in one stroke without reloading, reducing the number of handling of your goods, and thus the risk of damage. Thanks to our experienced and professional staff all your assets would be carefully packed and protected throughout the entire process of relocation. We are aproaching every personal item with utmost respect of it's uniqueness and special bond that people have with their belongings.",
+					"%p2": "Prior to the move we make a detailed relocation plan tailored to your specific needs stating all the details before and after the relocation. We can help you with properly filing all documents and through our partners network assist you with any customs issues, and can also provide you with useful information about the process of moving and preparations that should be done before arrival of our staff.",
+					"%p3": "We can offer a temporary or long-term storage for your belongings in our secure storage facility if you don't need to move them and use at the new location.",
+					"%p4": "Contact us with confidence."
+				},
+				"archive": {
+					"%title": "Safe storage",
+					"%lead": "Carefully stored and protected",
+					"%p1": "The problem of storing the archives is common among companies due to expencive leases or inadequate and not sufficiently large spaces. At Pro Moving  we have just what you need. Within our secured warehouses we have separate rooms built especially for archive storage with the capacity of several thousand files, which reduces the possibility of loss or damage to your documents.",
+					"%p2": "During storage your files are available only to you at any time as if they are stored in your office space but without paying the high cost of rent.",
+					"%p3": "Also, we can offer safe long or short term storage for your furniture and personal effects depending on your needs. We make sure all your items are properly packed and protected from outside influences so that one day you can collect them in the same state in which they were stored."
+				},
+				"questionnaire": {
+					"%tab1": "Corporate",
+					"%tab2": "Household",
+					"%tab3": "International",
+					"%tab3": "Storage",
+					"tabs": {
+						"%details": "Detalji selidbe",
+						"%additionalDetails": "Dodatne informacije",
+						"%loading": "Please wait...",
+						"%submit": "Kontaktirajte me",
+						"%successAlert": "Vaša poruka uspješno je poslana!",
+						"%successTitle": "Zahvaljujemo na upitu",
+						"%successMessage": "Naš agent će Vas kontaktirati u najskorijem mogućem roku. Kopija ove poruke poslana je i na Vašu e-mail adresu.",
+						"%successButton": "Pošalji još jedan upit",
+						"office": {
+							"%formAlertTitle": "Obvezna polja!",
+							"%formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
+							"%formLabelName": "Kontakt osoba",
+							"%formLabelEmail": "E-mail adresa",
+							"%formLabelNumber": "Kontakt broj",
+							"%formAddressStart": "Preseljenje iz",
+							"%formDateStart": "Datum preseljenja",
+							"%formAddressFinish": "Preseljenje u",
+							"%formEmployees": "Broj radnih mjesta"
+						},
+						"home": {
+							"%formAlertTitle": "Obvezna polja!",
+							"%formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
+							"%formLabelName": "Ime i prezime",
+							"%formLabelEmail": "E-mail adresa",
+							"%formLabelNumber": "Kontakt broj",
+							"%formAddressStart": "Preseljenje iz",
+							"%formDateStart": "Datum preseljenja",
+							"%formAddressFinish": "Preseljenje u",
+							"%formEmployees": "Površina m2"
+						},
+						"international": {
+							"%formAlertTitle": "Obvezna polja!",
+							"%formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
+							"%formLabelName": "Ime i prezime",
+							"%formLabelEmail": "E-mail adresa",
+							"%formLabelNumber": "Kontakt broj",
+							"%formAddressStart": "Preseljenje iz",
+							"%formDateStart": "Datum preseljenja",
+							"%formAddressFinish": "Preseljenje u",
+							"%formEmployees": "Površina m2"
+						},
+						"archive": {
+							"%formAlertTitle": "Obvezna polja!",
+							"%formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
+							"%formLabelName": "Ime i prezime",
+							"%formLabelEmail": "E-mail adresa",
+							"%formLabelNumber": "Kontakt broj",
+							"%formItemType": "Vrsta robe"
+						}
+					}
+				}
+			},
+			"clients": {
+				"%title": "Naši klijenti",
+				"%lead": "Preselite se među naše klijente"
+			},
+			"aboutus": {
+				"%title": "About us",
+				"%lead": "Professional movers",
+				"%p1": "Pro Moving Company was founded as a result of years of gaining knowledge and experience in corporate and international removals which we now want to apply for our clients benefit, to form a relationship of mutual respect and thus lay the foundations of long-term cooperation.",
+				"%p2": "Because each relocation is different as well as every clients needs - it is our vision to provide logistic services tailored to the specific needs of each customer through consultation and stage planning, increasing efficiency and thereby reducing the total cost for both sides.",
+				"%p3": "Consequently, our mission is to continuously work on implementing those solutions in relocating, shipping and storing while taking care of the professional standards and within the agreed time frame - which is an absolute imperative.",
+				"%p4": "Reduced to a single sentence – for our customers professional and fair relationship, and for us a stable and sustainable way of doing business.",
+				"%p5": "",
+				"stats": {
+					"%numberClosets": "preseljenih ormara",
+					"%numberBoxes": "preseljenih kutija",
+					"%numberChairs": "preseljenih stolaca",
+					"%numberFlowers": "preseljenih cvijetova"
+				}
+			},
+			"contact": {
+				"%title": "Kontaktirajte nas",
+				"%lead": "Stojimo Vam na raspolaganju",
+				"%addressCountry": "Hrvatska",
+				"%detailsOIB": "OIB",
+				"%detailsBank": "Banka",
+				"%detailsIBAN": "IBAN",
+				"%detailsSWIFT": "SWIFT",
+				"social": {
+					"%facebook": "Posjetite nas na Facebooku"
+				}
+			}
 		}
 	},
 	"de": {
@@ -102,7 +229,7 @@ String.toLocaleString({
 							"%formAddressStart": "Preseljenje iz",
 							"%formDateStart": "Datum preseljenja",
 							"%formAddressFinish": "Preseljenje u",
-							"%formEmployees": "Broj radnih mjesta"
+							"%formEmployees": "Površina m2"
 						},
 						"international": {
 							"%formAlertTitle": "Obvezna polja!",
@@ -113,7 +240,7 @@ String.toLocaleString({
 							"%formAddressStart": "Preseljenje iz",
 							"%formDateStart": "Datum preseljenja",
 							"%formAddressFinish": "Preseljenje u",
-							"%formEmployees": "Broj radnih mjesta"
+							"%formEmployees": "Površina m2"
 						},
 						"archive": {
 							"%formAlertTitle": "Obvezna polja!",
@@ -139,10 +266,10 @@ String.toLocaleString({
 				"%p4": "Svako preseljenje je posebno i zahtjevi klijenata se jako razlikuju pa je stoga naša vizija pružanje logističkih usluga krojenih prema specifičnim potrebama svakog klijenta kroz savjetovanja te etapno planiranje posla, povećavajući efikasnost i pritom umanjujući ukupne troškove za obje strane.",
 				"%p5": "Slijedom toga, naša je misija da kontinuirano radimo na provedbi logističkih rješenja kroz preseljenja, dostave i skladištenja, služeći se specijaliziranom opremom te vodeći brigu o propisanim standardima i unutar dogovorenog roka – što je apsolutni imperativ.",
 				"stats": {
-					"numberClosets": "preseljenih ormara",
-					"numberBoxes": "preseljenih kutija",
-					"numberChairs": "preseljenih stolaca",
-					"numberFlowers": "preseljenih cvijetova"
+					"%numberClosets": "preseljenih ormara",
+					"%numberBoxes": "preseljenih kutija",
+					"%numberChairs": "preseljenih stolaca",
+					"%numberFlowers": "preseljenih cvijetova"
 				}
 			},
 			"contact": {
@@ -154,7 +281,7 @@ String.toLocaleString({
 				"%detailsIBAN": "IBAN",
 				"%detailsSWIFT": "SWIFT",
 				"social": {
-					"facebook": "Posjetite nas na Facebooku"
+					"%facebook": "Posjetite nas na Facebooku"
 				}
 			}
 		}
