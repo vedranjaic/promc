@@ -3,50 +3,50 @@
 	<!-- ALERT -->
 	<div class="alert alert-danger alert-dismissible hidden" role="alert">
 		<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		<strong><i class="icon fa fa-warning"></i> Obvezna polja!</strong> Za kontakt potrebno je popuniti polja s kontaktnim podacima.
+		<strong><i class="icon fa fa-warning"></i> <span id="qOfficeAlertTitle">Obvezna polja!</span></strong> <span id="qOfficeAlertMessage">Za kontakt potrebno je popuniti polja s kontaktnim podacima.</span>
 	</div>
 
 
 	<div class="form-section form-section-contact row">
 		<div class="form-group col-sm-4">
-			<label for="promc-office-name" class="control-label">Kontakt osoba: <sup class="required"></sup></label>
+			<label for="promc-office-name" class="control-label"><span id="qOfficeLabelContactName">Kontakt osoba</span>: <sup class="required"></sup></label>
 			<input name="Kontakt osoba" type="text" class="form-control" id="promc-office-name" placeholder="Ime prezime">
 		</div>
 		<div class="form-group col-sm-4">
-			<label for="promc-office-email" class="control-label">E-mail adresa: <sup class="required"></sup></label>
+			<label for="promc-office-email" class="control-label"><span id="qOfficeLabelContactEmail">E-mail adresa</span>: <sup class="required"></sup></label>
 			<input name="E-mail adresa" type="email" class="form-control" id="promc-office-email" placeholder="email@adresa.hr">
 		</div>
 		<div class="form-group col-sm-4 form-group-number">
-			<label for="promc-office-number" class="control-label">Kontakt broj: <sup class="prefer-call required"></sup></label>
+			<label for="promc-office-number" class="control-label"><span id="qOfficeLabelContactNumber">Kontakt broj</span>: <sup class="prefer-call required"></sup></label>
 			<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-office-number">
 		</div>
 	</div>
 	<!-- /.form-section -->
 
-	<a class="form-section-toggle" data-toggle="collapse" href="#promc-office-moving-details" data-text=" Zatvori detalje selidbe">
+	<a class="form-section-toggle" id="qDetailsMove" data-toggle="collapse" href="#promc-office-moving-details" data-text=" Zatvori detalje selidbe">
 		Detalji selidbe
 	</a>
 
 	<div class="form-section form-section-moving collapse row" id="promc-office-moving-details">
 		<div class="form-group col-sm-8">
-			<label for="promc-office-address-start">Preseljenje iz:</label>
+			<label for="promc-office-address-start" id="qOfficeAddressStart">Preseljenje iz:</label>
 			<input name="Preseljenje iz" type="text" class="form-control" id="promc-office-address-start" placeholder="Adresa i kućni broj, grad">
 		</div>
 		<div class="form-group col-sm-4">
-			<label for="promc-office-date-start">Datum preseljenja:</label>
+			<label for="promc-office-date-start" id="qOfficeDateStart">Datum preseljenja:</label>
 			<input name="Datum preseljenja" type="date" class="form-control" id="promc-office-date-start">
 		</div>
 		<div class="form-group col-sm-8">
-			<label for="promc-office-address-finish">Preseljenje u:</label>
+			<label for="promc-office-address-finish" id="qOfficeAddressFinish">Preseljenje u:</label>
 			<input name="Preseljenje u" type="text" class="form-control" id="promc-office-address-finish" placeholder="Adresa i kućni broj, grad">
 		</div>
 		<div class="form-group col-sm-4">
-			<label for="promc-office-employees">Broj radnih mjesta:</label>
+			<label for="promc-office-employees" id="qOfficeQuantity">Broj radnih mjesta:</label>
 			<input name="Broj radnih mjesta" type="text" pattern="[0-9]*" class="form-control" id="promc-office-employees" placeholder="">
 		</div>
 		<div class="form-group col-sm-12">
-			<a class="form-label-toggle" data-toggle="collapse" href="#promc-office-details">
-				Dodatne informacije:
+			<a class="form-label-toggle" id="qDetailsDodatne" data-toggle="collapse" href="#promc-office-details">
+				 Dodatne informacije:
 			</a>
 			<div class="form-group-textarea collapse" id="promc-office-details">
 				<textarea name="Dodatne informacije" class="form-control" rows="3"></textarea>
@@ -57,9 +57,9 @@
 
 	<div class="form-actions clearfix">
 		<div class="loading hidden">
-			<i class="spin large"></i> <span>Molimo pričekajte...</span>
+			<i class="spin large"></i> <span id="qSubmitLoader">Molimo pričekajte...</span>
 		</div>
-		<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
+		<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right" id="qSubmitBtn">Kontaktirajte me</button>
 	</div>
 
 

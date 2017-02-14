@@ -3,50 +3,50 @@
 	<!-- ALERT -->
 	<div class="alert alert-danger alert-dismissible hidden" role="alert">
 		<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		<strong><i class="icon fa fa-warning"></i> Obvezna polja!</strong> Za kontakt potrebno je popuniti polja s kontaktnim podacima.
+		<strong><i class="icon fa fa-warning"></i> <span id="qInternationalAlertTitle">Obvezna polja!</span></strong> <span id="qInternationalAlertMessage">Za kontakt potrebno je popuniti polja s kontaktnim podacima.</span>
 	</div>
 
 
 	<div class="form-section form-section-contact row">
 		<div class="form-group col-sm-4">
-			<label for="promc-international-name">Ime i prezime: <sup class="required"></sup></label>
+			<label for="promc-international-name"><span id="qInternationalLabelContactName">Ime i prezime</span>: <sup class="required"></sup></label>
 			<input name="Ime i prezime" type="text" class="form-control" id="promc-international-name" placeholder="Ime prezime">
 		</div>
 		<div class="form-group col-sm-4">
-			<label for="promc-international-email">E-mail adresa: <sup class="required"></sup></label>
+			<label for="promc-international-email"><span id="qInternationalLabelContactEmail">E-mail adresa</span>: <sup class="required"></sup></label>
 			<input name="E-mail adresa" type="email" class="form-control" id="promc-international-email" placeholder="email@adresa.hr">
 		</div>
 		<div class="form-group col-sm-4 form-group-number">
-			<label for="promc-international-number">Kontakt broj: <sup class="prefer-call required"></sup></label>
+			<label for="promc-international-number"><span id="qInternationalLabelContactNumber">Kontakt broj</span>: <sup class="prefer-call required"></sup></label>
 			<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-international-number">
 		</div>
 	</div>
 	<!-- /.form-section -->
 
-	<a class="form-section-toggle" data-toggle="collapse" href="#promc-international-moving-details" data-text=" Zatvori detalje selidbe">
+	<a class="form-section-toggle" id="qDetailsMove" data-toggle="collapse" href="#promc-international-moving-details" data-text=" Zatvori detalje selidbe">
 		Detalji selidbe
 	</a>
 
 	<div class="form-section form-section-moving collapse row" id="promc-international-moving-details">
 		<div class="form-group col-sm-8">
-			<label for="promc-international-address-start">Preseljenje iz:</label>
+			<label for="promc-international-address-start" id="qInternationalAddressStart">Preseljenje iz:</label>
 			<input name="Preseljenje iz" type="text" class="form-control" id="promc-international-address-start" placeholder="Adresa i kućni broj, grad, država">
 		</div>
 		<div class="form-group col-sm-4">
-			<label for="promc-international-date-start">Datum preseljenja:</label>
+			<label for="promc-international-date-start" id="qInternationalDateStart">Datum preseljenja:</label>
 			<input name="Datum preseljenja" type="date" class="form-control" id="promc-international-date-start">
 		</div>
 		<div class="form-group col-sm-8">
-			<label for="promc-international-address-finish">Preseljenje u:</label>
+			<label for="promc-international-address-finish" id="qInternationalAddressFinish">Preseljenje u:</label>
 			<input name="Preseljenje u" type="text" class="form-control" id="promc-international-address-finish" placeholder="Adresa i kućni broj, grad, država">
 		</div>
 		<div class="form-group col-sm-4">
-			<label for="promc-international-volume">Površina m<sup>2</sup>:</label>
+			<label for="promc-international-volume"><span id="qInternationalQuantity">Površina</span> m<sup>2</sup>:</label>
 			<input name="Površina u m2" type="text" pattern="[0-9]*" class="form-control" id="promc-international-volume" placeholder="">
 		</div>
 		<div class="form-group col-sm-12">
-			<a class="form-label-toggle" data-toggle="collapse" href="#promc-international-details">
-				Dodatne informacije:
+			<a class="form-label-toggle" id="qDetailsDodatne" data-toggle="collapse" href="#promc-international-details">
+				 Dodatne informacije:
 			</a>
 			<div class="form-group-textarea collapse" id="promc-international-details">
 				<textarea name="Dodatne informacije" class="form-control" rows="3"></textarea>
@@ -57,9 +57,9 @@
 
 	<div class="form-actions clearfix">
 		<div class="loading hidden">
-			<i class="spin large"></i> <span>Molimo pričekajte...</span>
+			<i class="spin large"></i> <span id="qSubmitLoader">Molimo pričekajte...</span>
 		</div>
-		<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
+		<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right" id="qSubmitBtn">Kontaktirajte me</button>
 	</div>
 
 

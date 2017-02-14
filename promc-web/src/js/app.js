@@ -118,10 +118,6 @@ $(".btn-send-another").on("click", function(e) {
 
 
 
-// --- [ l10n.js ]
-var l = function (string) {
-	return string.toLocaleString();
-};
 
 // --- [ SCROLL TO TOP ]
 // init controller
