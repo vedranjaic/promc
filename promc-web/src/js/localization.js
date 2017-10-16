@@ -1,16 +1,27 @@
 // --- [ l10n.js ]
-// $('#lang-hr').click(function() {
-// 	console.log($(this).text());
-// 	String.locale = ($(this).text().toLowerCase());
-// 	document.documentElement.lang = String.locale;
-// });
-// $('#lang-en').click(function() {
-// 	String.locale = ($(this).text().toLowerCase());
-// });
-// $('#lang-de').click(function() {
-// 	String.locale = ($(this).text().toLowerCase());
-// });
-String.locale = "en";
+// On first load set language in cookie to 'hr'
+// setCookie("promcLocale", "hr");
+// Change language on dropdown
+$('#lang-hr').click(function() {
+	setCookie("promcLocale", $(this).text().toLowerCase(), 365);
+	location.reload();
+});
+$('#lang-en').click(function() {
+	setCookie("promcLocale", $(this).text().toLowerCase(), 365);
+	location.reload();
+});
+$('#lang-de').click(function() {
+	setCookie("promcLocale", $(this).text().toLowerCase(), 365);
+	location.reload();
+});
+
+// Set the locale and change language shortcode
+String.locale = getCookie("promcLocale");
+if (String.locale != 0) {
+	$('#lang-selected').text(String.locale.toUpperCase());
+}
+
+
 
 var l = function (string, fallback) {
 	var localized = string.toLocaleString();
@@ -20,6 +31,33 @@ var l = function (string, fallback) {
 		return fallback;
 	}
 };
+
+// Set language to cookie
+function setCookie(cname, cvalue, exdays) {
+	var d = new Date();
+	d.setTime(d.getTime() + (exdays*24*60*60*1000));
+	var expires = "expires="+ d.toUTCString();
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+	var name = cname + "=";
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+	for(var i = 0; i <ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+
+
+
 
 // Meta tags
 document.title = l('title');
@@ -37,6 +75,10 @@ document.getElementById('navKontakt').innerText = l('nav')['contact'];
 // Intro
 document.getElementById('pageTitleUvod').innerText = l('page')['intro']['title'];
 document.getElementById('pageLeadUvod').innerText = l('page')['intro']['lead'];
+document.getElementById('pageIntroOffice').innerText = l('page')['intro']['office'];
+document.getElementById('pageIntroHome').innerText = l('page')['intro']['home'];
+document.getElementById('pageIntroInternational').innerText = l('page')['intro']['international'];
+document.getElementById('pageIntroArchive').innerText = l('page')['intro']['archive'];
 // Services
 // Office
 document.getElementById('pageDetailsSelidbe').innerText = l('page')['services']['details'];
@@ -76,6 +118,10 @@ document.getElementById('textONamap2').innerText = l('page')['aboutus']['p2'];
 document.getElementById('textONamap3').innerText = l('page')['aboutus']['p3'];
 document.getElementById('textONamap4').innerText = l('page')['aboutus']['p4'];
 document.getElementById('textONamap5').innerText = l('page')['aboutus']['p5'];
+document.getElementById('textONamaStat1').innerText = l('page')['aboutus']['stats']['numberClosets'];
+document.getElementById('textONamaStat2').innerText = l('page')['aboutus']['stats']['numberBoxes'];
+document.getElementById('textONamaStat3').innerText = l('page')['aboutus']['stats']['numberChairs'];
+document.getElementById('textONamaStat4').innerText = l('page')['aboutus']['stats']['numberFlowers'];
 // Contact
 document.getElementById('pageTitleKontakt').innerText = l('page')['contact']['title'];
 document.getElementById('pageLeadKontakt').innerText = l('page')['contact']['lead'];

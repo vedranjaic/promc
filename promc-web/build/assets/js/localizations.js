@@ -1,7 +1,7 @@
 String.toLocaleString({
 	"en": {
 		"title": "PRO Moving Company | Profesional movers",
-		"info": "Međunarodna selidba ureda i arhive - Specijalisti za korporativne selidbe",
+		"info": "International office & archive movers - Specialists for corporate moving",
 		"nav": {
 			"intro": "Intro",
 			"services": "Services",
@@ -12,10 +12,14 @@ String.toLocaleString({
 		"page": {
 			"intro": {
 				"title": "Professional movers",
-				"lead": "Profesionalan i korektan odnos prema klijentima za nas je stabilan i održiv način poslovanja."
+				"lead": "Being professional and fair toward our clients means to run our business in a stable and sustainable way",
+				"office": "Moving Office",
+				"home": "Moving Home",
+				"international": "International Moving",
+				"archive": "Archiving"
 			},
 			"services": {
-				"details": " Detalji usluge",
+				"details": " Service details",
 				"office": {
 					"title": "Corporate relocation",
 					"lead": "Specialists in corporate removals",
@@ -48,8 +52,8 @@ String.toLocaleString({
 				}
 			},
 			"clients": {
-				"title": "Naši klijenti",
-				"lead": "Preselite se među naše klijente"
+				"title": "Our clients",
+				"lead": "Move to our clients list"
 			},
 			"aboutus": {
 				"title": "About us",
@@ -60,22 +64,22 @@ String.toLocaleString({
 				"p4": "Reduced to a single sentence – for our customers professional and fair relationship, and for us a stable and sustainable way of doing business.",
 				"p5": "",
 				"stats": {
-					"numberClosets": "preseljenih ormara",
-					"numberBoxes": "preseljenih kutija",
-					"numberChairs": "preseljenih stolaca",
-					"numberFlowers": "preseljenih cvijetova"
+					"numberClosets": "cabinets moved",
+					"numberBoxes": "boxes moved",
+					"numberChairs": "chairs moved",
+					"numberFlowers": "plants moved"
 				}
 			},
 			"contact": {
-				"title": "Kontaktirajte nas",
-				"lead": "Stojimo Vam na raspolaganju",
-				"addressCountry": "Hrvatska",
-				"detailsOIB": "OIB",
-				"detailsBank": "Banka",
+				"title": "Feel free to contact us",
+				"lead": "We are at your service",
+				"addressCountry": "Croatia",
+				"detailsOIB": "VAT",
+				"detailsBank": "Bank",
 				"detailsIBAN": "IBAN",
 				"detailsSWIFT": "SWIFT",
 				"social": {
-					"facebook": "Posjetite nas na Facebooku"
+					"facebook": "Visit us on Facebook"
 				}
 			}
 		},
@@ -85,67 +89,198 @@ String.toLocaleString({
 			"tab3": "International",
 			"tab4": "Storage",
 			"tabs": {
-				"details": "Detalji selidbe",
-				"additionalDetails": " Dodatne informacije",
+				"details": " Moving details",
+				"additionalDetails": " Additional details",
 				"loading": "Please wait...",
-				"submit": "Kontaktirajte me",
-				"successAlert": "Vaša poruka uspješno je poslana!",
-				"successTitle": "Zahvaljujemo na upitu",
-				"successMessage": "Naš agent će Vas kontaktirati u najskorijem mogućem roku. Kopija ove poruke poslana je i na Vašu e-mail adresu.",
-				"successButton": "Pošalji još jedan upit",
+				"submit": "Contact me",
+				"successAlert": "Your message was sent successfully!",
+				"successTitle": "Thank you for your inquiry",
+				"successMessage": "Our agent will contact you soon. The copy of this message was sent to your e-mail address.",
+				"successButton": "Send another inquiry",
 				"office": {
-					"formAlertTitle": "Obvezna polja!",
-					"formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
-					"formLabelName": "Kontakt osoba",
-					"formLabelEmail": "E-mail adresa",
-					"formLabelNumber": "Kontakt broj",
-					"formAddressStart": "Preseljenje iz",
-					"formDateStart": "Datum preseljenja",
-					"formAddressFinish": "Preseljenje u",
-					"formEmployees": "Broj radnih mjesta"
+					"formAlertTitle": "Required fields!",
+					"formAlertMessage": "To contact you, please fill out all required fields.",
+					"formLabelName": "Name",
+					"formLabelEmail": "E-mail",
+					"formLabelNumber": "Contact number",
+					"formAddressStart": "Moving from",
+					"formDateStart": "Move date",
+					"formAddressFinish": "Moving to",
+					"formEmployees": "Number of employees"
 				},
 				"home": {
-					"formAlertTitle": "Obvezna polja!",
-					"formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
-					"formLabelName": "Ime i prezime",
-					"formLabelEmail": "E-mail adresa",
-					"formLabelNumber": "Kontakt broj",
-					"formAddressStart": "Preseljenje iz",
-					"formDateStart": "Datum preseljenja",
-					"formAddressFinish": "Preseljenje u",
-					"formEmployees": "Površina"
+					"formAlertTitle": "Required fields!",
+					"formAlertMessage": "To contact you, please fill out all required fields.",
+					"formLabelName": "Name",
+					"formLabelEmail": "E-mail",
+					"formLabelNumber": "Contact number",
+					"formAddressStart": "Moving from",
+					"formDateStart": "Move date",
+					"formAddressFinish": "Moving to",
+					"formEmployees": "Amount to move"
 				},
 				"international": {
-					"formAlertTitle": "Obvezna polja!",
-					"formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
-					"formLabelName": "Ime i prezime",
-					"formLabelEmail": "E-mail adresa",
-					"formLabelNumber": "Kontakt broj",
-					"formAddressStart": "Preseljenje iz",
-					"formDateStart": "Datum preseljenja",
-					"formAddressFinish": "Preseljenje u",
-					"formEmployees": "Površina"
+					"formAlertTitle": "Required fields!",
+					"formAlertMessage": "To contact you, please fill out all required fields.",
+					"formLabelName": "Name",
+					"formLabelEmail": "E-mail",
+					"formLabelNumber": "Contact number",
+					"formAddressStart": "Moving from",
+					"formDateStart": "Move date",
+					"formAddressFinish": "Moving to",
+					"formEmployees": "Amount to move"
 				},
 				"archive": {
-					"formAlertTitle": "Obvezna polja!",
-					"formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
-					"formLabelName": "Ime i prezime",
-					"formLabelEmail": "E-mail adresa",
-					"formLabelNumber": "Kontakt broj",
-					"formItemType": " Vrsta robe"
+					"formAlertTitle": "Required fields!",
+					"formAlertMessage": "To contact you, please fill out all required fields.",
+					"formLabelName": "Name",
+					"formLabelEmail": "E-mail",
+					"formLabelNumber": "Contact number",
+					"formItemType": " Type of goods"
 				}
 			}
 		}
 	},
 	"de": {
-		"title": "PRO Moving Company | Profesional movers",
-		"info": "TODO",
+		"title": "PRO Moving Company | Professionelle Umzugsfirma",
+		"info": "Internationale Büro und Archivumzüge – Spezialisten für korporative Umzüge",
 		"nav": {
-			"intro": "TODO",
-			"services": "TODO",
-			"clients": "TODO",
-			"aboutus": "TODO",
-			"contact": "TODO"
+			"intro": "Einleitung",
+			"services": "Dienstleistungen",
+			"clients": "Klienten",
+			"aboutus": "Über uns",
+			"contact": "Kontakt"
+		},
+		"page": {
+			"intro": {
+				"title": "Professionelle Umzugsfirma",
+				"lead":  "Ein professionelles und korrektes Verhältnis zu den Kunden gehört für uns zu einer stabilen und nachhaltigen Geschäftspraxis",
+				"office": "Büroumzüge",
+				"home": "Wohnungsumzüge",
+				"international": "Internationale Umzüge",
+				"archive": "Lagerung von Archiven"
+			},
+			"services": {
+				"details": " Details der Dienstleistungen",
+				"office": {
+					"title": "Büro- und Archivumzüge",
+					"lead": "Spezialist für korporative Umzüge",
+					"p1": "In der Firma ProMC schenken wir eine besondere Aufmerksamkeit der logistischen Planung für korporative und Büroumzüge in Zusammenarbeit mit den Vertretern ihrer Firma",
+					"p2": "Unser Spezialgebiet ist der Umzug einer großen Anzahl von Angestellten in kurzer Zeit von einem Büro zum anderen, einschließlich des Archivs. Ohne Rücksicht auf den Projektumfang garantieren wir einen professionellen Schutz der gesamten elektronischen Ausstattung, Büromobiliar, sowie aller Korridore und Lifte, die wir beim Umzug benutzen würden.",
+					"p3": "Die flexibel Arbeitszeit und ein schneller und perfekter Service ist unser oberstes Gebot, und wir erfüllen all ihre Erwartungen kompromisslos. Wir betrachten unsere Arbeit erst dann als erledigt, wenn alles zur Zufriedenheit unseres Klienten gemacht wurde, und bis die letzte, sorgfältig gepflegte Pflanze ihren neuen Platz unter der Sonne bezogen hat."
+				},
+				"home": {
+					"title": "Wohnungsumzüge/Hausumzüge",
+					"lead": "Einwandfrei und sicher",
+					"p1": "Egal ob sie nun privat oder wegen Arbeitsplatzwechsel umziehen, allein oder mit Familie, wenden sie sich vertrauensvoll an uns", 
+					"p2": "Wir verwenden nur das neueste Verpackungsmaterial und Ausstattung, so dass wir ihr persönliches Eigentum, Möbel oder Kunstwerke professionell absichern, transportieren und wieder entpacken. Wenn der letzte Gegenstand seinen Platz im neuen Wohnbereich gefunden hat, bieten wir ihnen einen Montageservice, den unser Hausmeister ausführt, sei es an elektrischen Installationen, Wasserleitungen oder Tischlerei.",
+					"p3": "Zu guter Letzt können wir ihnen auch einen Reinigungsservice anbieten, um ihnen den Wechsel in ihr neues Heim so stressfrei als möglich zu gestalten.",
+					"p4": "Für uns spielt es keine Rolle, ob sie nur eine Straße weiter oder ans andere Ende des Landes umziehen. Unsere Aufgabe ist es, ihnen beim Umzug behilflich zu sein, damit sie ihre neue Bleibe nicht als Wohnung oder Haus, sondern als Heim empfinden."
+				},
+				"international": {
+					"title": "Internationale Umzüge",
+					"lead": "Umzüge ohne Grenzen",
+					"p1": "Die Mitglieder der Europäischen Union ziehen heute öfters um, als jemals zuvor. Falls sie zu jenen dazu gehören, die nach Europa umziehen, egal ob es sich nur um ein paar Kartons oder den ganzen Haushalt handelt, können wir ihnen den kompletten Service Tür-zu-Tür auf einmal, ohne Umladung anbieten. Damit wird das Risiko einer Beschädigung auf das Minimum gebracht. Dank unserem erfahrenen und professionellen Personal werden ihr Besitz und Wertsachen sorgfältig verpackt und während des ganzen Transports gut abgesichert. Wir garantieren ihnen diesen zuverlässigen Umgang mit ihren Gegenständen, und respektieren ihren Wert und die Emotionen, die sie als Besitzer damit verbinden.",
+					"p2": "Kurz vor dem Umzug arbeiten wir mit ihnen zusammen einen detaillierten Plan aus, der auf ihre Bedürfnisse zugeschnitten ist, mit allen Einzelheiten vor und nach dem Umzug. Wir füllen für sie alle notwendigen Dokumente aus und helfen ihnen mit unseren Außenmitarbeitern in allen Zollfragen. Ferner verschaffen wir ihnen alle nützlichen Informationen über den Umzugsprozess und eventuelle Vorarbeiten, die vor unserer Ankunft zu erledigen wären.",
+					"p3": "Falls nötig, ermöglichen wir ihnen eine kurz- oder langfristige Lagerung ihres Besitzes in unserem bewachten Lagerhaus, wenn sie nicht alles auf einmal in ihrer neuen Bleibe brauchen oder benutzen können.",
+					"p4": "Wenden sie sich vertrauensvoll an uns." 
+				},
+				"archive": {
+					"title": "Lagerung von Archiven, Möbel und persönlichem Eigentum",
+					"lead": "Abgesichert, sicher und sorgfältig aufbewahrt", 
+					"p1": "Das Problem der Aufbewahrung von Archiven ist bei großen Firmen oft präsent, teils wegen der hohen Mietkosten, teils durch unpassende oder zu kleine Lagerräume. Wir im ProMC haben wir gerade das, was sie brauchen. Innerhalb unseres abgesicherten Lagers haben wir einen besonderen Bereich nur für Archive, der einige tausend Ordner umfassen kann, womit ein Verlust oder Beschädigung ihrer Dokumentation minimal ist.",
+					"p2": "Ihr Archiv ist immer nur für sie vollkommen zugängig, ohne hohe Mietkosten, wie in ihren eigenen Geschäftsräumen",
+					"p3": "In unseren Lagerräumen können sie vollkommen sicher und sorglos ihre Möbel oder persönliche Sachen über einen kürzeren oder längeren Zeitraum aufbewahren, abhängig von ihren Bedürfnissen. Dabei werden alle Objekte dementsprechend verpackt und von äußeren Einflüssen abgesichert, damit sie sie so wiederfinden, wie sie gelagert wurden."
+				}
+			},
+			"clients": {
+				"title": "Unsere Klienten",
+				"lead": "Schließen sie sich unseren Klienten an"
+			},
+			"aboutus": {
+				"title": "Über uns",
+				"lead": "Professionelle Umzugsfirma",
+				"p1": "Pro Moving Company GmbH wurde als das Resultat von mehrjähriger Erfahrung und Kenntnisse ihrer Gründer ins Leben gerufen, innerhalb des Sektors von korporativen und internationalen Umzüge, sowie Transports von schweren Lasten, womit wir auf diesem Wirkungsgebiet Spezialisten sind.",
+				"p2": "Unsere Mitarbeiter verfügen über professionelle Kenntnisse und sind entgegenkommend nach traditionellen europäischen Standards, die sie in der Praxis im In- und Ausland anwenden.",
+				"p3": "Unsere Leitgedanken bei der Gründung unserer Firma waren vor allem der Wunsch nach Selbständigkeit und einer anderen, effizienten Wirkungsweise. Das bedeutet, dass wir durchgehend unsere Fähigkeiten zum Wohl unserer Klienten anwenden, womit wir eine gegenseitige Vertrauensbasis aufbauen wollen, als Grundstein für eine langjährige Zusammenarbeit.",
+				"p4": "Jeder Umzug ist verschieden, und die Wünsche der Klienten sehr unterschiedlich. Daher ist es unsere Vision, die logistischen Dienstleistungen nach spezifischen Bedürfnissen jedes Klienten durch Beratung und Schritt-für-Schritt-Planung auszurichten, womit die Effizienz gesteigert, und die Unkosten für beide Seiten gemindert werden.",
+				"p5": "In diesem Sinn ist es unsere Mission, kontinuierlich an der Durchführung von logistischen Lösungen bei Umzügen, Lieferung und Lagerung zu arbeiten, bei der gleichzeitigen Anwendung von spezialisierter Ausstattung, und Beachtung von vorgeschriebenen Standards im Rahmen der vereinbarten Frist – was für uns ein absolutes Imperativ ist.",
+				"stats": {
+					"numberClosets": "zu transportierende Schränke",
+					"numberBoxes": "zu transportierende Kartons",
+					"numberChairs": "zu transportierende Stühle",
+					"numberFlowers": "zu transportierende Zimmerpflanzen"
+				}
+			},
+			"contact": {
+				"title": "Kontaktieren sie uns",
+				"lead": "Wir stehen ihnen zur Verfügung",
+				"addressCountry": "Kroatien",
+				"detailsOIB": "OIB",
+				"detailsBank": "Bank",
+				"detailsIBAN": "IBAN",
+				"detailsSWIFT": "SWIFT",
+				"social": {
+					"facebook": "Besuchen sie uns auf Facebook"
+				}
+			}
+		},
+		"questionnaire": {
+			"tab1": "Büro",
+			"tab2": "Wohnung",
+			"tab3": "International",
+			"tab4": "Lagerung",
+			"tabs": {
+				"details": "Umzugsdetails",
+				"additionalDetails": " Zusätzliche Informationen",
+				"loading": "Bitte warten sie...",
+				"submit": "Kontaktieren sie mich",
+				"successAlert": "Ihre Nachricht wurde erfolgreich abgeschickt!",
+				"successTitle": "Wir danken für ihre Anfrage",
+				"successMessage": "Unsere Mitarbeiter werden sie in kürzester Zeit kontaktieren. Die Kopie dieser Nachricht wurde auch an ihre E-Mail Adresse geschickt.",
+				"successButton": "Bitte noch eine Anfrage schicken",
+				"office": {
+					"formAlertTitle": "Pflichtfelder!",
+					"formAlertMessage": "Für den Kontakt bitte alle Pflichtfelder mit Kontaktangaben ausfüllen.",
+					"formLabelName": "Kontaktperson",
+					"formLabelEmail": "E-Mail Adresse",
+					"formLabelNumber": "Kontaktnummer",
+					"formAddressStart": "Umzug von",
+					"formDateStart": "Umzugsdatum",
+					"formAddressFinish": "Umzug nach",
+					"formEmployees": "Anzahl der Arbeitsplätze"
+				},
+				"home": {
+					"formAlertTitle": "Pflichtfelder!",
+					"formAlertMessage": "Für den Kontakt bitte alle Pflichtfelder mit Kontaktangaben ausfüllen.",
+					"formLabelName": "Vor- und Nachname",
+					"formLabelEmail": "E-Mail Adresse",
+					"formLabelNumber": "Kontaktnummer",
+					"formAddressStart": "Umzug von",
+					"formDateStart": "Umzugsdatum",
+					"formAddressFinish": "Umzug nach",
+					"formEmployees": "Fläche in m2"
+				},
+				"international": {
+					"formAlertTitle": "Pflichtfelder!",
+					"formAlertMessage": "Für den Kontakt bitte alle Pflichtfelder mit Kontaktangaben ausfüllen.",
+					"formLabelName": "Vor- und Nachname",
+					"formLabelEmail": "E-Mail Adresse",
+					"formLabelNumber": "Kontaktnummer",
+					"formAddressStart": "Umzug von",
+					"formDateStart": "Umzugsdatum",
+					"formAddressFinish": "Umzug nach",
+					"formEmployees": "Fläche in m2"
+				},
+				"archive": {
+					"formAlertTitle": "Pflichtfelder!",
+					"formAlertMessage": "Für den Kontakt bitte alle Pflichtfelder mit Kontaktangaben ausfüllen.",
+					"formLabelName": "Vor- und Nachname",
+					"formLabelEmail": "E-Mail Adresse",
+					"formLabelNumber": "Kontaktnummer",
+					"formItemType": "Art der Waren"
+				}
+			}
 		}
 	},
 	"hr": {
@@ -161,7 +296,11 @@ String.toLocaleString({
 		"page": {
 			"intro": {
 				"title": "Professionalne selidbe",
-				"lead": "Profesionalan i korektan odnos prema klijentima za nas je stabilan i održiv način poslovanja."
+				"lead": "Profesionalan i korektan odnos prema klijentima za nas je stabilan i održiv način poslovanja.",
+				"office": "Selidba ureda",
+				"home": "Selidba stana",
+				"international": "Međunarodne selidbe",
+				"archive": "Skladištenje"
 			},
 			"services": {
 				"details": " Detalji usluge",
@@ -229,61 +368,61 @@ String.toLocaleString({
 			}
 		},
 		"questionnaire": {
-				"tab1": "Ured",
-				"tab2": "Stan",
-				"tab3": "Međunarodna",
-				"tab3": "Skladištenje",
-				"tabs": {
-					"details": "cDetalji selidbe",
-					"additionalDetails": " Dodatne informacije",
-					"loading": "Molimo pričekajte...",
-					"submit": "Kontaktirajte me",
-					"successAlert": "Vaša poruka uspješno je poslana!",
-					"successTitle": "Zahvaljujemo na upitu",
-					"successMessage": "Naš agent će Vas kontaktirati u najskorijem mogućem roku. Kopija ove poruke poslana je i na Vašu e-mail adresu.",
-					"successButton": "Pošalji još jedan upit",
-					"office": {
-						"formAlertTitle": "Obvezna polja!",
-						"formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
-						"formLabelName": "Kontakt osoba",
-						"formLabelEmail": "E-mail adresa",
-						"formLabelNumber": "Kontakt broj",
-						"formAddressStart": "Preseljenje iz",
-						"formDateStart": "Datum preseljenja",
-						"formAddressFinish": "Preseljenje u",
-						"formEmployees": "Broj radnih mjesta"
-					},
-					"home": {
-						"formAlertTitle": "Obvezna polja!",
-						"formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
-						"formLabelName": "Ime i prezime",
-						"formLabelEmail": "E-mail adresa",
-						"formLabelNumber": "Kontakt broj",
-						"formAddressStart": "Preseljenje iz",
-						"formDateStart": "Datum preseljenja",
-						"formAddressFinish": "Preseljenje u",
-						"formEmployees": "Površina m2"
-					},
-					"international": {
-						"formAlertTitle": "Obvezna polja!",
-						"formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
-						"formLabelName": "Ime i prezime",
-						"formLabelEmail": "E-mail adresa",
-						"formLabelNumber": "Kontakt broj",
-						"formAddressStart": "Preseljenje iz",
-						"formDateStart": "Datum preseljenja",
-						"formAddressFinish": "Preseljenje u",
-						"formEmployees": "Površina m2"
-					},
-					"archive": {
-						"formAlertTitle": "Obvezna polja!",
-						"formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
-						"formLabelName": "Ime i prezime",
-						"formLabelEmail": "E-mail adresa",
-						"formLabelNumber": "Kontakt broj",
-						"formItemType": " Vrsta robe"
-					}
+			"tab1": "Ured",
+			"tab2": "Stan",
+			"tab3": "Međunarodna",
+			"tab4": "Skladištenje",
+			"tabs": {
+				"details": "Detalji selidbe",
+				"additionalDetails": " Dodatne informacije",
+				"loading": "Molimo pričekajte...",
+				"submit": "Kontaktirajte me",
+				"successAlert": "Vaša poruka uspješno je poslana!",
+				"successTitle": "Zahvaljujemo na upitu",
+				"successMessage": "Naš agent će Vas kontaktirati u najskorijem mogućem roku. Kopija ove poruke poslana je i na Vašu e-mail adresu.",
+				"successButton": "Pošalji još jedan upit",
+				"office": {
+					"formAlertTitle": "Obvezna polja!",
+					"formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
+					"formLabelName": "Kontakt osoba",
+					"formLabelEmail": "E-mail adresa",
+					"formLabelNumber": "Kontakt broj",
+					"formAddressStart": "Preseljenje iz",
+					"formDateStart": "Datum preseljenja",
+					"formAddressFinish": "Preseljenje u",
+					"formEmployees": "Broj radnih mjesta"
+				},
+				"home": {
+					"formAlertTitle": "Obvezna polja!",
+					"formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
+					"formLabelName": "Ime i prezime",
+					"formLabelEmail": "E-mail adresa",
+					"formLabelNumber": "Kontakt broj",
+					"formAddressStart": "Preseljenje iz",
+					"formDateStart": "Datum preseljenja",
+					"formAddressFinish": "Preseljenje u",
+					"formEmployees": "Površina m2"
+				},
+				"international": {
+					"formAlertTitle": "Obvezna polja!",
+					"formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
+					"formLabelName": "Ime i prezime",
+					"formLabelEmail": "E-mail adresa",
+					"formLabelNumber": "Kontakt broj",
+					"formAddressStart": "Preseljenje iz",
+					"formDateStart": "Datum preseljenja",
+					"formAddressFinish": "Preseljenje u",
+					"formEmployees": "Površina m2"
+				},
+				"archive": {
+					"formAlertTitle": "Obvezna polja!",
+					"formAlertMessage": "Za kontakt potrebno je popuniti polja s kontaktnim podacima.",
+					"formLabelName": "Ime i prezime",
+					"formLabelEmail": "E-mail adresa",
+					"formLabelNumber": "Kontakt broj",
+					"formItemType": " Vrsta robe"
 				}
 			}
+		}
 	}
 });

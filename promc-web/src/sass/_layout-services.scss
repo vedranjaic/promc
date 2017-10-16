@@ -1,0 +1,99 @@
+// Moving
+.page-moving {
+	// Questionnaire
+	// Toggle form section
+	.form-section-toggle {
+		color: $grey;
+		display: block;
+		margin-bottom: 1em;
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+		&:before {
+			content: '\f067';
+			font-family: 'FontAwesome';
+		}
+		&[aria-expanded="true"] {
+			&:before {
+				content: '\f068';
+			}
+		}
+		@include breakpoint(sm) {
+			display: none;
+		}
+		& + .form-section.collapse {
+			@include breakpoint(sm) {
+				display: block;
+			}
+		}
+	}
+	// Toggle form element
+	.form-label-toggle {
+		font-weight: bold;
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+		&:before {
+			content: '\f067';
+			font-family: 'FontAwesome';
+		}
+		&[aria-expanded="true"] {
+			&:before {
+				content: '\f068';
+			}
+		}
+	}
+	.form-section {
+		.checkbox {
+			margin-top: 0;
+		}
+	}
+	// Moving section
+	.form-section-moving {
+		margin-left: -21px;
+		margin-right: -21px;
+		padding-left: 13px;
+		padding-right: 13px;
+		background-color: rgba($grey, 0.1);
+		padding-top: 1em;
+		margin-bottom: 1em;
+		@include breakpoint(sm) {
+			margin-left: -28px;
+			margin-right: -28px;
+		}
+	}
+	// Submit form
+	.form-actions {
+		.btn-submit {
+			display: block;
+			width: 100%;
+			text-transform: uppercase;
+			@include breakpoint(sm) {
+				width: auto;
+				display: inline-block;
+			}
+		}
+	}
+	// Thank you message
+	.thankyou-message {
+		@include clearfix;
+		color: $grey;
+		.thankyou-title {
+			margin-top: 0;
+		}
+		.lead {
+			font-size: 18px;
+		}
+		.btn-send-another {
+			display: block;
+			width: 100%;
+			text-transform: uppercase;
+			@include breakpoint(sm) {
+				width: auto;
+				display: inline-block;
+			}
+		}
+	}
+}

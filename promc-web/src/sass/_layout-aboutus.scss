@@ -1,0 +1,43 @@
+// About us
+.page-about-us {
+	.progress-number,
+	.progress-title {
+		text-align: center;
+		@include breakpoint(sm) {
+			text-align: left;
+		}
+	}
+	.progress-number {
+		font-weight: bold;
+		font-size: 4em;
+		line-height: 0.7em;
+		margin-top: 0;
+		@include breakpoint(sm) {
+			font-size: 6em;
+		}
+	}
+	.progress-title {
+		font-size: 1.6em;
+		@include breakpoint(sm) {
+			font-size: 2em;
+		}
+	}
+	// Progress office
+	.progress-stats {
+		margin-bottom: 2em;
+		@include breakpoint(sm) {
+			.progress-number,
+			.progress-title {
+				padding-right: 40px;
+				text-align: right;
+			}
+		}
+	}
+}
+
+.page-media-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}

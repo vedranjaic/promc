@@ -1,0 +1,102 @@
+// Contact
+.page-contact {
+	@include breakpoint(sm) {
+		height: 100vh;
+	}
+	.page-content {
+		padding-bottom: 150px;
+		@include breakpoint(md) {
+			padding-bottom: 0;
+		}
+	}
+	// Phone
+	.contact-phone,
+	.contact-linkedin {
+		font-size: 1.7em;
+		margin-bottom: 0.3em;
+		display: block;
+		@include breakpoint(sm) {
+			margin-bottom: 0.7em;
+		}
+		@include breakpoint(md) {
+			margin-bottom: 1em;
+		}
+		.icon {
+			margin-right: 3px;
+		}
+	}
+	// Linkedin
+	.contact-linkedin {
+		.fa-linkedin-square {
+			color: $social-linkedin;
+			font-size: 1.1em;
+			@include breakpoint(sm) {
+				font-size: 1.2em;
+			}
+		}
+		.fa-square {
+			font-size: 0.9em;
+			color: $white;
+		}
+	}
+	.fa-stack {
+		width: 1em;
+		height: 1em;
+		line-height: 0.8em;
+	}
+	// Facebook
+	.facebook-card {
+		@include clearfix;
+		position: absolute;
+		z-index: 11;
+		width: 90%;
+		right: 0;
+		bottom: 5%;
+		background-color: $social-facebook;
+		@include breakpoint(md) {
+			z-index: 1;
+		}
+		.icon {
+			float: left;
+			margin-left: -60px;
+			width: 120px;
+		}
+		.facebook-body {
+			padding-left: 0;
+			@include breakpoint(sm) {
+				padding-left: 80px;
+			}
+			.facebook-title {
+				font-size: 26px;
+				line-height: 1.1em;
+				@include breakpoint(sm) {
+					font-size: 32px;
+				}
+			}
+		}
+		.btn-facebook {
+			position: relative;
+			&:hover,
+			&:active {
+				text-decoration: none;
+				color: $white;
+				&:after {
+					opacity: 0.2;
+				}
+			}
+			&:after {
+				@include transition;
+				content: '\f08e';
+				font-family: 'FontAwesome';
+				margin-left: 10px;
+				font-size: 1em;
+				position: absolute;
+				right: -25px;
+				top: -1px;
+				opacity: 0;
+			}
+		}
+	}
+}
+
+
