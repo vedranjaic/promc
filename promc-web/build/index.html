@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>PRO Moving Company | Profesional movers</title>
+	<title>PRO Moving Company | Profesionalne selidbe</title>
 	<meta name="description" content="Međunarodna selidba ureda i arhive - Specijalisti za korporativne selidbe">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
@@ -14,6 +14,9 @@
 	<!-- styles / fonts -->
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Rajdhani:300,500,700&amp;subset=latin-ext" rel="stylesheet">
+	<script src="assets/js/json2.min.js"></script>
+	<script src="assets/js/l10n.min.js"></script>
+	<script src="assets/js/localizations.js"></script>
 	
 </head>
 <body>
@@ -50,19 +53,19 @@
 					<li class="active" id="scroll-to-top">
 						<a href="#uvod" class="scroll-to" tabindex="-1" id="nav-uvod">
 							<i class="icon fa fa-chevron-up"></i> 
-							<span class="visible-xs-inline">Uvod</span>
+							<span class="visible-xs-inline" id="navIntro">Uvod</span>
 						</a>
 					</li>
-					<li id="nav-selidbe"><a href="#selidbe" class="scroll-to">Usluge</a></li>
-					<li id="nav-klijenti"><a href="#klijenti" class="scroll-to">Klijenti</a></li>
-					<li id="nav-o-nama"><a href="#o-nama" class="scroll-to">O nama</a></li>
-					<li id="nav-kontakt"><a href="#kontakt" class="scroll-to">Kontakt</a></li>
+					<li id="nav-selidbe"><a href="#selidbe" id="navUsluge" class="scroll-to">Usluge</a></li>
+					<li id="nav-klijenti"><a href="#klijenti" id="navKlijenti" class="scroll-to">Klijenti</a></li>
+					<li id="nav-o-nama"><a href="#o-nama" id="navONama" class="scroll-to">O nama</a></li>
+					<li id="nav-kontakt"><a href="#kontakt" id="navKontakt" class="scroll-to">Kontakt</a></li>
 					<li class="dropdown dropdown-lang">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">HR <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="lang-selected">HR</span> <span class="caret"></span></a>
 						<ul class="dropdown-menu dropdown-menu-right">
-							<li><a href="#">HR</a></li>
-							<li><a href="#">EN</a></li>
-							<li><a href="#">DE</a></li>
+							<li><a href="#" id="lang-hr">HR</a></li>
+							<li><a href="#" id="lang-en">EN</a></li>
+							<li><a href="#" id="lang-de">DE</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -77,9 +80,9 @@
 	<section class="page page-intro" id="uvod">
 	
 		<!-- PAGE HEADING -->
-		<header class="page-heading @@page-class @@page-status">
-			<h1 class="page-title">Professional movers</h1>
-			<p class="page-lead lead">Profesionalan i korektan odnos prema klijentima za nas je stabilan i održiv način poslovanja.</p>
+		<header class="page-heading  ">
+			<h1 class="page-title" id="pageTitleUvod">Professionalne selidbe</h1>
+			<p class="page-lead lead" id="pageLeadUvod">Profesionalan i korektan odnos prema klijentima za nas je stabilan i održiv način poslovanja.</p>
 		</header>
 		<!-- /.page-heading -->
 
@@ -88,32 +91,32 @@
 			<ul class="offer-list list-unstyled">
 				<li class="offer-item">
 					<a href="#selidbe" class="offer-link scroll-to" id="page-slide-office">
-						<i class="icon fa fa-building"></i>
-						<span class="offer-title">
+						<img src="assets/images/icon-office.svg" alt="Selidba ureda">
+						<span class="offer-title" id="pageIntroOffice">
 							Selidba ureda
 						</span>
 					</a>
 				</li>
 				<li class="offer-item">
 					<a href="#selidbe" class="offer-link scroll-to" id="page-slide-home">
-						<i class="icon fa fa-home"></i>
-						<span class="offer-title">
+						<img src="assets/images/icon-home.svg" alt="Selidba stana">
+						<span class="offer-title" id="pageIntroHome">
 							Selidba stana
 						</span>
 					</a>
 				</li>
 				<li class="offer-item">
 					<a href="#selidbe" class="offer-link scroll-to" id="page-slide-international">
-						<i class="icon fa fa-globe"></i>
-						<span class="offer-title">
+						<img src="assets/images/icon-international.svg" alt="Međunarodne selidbe">
+						<span class="offer-title" id="pageIntroInternational">
 							Međunarodne selidbe
 						</span>
 					</a>
 				</li>
 				<li class="offer-item">
 					<a href="#selidbe" class="offer-link scroll-to" id="page-slide-archive">
-						<i class="icon fa fa-archive"></i>
-						<span class="offer-title">
+						<img src="assets/images/icon-archive.svg" alt="Skladištenje">
+						<span class="offer-title" id="pageIntroArchive">
 							Skladištenje
 						</span>
 					</a>
@@ -141,8 +144,7 @@
 		</div>
 		<!-- /.page-split -->
 
-		
-		<div class="bg-image page-bg-image page-media-image" style="background-image: url(http://sanantoniomovingman.com/wp-content/uploads/2015/07/Hiring-a-Professional-Moving-Company.jpg);"></div>
+		<div class="bg-image page-bg-image page-media-image" style="background-image: url(assets/images/bg/intro.jpg);"></div>
 
 	</section>
 	<!-- /.page page-intro -->
@@ -157,57 +159,57 @@
 	
 		<!-- PAGE HEADING -->
 		<header class="page-heading page-heading-office shown">
-			<h1 class="page-title">Selidbe ureda i arhive</h1>
-			<p class="page-lead lead">Specijalisti za korporativne selidbe</p>
+			<h1 class="page-title" id="pageTitleSelidbeUred">Selidbe ureda i arhive</h1>
+			<p class="page-lead lead" id="pageLeadSelidbeUred">Specijalisti za korporativne selidbe</p>
 		</header>
 		<!-- /.page-heading -->
 		<header class="page-heading page-heading-home ">
-			<h1 class="page-title">Selidbe stana/kuće</h1>
-			<p class="page-lead lead">Pedantno i sigurno</p>
+			<h1 class="page-title" id="pageTitleSelidbeStana">Selidbe stana/kuće</h1>
+			<p class="page-lead lead" id="pageLeadSelidbeStana">Pedantno i sigurno</p>
 		</header>
 		<!-- /.page-heading -->
 		<header class="page-heading page-heading-international ">
-			<h1 class="page-title">Međunarodna selidba</h1>
-			<p class="page-lead lead">Selidbe bez granica</p>
+			<h1 class="page-title" id="pageTitleSelidbeInternational">Međunarodna selidba</h1>
+			<p class="page-lead lead" id="pageLeadSelidbeInternational">Selidbe bez granica</p>
 		</header>
 		<!-- /.page-heading -->
 		<header class="page-heading page-heading-archive ">
-			<h1 class="page-title">Skladištenje arhive, namještaja i osobnih stvari</h1>
-			<p class="page-lead lead">Zaštićeno, sigurno i brižno pohranjeno</p>
+			<h1 class="page-title" id="pageTitleSelidbeArhiva">Skladištenje arhive, namještaja i osobnih stvari</h1>
+			<p class="page-lead lead" id="pageLeadSelidbeArhiva">Zaštićeno, sigurno i brižno pohranjeno</p>
 		</header>
 		<!-- /.page-heading -->
 
 
 		<div class="page-content row">
-			<a class="page-text-collapse btn-block" role="button" data-toggle="collapse" href="#collapse-moving-text" aria-expanded="false" aria-controls="collapse-moving-text" data-text=" Zatvori detalje usluge">
+			<a class="page-text-collapse btn-block" id="pageDetailsSelidbe" role="button" data-toggle="collapse" href="#collapse-moving-text" aria-expanded="false" aria-controls="collapse-moving-text" data-text=" Zatvori detalje usluge">
 				Detalji usluge
 			</a>
 			<div class="page-text collapse col-md-5" id="collapse-moving-text">
 
 				<div class="page-text-office shown">
-					<p>U ProMC-u posebnu pažnju poklanjamo logističkoj razradi planova korporativnih i uredskih preseljenja, u koordinaciji s predstavnicima Vaše tvrtke.</p>
-					<p>Preseljenje velikog broja zaposlenika u kratkom vremenskom roku iz jednog poslovnog prostora u drugi, uključujući arhivu naša je specijalnost. Bez obzira na opseg projekta garantiramo profesionalnu zaštitu sve elektroničke opreme, uredskog namještaja te svih koridora i liftova kojima bismo se prilikom preseljenja služili.</p>
-					<p>Fleksibilnost radnog vremena te brzinu i kvalitetu usluge stavljamo na prvo mjesto i ispunjavamo sva Vaša očekivanja bez kompromisa jer smatramo da je naš posao završen tek sa zadovoljstvom našeg klijenta, sve dok i posljednja pomno uzgajana uredska biljka ne nađe svoje novo mjesto pod suncem.</p>
+					<p id="textSelidbeUredp1">U ProMC-u posebnu pažnju poklanjamo logističkoj razradi planova korporativnih i uredskih preseljenja, u koordinaciji s predstavnicima Vaše tvrtke.</p>
+					<p id="textSelidbeUredp2">Preseljenje velikog broja zaposlenika u kratkom vremenskom roku iz jednog poslovnog prostora u drugi, uključujući arhivu naša je specijalnost. Bez obzira na opseg projekta garantiramo profesionalnu zaštitu sve elektroničke opreme, uredskog namještaja te svih koridora i liftova kojima bismo se prilikom preseljenja služili.</p>
+					<p id="textSelidbeUredp3">Fleksibilnost radnog vremena te brzinu i kvalitetu usluge stavljamo na prvo mjesto i ispunjavamo sva Vaša očekivanja bez kompromisa jer smatramo da je naš posao završen tek sa zadovoljstvom našeg klijenta, sve dok i posljednja pomno uzgajana uredska biljka ne nađe svoje novo mjesto pod suncem.</p>
 				</div>
 				<!-- /.page-text-office -->
 				<div class="page-text-home">
-					<p>Neovisno da li se selite privatno ili zbog promjene radnog mjesta te sami ili s obitelji obratite nam se s punim povjerenjem.</p>
-					<p>Služeći se najnovnijim pakirnim materijalima i opremom, pružit ćemo Vam uslugu profesionalnog pakiranja i zaštite osobnih stvari, namještaja i umjetnina, prijevoz te raspakiravanje. A nakon što i posljednja Vaša stvar uđe u novi prostor možemo Vam ponudit uslugu montaže koju obavlja naš domar, bez obzira radi li se o električarskim, vodointalaterskim ili stolarskim poslovima.</p>
-					<p>Naposlijetku, uslugu detaljnog čišćenja Vašeg novog doma nudimo kao posljednju etapu procesa kroz koji Vam uz uslugu  želimo takvu veliku životnu promjenu učiniti što manje stresnom.</p>
-					<p>Jer za nas nije važno selite li na drugi kraj ulice ili zemlje. Naš je cilj da Vas na kraju uselimo u prostor koji nećete nazivati stanom ili kućom već domom.</p>
+					<p id="textSelidbeStanp1">Neovisno da li se selite privatno ili zbog promjene radnog mjesta te sami ili s obitelji obratite nam se s punim povjerenjem.</p>
+					<p id="textSelidbeStanp2">Služeći se najnovnijim pakirnim materijalima i opremom, pružit ćemo Vam uslugu profesionalnog pakiranja i zaštite osobnih stvari, namještaja i umjetnina, prijevoz te raspakiravanje. A nakon što i posljednja Vaša stvar uđe u novi prostor možemo Vam ponudit uslugu montaže koju obavlja naš domar, bez obzira radi li se o električarskim, vodointalaterskim ili stolarskim poslovima.</p>
+					<p id="textSelidbeStanp3">Naposlijetku, uslugu detaljnog čišćenja Vašeg novog doma nudimo kao posljednju etapu procesa kroz koji Vam uz uslugu  želimo takvu veliku životnu promjenu učiniti što manje stresnom.</p>
+					<p id="textSelidbeStanp4">Jer za nas nije važno selite li na drugi kraj ulice ili zemlje. Naš je cilj da Vas na kraju uselimo u prostor koji nećete nazivati stanom ili kućom već domom.</p>
 				</div>
 				<!-- /.page-text-home -->
 				<div class="page-text-international">
-					<p>Stanovnici Europske Unije sele se danas više nego ikada prije. Ako ste i Vi jedan od mnogih koji sele u Europu, neovisno radi li se o nekoliko kutija ili cijelom kućanstvu,  možemo Vam ponuditi sveobuhvatnu uslugu od vrata do vrata, u jednom potezu bez pretovara umanjujući broj rukovanja s Vašom robom, a time i rizik od oštećenja.  Zahvaljujući našem iskusnom i profesionalnom osoblju sva Vaša imovina i dragocjenosti biti će pažljivo zapakirane te zaštićene tijekom cijelog procesa preseljenja. To garantiramo svojim pristupom prema Vašim osobnim stvarima poštujući njihovu jedinstvenost i emociju koja vlasnika često veže u pojedine predmete.</p>
-					<p>Prije samog preseljena u dogovoru s Vama izrađujemo deteljan plan prilagođen Vašim potrebama navodeći sve pojedinosti prije i nakon preseljenja. Za Vas ćemo se pobrinuti za rješavanje i pravilno ispunjavanje sve popratne dokumentacije te u suradnji s našim vanjskim partnerima pomoći s carinskim pitanjima. Pružit ćemo Vam korisne informacije o samom procesu preseljenja te predradnjama koje bi bilo dobro odraditi prije dolaska našeg osoblja.</p>
-					<p>Omogućit ćemo Vam i privremeno ili dugotrajno pohranjivanje Vaših stvari u našem sigurnom skladištu ukoliko ih nemate potrebu sve preseliti i koristiti na novoj lokaciji.</p>
-					<p>Obratite nam se s povjerenjem.</p>
+					<p id="textSelidbeInternationalp1">Stanovnici Europske Unije sele se danas više nego ikada prije. Ako ste i Vi jedan od mnogih koji sele u Europu, neovisno radi li se o nekoliko kutija ili cijelom kućanstvu,  možemo Vam ponuditi sveobuhvatnu uslugu od vrata do vrata, u jednom potezu bez pretovara umanjujući broj rukovanja s Vašom robom, a time i rizik od oštećenja.  Zahvaljujući našem iskusnom i profesionalnom osoblju sva Vaša imovina i dragocjenosti biti će pažljivo zapakirane te zaštićene tijekom cijelog procesa preseljenja. To garantiramo svojim pristupom prema Vašim osobnim stvarima poštujući njihovu jedinstvenost i emociju koja vlasnika često veže u pojedine predmete.</p>
+					<p id="textSelidbeInternationalp2">Prije samog preseljena u dogovoru s Vama izrađujemo deteljan plan prilagođen Vašim potrebama navodeći sve pojedinosti prije i nakon preseljenja. Za Vas ćemo se pobrinuti za rješavanje i pravilno ispunjavanje sve popratne dokumentacije te u suradnji s našim vanjskim partnerima pomoći s carinskim pitanjima. Pružit ćemo Vam korisne informacije o samom procesu preseljenja te predradnjama koje bi bilo dobro odraditi prije dolaska našeg osoblja.</p>
+					<p id="textSelidbeInternationalp3">Omogućit ćemo Vam i privremeno ili dugotrajno pohranjivanje Vaših stvari u našem sigurnom skladištu ukoliko ih nemate potrebu sve preseliti i koristiti na novoj lokaciji.</p>
+					<p id="textSelidbeInternationalp4">Obratite nam se s povjerenjem.</p>
 				</div>
 				<!-- /.page-text-international -->
 				<div class="page-text-archive">
-					<p>Problem pohranjivanja arhive čest je među tvrtkama zbog visokih cijena najma poslovnih prostora ili neadekvatnog  i nedovoljno velikog prostora. U ProMC-u imamo upravo ono što Vam treba.  Unutar našeg zaštićenog skladišta imamo posebno odvojen prostor samo za pohranu arhive kapaciteta nekoliko tisuća registratora čime je mogućnost gubitka ili oštećenja Vaše dokumentacije svedena na minimum.</p>
-					<p>Vaša arhiva cijelo je vrijeme potpuno dostupna samo Vama u bilo koje doba dana kao da se nalazi u Vašem poslovnom prostoru samo bez plaćanja visoke cijene najma.</p>
-					<p>U našem skladištu možete potpuno sigurno i bez ikakve brige pohraniti namještaj te osobne stvari na dulje ili kraće periode, ovisno o Vašim potrebama. Pritom su sve pohranjene stvari adekvatno zapakirane i zaštićene od vanjskih utjecaja kako bi Vas dočekale u jednakom stanju u kakvom su pohranjene.</p>
+					<p id="textSelidbeArhivap1">Problem pohranjivanja arhive čest je među tvrtkama zbog visokih cijena najma poslovnih prostora ili neadekvatnog  i nedovoljno velikog prostora. U ProMC-u imamo upravo ono što Vam treba.  Unutar našeg zaštićenog skladišta imamo posebno odvojen prostor samo za pohranu arhive kapaciteta nekoliko tisuća registratora čime je mogućnost gubitka ili oštećenja Vaše dokumentacije svedena na minimum.</p>
+					<p id="textSelidbeArhivap2">Vaša arhiva cijelo je vrijeme potpuno dostupna samo Vama u bilo koje doba dana kao da se nalazi u Vašem poslovnom prostoru samo bez plaćanja visoke cijene najma.</p>
+					<p id="textSelidbeArhivap3">U našem skladištu možete potpuno sigurno i bez ikakve brige pohraniti namještaj te osobne stvari na dulje ili kraće periode, ovisno o Vašim potrebama. Pritom su sve pohranjene stvari adekvatno zapakirane i zaštićene od vanjskih utjecaja kako bi Vas dočekale u jednakom stanju u kakvom su pohranjene.</p>
 				</div>
 				<!-- /.page-text-archive -->
 
@@ -221,25 +223,25 @@
 						<li role="presentation" class="active">
 							<a href="#tab-selidbe-ureda" id="selidbe-ureda" role="tab" data-toggle="tab">
 								<i class="icon fa fa-building visible-xs"></i>
-								<span class="hidden-xs">Ured</span>
+								<span class="hidden-xs" id="qTabUred">Ured</span>
 							</a>
 						</li>
 						<li role="presentation">
 							<a href="#tab-selidbe-stana" id="selidbe-stana" role="tab" data-toggle="tab">
 								<i class="icon fa fa-home visible-xs"></i>
-								<span class="hidden-xs">Stan</span>
+								<span class="hidden-xs" id="qTabStan">Stan</span>
 							</a>
 						</li>
 						<li role="presentation">
 							<a href="#tab-selidbe-medjunarodno" id="selidbe-medjunarodno" role="tab" data-toggle="tab">
 								<i class="icon fa fa-globe visible-xs"></i>
-								<span class="hidden-xs">Međunarodna</span>
+								<span class="hidden-xs" id="qTabInternational">Međunarodna</span>
 							</a>
 						</li>
 						<li role="presentation">
 							<a href="#tab-selidbe-skladistenje" id="selidbe-skladistenje" role="tab" data-toggle="tab">
 								<i class="icon fa fa-archive visible-xs"></i>
-								<span class="hidden-xs">Skladištenje</span>
+								<span class="hidden-xs" id="qTabArhiva">Skladištenje</span>
 							</a>
 						</li>
 					</ul>
@@ -253,50 +255,50 @@
 								<!-- ALERT -->
 								<div class="alert alert-danger alert-dismissible hidden" role="alert">
 									<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-									<strong><i class="icon fa fa-warning"></i> Obvezna polja!</strong> Za kontakt potrebno je popuniti polja s kontaktnim podacima.
+									<strong><i class="icon fa fa-warning"></i> <span id="qOfficeAlertTitle">Obvezna polja!</span></strong> <span id="qOfficeAlertMessage">Za kontakt potrebno je popuniti polja s kontaktnim podacima.</span>
 								</div>
 
 
 								<div class="form-section form-section-contact row">
 									<div class="form-group col-sm-4">
-										<label for="promc-office-name" class="control-label">Kontakt osoba: <sup class="required"></sup></label>
+										<label for="promc-office-name" class="control-label"><span id="qOfficeLabelContactName">Kontakt osoba</span>: <sup class="required"></sup></label>
 										<input name="Kontakt osoba" type="text" class="form-control" id="promc-office-name" placeholder="Ime prezime">
 									</div>
 									<div class="form-group col-sm-4">
-										<label for="promc-office-email" class="control-label">E-mail adresa: <sup class="required"></sup></label>
+										<label for="promc-office-email" class="control-label"><span id="qOfficeLabelContactEmail">E-mail adresa</span>: <sup class="required"></sup></label>
 										<input name="E-mail adresa" type="email" class="form-control" id="promc-office-email" placeholder="email@adresa.hr">
 									</div>
 									<div class="form-group col-sm-4 form-group-number">
-										<label for="promc-office-number" class="control-label">Kontakt broj: <sup class="prefer-call required"></sup></label>
+										<label for="promc-office-number" class="control-label"><span id="qOfficeLabelContactNumber">Kontakt broj</span>: <sup class="prefer-call required"></sup></label>
 										<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-office-number">
 									</div>
 								</div>
 								<!-- /.form-section -->
 
-								<a class="form-section-toggle" data-toggle="collapse" href="#promc-office-moving-details" data-text=" Zatvori detalje selidbe">
+								<a class="form-section-toggle" id="qDetailsMove" data-toggle="collapse" href="#promc-office-moving-details" data-text=" Zatvori detalje selidbe">
 									Detalji selidbe
 								</a>
 
 								<div class="form-section form-section-moving collapse row" id="promc-office-moving-details">
 									<div class="form-group col-sm-8">
-										<label for="promc-office-address-start">Preseljenje iz:</label>
+										<label for="promc-office-address-start" id="qOfficeAddressStart">Preseljenje iz:</label>
 										<input name="Preseljenje iz" type="text" class="form-control" id="promc-office-address-start" placeholder="Adresa i kućni broj, grad">
 									</div>
 									<div class="form-group col-sm-4">
-										<label for="promc-office-date-start">Datum preseljenja:</label>
+										<label for="promc-office-date-start" id="qOfficeDateStart">Datum preseljenja:</label>
 										<input name="Datum preseljenja" type="date" class="form-control" id="promc-office-date-start">
 									</div>
 									<div class="form-group col-sm-8">
-										<label for="promc-office-address-finish">Preseljenje u:</label>
+										<label for="promc-office-address-finish" id="qOfficeAddressFinish">Preseljenje u:</label>
 										<input name="Preseljenje u" type="text" class="form-control" id="promc-office-address-finish" placeholder="Adresa i kućni broj, grad">
 									</div>
 									<div class="form-group col-sm-4">
-										<label for="promc-office-employees">Broj radnih mjesta:</label>
+										<label for="promc-office-employees" id="qOfficeQuantity">Broj radnih mjesta:</label>
 										<input name="Broj radnih mjesta" type="text" pattern="[0-9]*" class="form-control" id="promc-office-employees" placeholder="">
 									</div>
 									<div class="form-group col-sm-12">
-										<a class="form-label-toggle" data-toggle="collapse" href="#promc-office-details">
-											Dodatne informacije:
+										<a class="form-label-toggle" id="qDetailsDodatne" data-toggle="collapse" href="#promc-office-details">
+											 Dodatne informacije:
 										</a>
 										<div class="form-group-textarea collapse" id="promc-office-details">
 											<textarea name="Dodatne informacije" class="form-control" rows="3"></textarea>
@@ -307,9 +309,9 @@
 
 								<div class="form-actions clearfix">
 									<div class="loading hidden">
-										<i class="spin large"></i> <span>Molimo pričekajte...</span>
+										<i class="spin large"></i> <span id="qSubmitLoader">Molimo pričekajte...</span>
 									</div>
-									<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
+									<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right" id="qSubmitBtn">Kontaktirajte me</button>
 								</div>
 
 
@@ -319,13 +321,13 @@
 							  <!-- ALERT -->
 							  <div class="alert alert-success alert-dismissible " role="alert">
 							  	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							  	<strong><i class="icon fa fa-check"></i> Vaša poruka uspješno je poslana!</strong>
+							  	<strong id="qSubmitSuccessMessage"><i class="icon fa fa-check"></i> Vaša poruka uspješno je poslana!</strong>
 							  </div>
 
 							  <div class="thankyou-message">
-							  	<h2 class="thankyou-title">Zahvaljujemo na upitu</h2>
-							  	<p class="lead">Naš agent će Vas kontaktirati u najskorijem mogućem roku. Kopija ove poruke poslana je i na Vašu e-mail adresu.</p>
-							  	<button class="btn btn-default btn-lg btn-send-another pull-right">Pošalji još jedan upit</button>
+							  	<h2 class="thankyou-title" id="qSubmitThankyouTitle">Zahvaljujemo na upitu</h2>
+							  	<p class="lead" id="qSubmitThankyouMessage">Naš agent će Vas kontaktirati u najskorijem mogućem roku. Kopija ove poruke poslana je i na Vašu e-mail adresu.</p>
+							  	<button class="btn btn-default btn-lg btn-send-another pull-right" id="qSubmitBtnAgain">Pošalji još jedan upit</button>
 							  </div>
 							  <!-- /.thankyou-message -->
 							</div>
@@ -338,50 +340,50 @@
 								<!-- ALERT -->
 								<div class="alert alert-danger alert-dismissible hidden" role="alert">
 									<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-									<strong><i class="icon fa fa-warning"></i> Obvezna polja!</strong> Za kontakt potrebno je popuniti polja s kontaktnim podacima.
+									<strong><i class="icon fa fa-warning"></i> <span id="qHomeAlertTitle">Obvezna polja!</span></strong> <span id="qHomeAlertMessage">Za kontakt potrebno je popuniti polja s kontaktnim podacima.</span>
 								</div>
 
 
 								<div class="form-section form-section-contact row">
 									<div class="form-group col-sm-4">
-										<label for="promc-home-name" class="control-label">Ime i prezime: <sup class="required"></sup></label>
+										<label for="promc-home-name" class="control-label"><span id="qHomeLabelContactName">Ime i prezime</span>: <sup class="required"></sup></label>
 										<input name="Ime i prezime" type="text" class="form-control" id="promc-home-name" placeholder="Ime prezime">
 									</div>
 									<div class="form-group col-sm-4">
-										<label for="promc-home-email" class="control-label">E-mail adresa: <sup class="required"></sup></label>
+										<label for="promc-home-email" class="control-label"><span id="qHomeLabelContactEmail">E-mail adresa</span>: <sup class="required"></sup></label>
 										<input name="E-mail adresa" type="email" class="form-control" id="promc-home-email" placeholder="email@adresa.hr">
 									</div>
 									<div class="form-group col-sm-4 form-group-number">
-										<label for="promc-home-number" class="control-label">Kontakt broj: <sup class="prefer-call required"></sup></label>
+										<label for="promc-home-number" class="control-label"><span id="qHomeLabelContactNumber">Kontakt broj</span>: <sup class="prefer-call required"></sup></label>
 										<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-home-number">
 									</div>
 								</div>
 								<!-- /.form-section -->
 
-								<a class="form-section-toggle" data-toggle="collapse" href="#promc-home-moving-details" data-text=" Zatvori detalje selidbe">
+								<a class="form-section-toggle" id="qDetailsMove" data-toggle="collapse" href="#promc-home-moving-details" data-text=" Zatvori detalje selidbe">
 									Detalji selidbe
 								</a>
 
 								<div class="form-section form-section-moving collapse row" id="promc-home-moving-details">
 									<div class="form-group col-sm-8">
-										<label for="promc-home-address-start">Preseljenje iz:</label>
+										<label for="promc-home-address-start" id="qHomeAddressStart">Preseljenje iz:</label>
 										<input name="Preseljenje iz" type="text" class="form-control" id="promc-home-address-start" placeholder="Adresa i kućni broj, grad">
 									</div>
 									<div class="form-group col-sm-4">
-										<label for="promc-home-date-start">Datum preseljenja:</label>
+										<label for="promc-home-date-start" id="qHomeDateStart">Datum preseljenja:</label>
 										<input name="Datum preseljenja" type="date" class="form-control" id="promc-home-date-start">
 									</div>
 									<div class="form-group col-sm-8">
-										<label for="promc-home-address-finish">Preseljenje u:</label>
+										<label for="promc-home-address-finish" id="qHomeAddressFinish">Preseljenje u:</label>
 										<input name="Preseljenje u" type="text" class="form-control" id="promc-home-address-finish" placeholder="Adresa i kućni broj, grad">
 									</div>
 									<div class="form-group col-sm-4">
-										<label for="promc-home-volume">Površina m<sup>2</sup>:</label>
+										<label for="promc-home-volume"><span id="qHomeQuantity">Površina</span> m<sup>2</sup>:</label>
 										<input name="Površina u m2" type="text" pattern="[0-9]*" class="form-control" id="promc-home-volume" placeholder="">
 									</div>
 									<div class="form-group col-sm-12">
-										<a class="form-label-toggle" data-toggle="collapse" href="#promc-home-details">
-											Dodatne informacije:
+										<a class="form-label-toggle" id="qDetailsDodatne" data-toggle="collapse" href="#promc-home-details">
+											 Dodatne informacije:
 										</a>
 										<div class="form-group-textarea collapse" id="promc-home-details">
 											<textarea name="Dodatne informacije" class="form-control" rows="3"></textarea>
@@ -392,9 +394,9 @@
 
 								<div class="form-actions clearfix">
 									<div class="loading hidden">
-										<i class="spin large"></i> <span>Molimo pričekajte...</span>
+										<i class="spin large"></i> <span id="qSubmitLoader">Molimo pričekajte...</span>
 									</div>
-									<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
+									<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right" id="qSubmitBtn">Kontaktirajte me</button>
 								</div>
 
 
@@ -404,13 +406,13 @@
 							  <!-- ALERT -->
 							  <div class="alert alert-success alert-dismissible " role="alert">
 							  	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							  	<strong><i class="icon fa fa-check"></i> Vaša poruka uspješno je poslana!</strong>
+							  	<strong id="qSubmitSuccessMessage"><i class="icon fa fa-check"></i> Vaša poruka uspješno je poslana!</strong>
 							  </div>
 
 							  <div class="thankyou-message">
-							  	<h2 class="thankyou-title">Zahvaljujemo na upitu</h2>
-							  	<p class="lead">Naš agent će Vas kontaktirati u najskorijem mogućem roku. Kopija ove poruke poslana je i na Vašu e-mail adresu.</p>
-							  	<button class="btn btn-default btn-lg btn-send-another pull-right">Pošalji još jedan upit</button>
+							  	<h2 class="thankyou-title" id="qSubmitThankyouTitle">Zahvaljujemo na upitu</h2>
+							  	<p class="lead" id="qSubmitThankyouMessage">Naš agent će Vas kontaktirati u najskorijem mogućem roku. Kopija ove poruke poslana je i na Vašu e-mail adresu.</p>
+							  	<button class="btn btn-default btn-lg btn-send-another pull-right" id="qSubmitBtnAgain">Pošalji još jedan upit</button>
 							  </div>
 							  <!-- /.thankyou-message -->
 							</div>
@@ -424,50 +426,50 @@
 								<!-- ALERT -->
 								<div class="alert alert-danger alert-dismissible hidden" role="alert">
 									<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-									<strong><i class="icon fa fa-warning"></i> Obvezna polja!</strong> Za kontakt potrebno je popuniti polja s kontaktnim podacima.
+									<strong><i class="icon fa fa-warning"></i> <span id="qInternationalAlertTitle">Obvezna polja!</span></strong> <span id="qInternationalAlertMessage">Za kontakt potrebno je popuniti polja s kontaktnim podacima.</span>
 								</div>
 
 
 								<div class="form-section form-section-contact row">
 									<div class="form-group col-sm-4">
-										<label for="promc-international-name">Ime i prezime: <sup class="required"></sup></label>
+										<label for="promc-international-name"><span id="qInternationalLabelContactName">Ime i prezime</span>: <sup class="required"></sup></label>
 										<input name="Ime i prezime" type="text" class="form-control" id="promc-international-name" placeholder="Ime prezime">
 									</div>
 									<div class="form-group col-sm-4">
-										<label for="promc-international-email">E-mail adresa: <sup class="required"></sup></label>
+										<label for="promc-international-email"><span id="qInternationalLabelContactEmail">E-mail adresa</span>: <sup class="required"></sup></label>
 										<input name="E-mail adresa" type="email" class="form-control" id="promc-international-email" placeholder="email@adresa.hr">
 									</div>
 									<div class="form-group col-sm-4 form-group-number">
-										<label for="promc-international-number">Kontakt broj: <sup class="prefer-call required"></sup></label>
+										<label for="promc-international-number"><span id="qInternationalLabelContactNumber">Kontakt broj</span>: <sup class="prefer-call required"></sup></label>
 										<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-international-number">
 									</div>
 								</div>
 								<!-- /.form-section -->
 
-								<a class="form-section-toggle" data-toggle="collapse" href="#promc-international-moving-details" data-text=" Zatvori detalje selidbe">
+								<a class="form-section-toggle" id="qDetailsMove" data-toggle="collapse" href="#promc-international-moving-details" data-text=" Zatvori detalje selidbe">
 									Detalji selidbe
 								</a>
 
 								<div class="form-section form-section-moving collapse row" id="promc-international-moving-details">
 									<div class="form-group col-sm-8">
-										<label for="promc-international-address-start">Preseljenje iz:</label>
+										<label for="promc-international-address-start" id="qInternationalAddressStart">Preseljenje iz:</label>
 										<input name="Preseljenje iz" type="text" class="form-control" id="promc-international-address-start" placeholder="Adresa i kućni broj, grad, država">
 									</div>
 									<div class="form-group col-sm-4">
-										<label for="promc-international-date-start">Datum preseljenja:</label>
+										<label for="promc-international-date-start" id="qInternationalDateStart">Datum preseljenja:</label>
 										<input name="Datum preseljenja" type="date" class="form-control" id="promc-international-date-start">
 									</div>
 									<div class="form-group col-sm-8">
-										<label for="promc-international-address-finish">Preseljenje u:</label>
+										<label for="promc-international-address-finish" id="qInternationalAddressFinish">Preseljenje u:</label>
 										<input name="Preseljenje u" type="text" class="form-control" id="promc-international-address-finish" placeholder="Adresa i kućni broj, grad, država">
 									</div>
 									<div class="form-group col-sm-4">
-										<label for="promc-international-volume">Površina m<sup>2</sup>:</label>
+										<label for="promc-international-volume"><span id="qInternationalQuantity">Površina</span> m<sup>2</sup>:</label>
 										<input name="Površina u m2" type="text" pattern="[0-9]*" class="form-control" id="promc-international-volume" placeholder="">
 									</div>
 									<div class="form-group col-sm-12">
-										<a class="form-label-toggle" data-toggle="collapse" href="#promc-international-details">
-											Dodatne informacije:
+										<a class="form-label-toggle" id="qDetailsDodatne" data-toggle="collapse" href="#promc-international-details">
+											 Dodatne informacije:
 										</a>
 										<div class="form-group-textarea collapse" id="promc-international-details">
 											<textarea name="Dodatne informacije" class="form-control" rows="3"></textarea>
@@ -478,9 +480,9 @@
 
 								<div class="form-actions clearfix">
 									<div class="loading hidden">
-										<i class="spin large"></i> <span>Molimo pričekajte...</span>
+										<i class="spin large"></i> <span id="qSubmitLoader">Molimo pričekajte...</span>
 									</div>
-									<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
+									<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right" id="qSubmitBtn">Kontaktirajte me</button>
 								</div>
 
 
@@ -490,13 +492,13 @@
 							  <!-- ALERT -->
 							  <div class="alert alert-success alert-dismissible " role="alert">
 							  	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							  	<strong><i class="icon fa fa-check"></i> Vaša poruka uspješno je poslana!</strong>
+							  	<strong id="qSubmitSuccessMessage"><i class="icon fa fa-check"></i> Vaša poruka uspješno je poslana!</strong>
 							  </div>
 
 							  <div class="thankyou-message">
-							  	<h2 class="thankyou-title">Zahvaljujemo na upitu</h2>
-							  	<p class="lead">Naš agent će Vas kontaktirati u najskorijem mogućem roku. Kopija ove poruke poslana je i na Vašu e-mail adresu.</p>
-							  	<button class="btn btn-default btn-lg btn-send-another pull-right">Pošalji još jedan upit</button>
+							  	<h2 class="thankyou-title" id="qSubmitThankyouTitle">Zahvaljujemo na upitu</h2>
+							  	<p class="lead" id="qSubmitThankyouMessage">Naš agent će Vas kontaktirati u najskorijem mogućem roku. Kopija ove poruke poslana je i na Vašu e-mail adresu.</p>
+							  	<button class="btn btn-default btn-lg btn-send-another pull-right" id="qSubmitBtnAgain">Pošalji još jedan upit</button>
 							  </div>
 							  <!-- /.thankyou-message -->
 							</div>
@@ -509,21 +511,21 @@
 								<!-- ALERT -->
 								<div class="alert alert-danger alert-dismissible hidden" role="alert">
 									<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-									<strong><i class="icon fa fa-warning"></i> Obvezna polja!</strong> Za kontakt potrebno je popuniti polja s kontaktnim podacima.
+									<strong><i class="icon fa fa-warning"></i> <span id="qArchiveAlertTitle">Obvezna polja!</span></strong> <span id="qArchiveAlertMessage">Za kontakt potrebno je popuniti polja s kontaktnim podacima.</span>
 								</div>
 
 
 								<div class="form-section form-section-contact row">
 									<div class="form-group col-sm-4">
-										<label for="promc-archive-name" class="control-label">Ime i prezime: <sup class="required"></sup></label>
+										<label for="promc-archive-name" class="control-label"><span id="qArchiveLabelContactName">Ime i prezime</span>: <sup class="required"></sup></label>
 										<input name="Ime i prezime" type="text" class="form-control" id="promc-archive-name" placeholder="Ime prezime">
 									</div>
 									<div class="form-group col-sm-4">
-										<label for="promc-archive-email" class="control-label">E-mail adresa: <sup class="required"></sup></label>
+										<label for="promc-archive-email" class="control-label"><span id="qArchiveLabelContactEmail">E-mail adresa</span>: <sup class="required"></sup></label>
 										<input name="E-mail adresa" type="email" class="form-control" id="promc-archive-email" placeholder="email@adresa.hr">
 									</div>
 									<div class="form-group col-sm-4 form-group-number">
-										<label for="promc-archive-number" class="control-label">Kontakt broj: <sup class="prefer-call required"></sup></label>
+										<label for="promc-archive-number" class="control-label"><span id="qArchiveLabelContactNumber">Kontakt broj</span>: <sup class="prefer-call required"></sup></label>
 										<input name="Kontakt broj" type="text" pattern="[0-9]*" class="form-control" id="promc-archive-number">
 									</div>
 								</div>
@@ -531,8 +533,8 @@
 
 								<div class="form-section row">
 									<div class="form-group col-sm-12">
-										<a class="form-label-toggle" data-toggle="collapse" href="#promc-archive-type">
-											Vrsta robe:
+										<a class="form-label-toggle" id="qDetailsType" data-toggle="collapse" href="#promc-archive-type">
+											 Vrsta robe:
 										</a>
 										<div class="form-group-textarea collapse" id="promc-archive-type">
 											<textarea name="Vrsta robe" class="form-control" rows="3"></textarea>
@@ -540,9 +542,9 @@
 									</div>
 									<div class="form-actions col-sm-12">
 										<div class="loading hidden">
-											<i class="spin large"></i> <span>Molimo pričekajte...</span>
+											<i class="spin large"></i> <span id="qSubmitLoader">Molimo pričekajte...</span>
 										</div>
-										<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right">Kontaktirajte me</button>
+										<button type="submit" class="btn btn-primary btn-lg btn-submit pull-right" id="qSubmitBtn">Kontaktirajte me</button>
 									</div>
 								</div>
 								<!-- /.form-section -->
@@ -554,13 +556,13 @@
 							  <!-- ALERT -->
 							  <div class="alert alert-success alert-dismissible " role="alert">
 							  	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							  	<strong><i class="icon fa fa-check"></i> Vaša poruka uspješno je poslana!</strong>
+							  	<strong id="qSubmitSuccessMessage"><i class="icon fa fa-check"></i> Vaša poruka uspješno je poslana!</strong>
 							  </div>
 
 							  <div class="thankyou-message">
-							  	<h2 class="thankyou-title">Zahvaljujemo na upitu</h2>
-							  	<p class="lead">Naš agent će Vas kontaktirati u najskorijem mogućem roku. Kopija ove poruke poslana je i na Vašu e-mail adresu.</p>
-							  	<button class="btn btn-default btn-lg btn-send-another pull-right">Pošalji još jedan upit</button>
+							  	<h2 class="thankyou-title" id="qSubmitThankyouTitle">Zahvaljujemo na upitu</h2>
+							  	<p class="lead" id="qSubmitThankyouMessage">Naš agent će Vas kontaktirati u najskorijem mogućem roku. Kopija ove poruke poslana je i na Vašu e-mail adresu.</p>
+							  	<button class="btn btn-default btn-lg btn-send-another pull-right" id="qSubmitBtnAgain">Pošalji još jedan upit</button>
 							  </div>
 							  <!-- /.thankyou-message -->
 							</div>
@@ -582,16 +584,16 @@
 			<!-- Slides -->
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
-					<div class="bg-image" style="background-image: url(assets/images/bg/office2.jpg);"></div>
+					<div class="bg-image" style="background-image: url(assets/images/bg/page-moving-office.jpg);"></div>
 				</div>
 				<div class="item">
-					<div class="bg-image" style="background-image: url(assets/images/bg/home.jpg);"></div>
+					<div class="bg-image" style="background-image: url(assets/images/bg/page-moving-home.jpg);"></div>
 				</div>
 				<div class="item">
-					<div class="bg-image" style="background-image: url(assets/images/bg/international.jpg);"></div>
+					<div class="bg-image" style="background-image: url(assets/images/bg/page-moving-international.jpg);"></div>
 				</div>
 				<div class="item">
-					<div class="bg-image" style="background-image: url(assets/images/bg/archive.jpg);"></div>
+					<div class="bg-image" style="background-image: url(assets/images/bg/page-moving-archive.jpg);"></div>
 				</div>
 			</div>
 			<!-- /.carousel-inner -->
@@ -606,9 +608,9 @@
 	<section class="page page-clients page-content-right" id="klijenti">
 	
 		<!-- PAGE HEADING -->
-		<header class="page-heading @@page-class @@page-status">
-			<h1 class="page-title">Naši klijenti</h1>
-			<p class="page-lead lead">Preselite se među naše klijente</p>
+		<header class="page-heading  ">
+			<h1 class="page-title" id="pageTitleKlijenti">Naši klijenti</h1>
+			<p class="page-lead lead" id="pageLeadKlijenti">Preselite se među naše klijente</p>
 		</header>
 		<!-- /.page-heading -->
 
@@ -617,38 +619,38 @@
 			<ul class="client-logos list-unstyled">
 				<li class="client-logo-set">
 					<div class="item">
-						<a href="#ht" class="logo-client"><img src="assets/images/clients/logo-hrvatski-telekom.svg" alt="Hrvatski Telekom"></a>
-						<a href="#generali" class="logo-client"><img src="assets/images/clients/logo-generali-osiguranje.svg" alt="Generali Osiguranje"></a>
+						<a href="#ht" class="logo-client"><img src="assets/images/clients/logo-hrvatski-telekom.svg" alt="Hrvatski Telekom" title="Hrvatski Telekom"></a>
+						<a href="#generali" class="logo-client"><img src="assets/images/clients/logo-generali-osiguranje.svg" alt="Generali Osiguranje" title="Generali Osiguranje"></a>
 					</div>
 				</li>
 				<li class="client-logo-set">
 					<div class="item">
-						<a href="#" class="logo-client"><img src="assets/images/clients/logo-luxor-multiservis.png" alt="Luxor multiservis"></a>
-						<a href="#" class="logo-client"><img src="assets/images/clients/logo-moderna-galerija.png" alt="Moderna galerija"></a>
+						<a href="#" class="logo-client"><img src="assets/images/clients/logo-luxor-multiservis.png" alt="Luxor multiservis" title="Luxor multiservis"></a>
+						<a href="#" class="logo-client"><img src="assets/images/clients/logo-moderna-galerija.png" alt="Moderna galerija" title="Moderna galerija"></a>
 					</div>
 				</li>
 				<li class="client-logo-set">
 					<div class="item">
-						<a href="#" class="logo-client"><img src="assets/images/clients/logo-konzum.svg" alt="Konzum"></a>
-						<a href="#" class="logo-client"><img src="assets/images/clients/logo-ericsson.svg" alt="Ericsson Nikola Tesla"></a>
+						<a href="#" class="logo-client"><img src="assets/images/clients/logo-konzum.svg" alt="Konzum" title="Konzum"></a>
+						<a href="#" class="logo-client"><img src="assets/images/clients/logo-ericsson.svg" alt="Ericsson Nikola Tesla" title="Ericsson Nikola Tesla"></a>
 					</div>
 				</li>
 				<li class="client-logo-set">
 					<div class="item">
-						<a href="#" class="logo-client"><img src="assets/images/clients/logo-atalian.svg" alt="Atalian Global Services Croatia"></a>
-						<a href="#" class="logo-client"><img src="assets/images/clients/logo-international-movers.svg" alt="Eurogroup International Movers"></a>
+						<a href="#" class="logo-client"><img src="assets/images/clients/logo-atalian.svg" alt="Atalian Global Services Croatia" title="Atalian Global Services Croatia"></a>
+						<a href="#" class="logo-client"><img src="assets/images/clients/logo-international-movers.svg" alt="Eurogroup International Movers" title="Eurogroup International Movers"></a>
 					</div>
 				</li>
 				<li class="client-logo-set">
 					<div class="item">
-						<a href="#" class="logo-client"><img src="assets/images/clients/logo-omega-software.svg" alt="Omega software"></a>
-						<a href="#" class="logo-client"><img src="assets/images/clients/logo-smart-net.png" alt="Smart net"></a>
+						<a href="#" class="logo-client"><img src="assets/images/clients/logo-omega-software.svg" alt="Omega software" title="Omega software"></a>
+						<a href="#" class="logo-client"><img src="assets/images/clients/logo-smart-net.png" alt="Smart net" title="Smart net"></a>
 					</div>
 				</li>
 				<li class="client-logo-set">
 					<div class="item">
-						<a href="#" class="logo-client"><img src="assets/images/clients/logo-hypo-aab.svg" alt="Hypo Alpe Adria Bank"></a>
-						<a href="#" class="logo-client"><img src="assets/images/clients/logo-croatia-osiguranje.svg" alt="Croatia Osiguranje"></a>
+						<a href="#" class="logo-client"><img src="assets/images/clients/logo-hypo-aab.svg" alt="Hypo Alpe Adria Bank" title="Hypo Alpe Adria Bank"></a>
+						<a href="#" class="logo-client"><img src="assets/images/clients/logo-croatia-osiguranje.svg" alt="Croatia Osiguranje" title="Croatia Osiguranje"></a>
 					</div>
 				</li>
 			</ul>
@@ -672,7 +674,7 @@
 		</div>
 		<!-- /.page-split -->
 
-		
+		<div class="bg-image page-bg-image page-media-image" style="background-image: url(assets/images/bg/page-clients.jpg);"></div>
 	
 	</section>
 	<!-- /.page page-clients -->
@@ -680,41 +682,41 @@
 	<section class="page page-about-us page-content-left" id="o-nama">
 
 		<!-- PAGE HEADING -->
-		<header class="page-heading @@page-class @@page-status">
-			<h1 class="page-title">O nama</h1>
-			<p class="page-lead lead">Professional movers</p>
+		<header class="page-heading  ">
+			<h1 class="page-title" id="pageTitleONama">O nama</h1>
+			<p class="page-lead lead" id="pageLeadONama">Professional movers</p>
 		</header>
 		<!-- /.page-heading -->
 
 		<div class="page-content row">
 			<div class="page-text col-md-5">
-				<p>Pro Moving Company d.o.o. je osnovan kao rezultat višegodišnjeg znanja i iskustva njenih osnivača u sektoru korporativnih i međunarodnih preseljenja te prijevoza teških tereta čime smo specijalizirani upravo za takvu vrstu djelatnosti. </p>
-				<p>Čine je pristupačni i stručni ljudi osposobljeni prema tradicijskim europskim standardima koje u praksi primijenjuju na domaćem i inozemnom tržištu.</p>
-				<p>Želja za samostalnošću te radom na drugačiji i učinkovitiji - nama jedini prihvatljiv način - bile su nam vodilje pri osnivanju tvrtke. To znači da kontinuirano primijenjujemo stečena znanja za dobrobit klijenta čime želimo graditi odnose međusobnog poštovanja i polagati temelje dugogodišnje suradnje.</p>
-				<p>Svako preseljenje je posebno i zahtjevi klijenata se jako razlikuju pa je stoga naša vizija pružanje logističkih usluga krojenih prema specifičnim potrebama svakog klijenta kroz savjetovanja te etapno planiranje posla, povećavajući efikasnost i pritom umanjujući ukupne troškove za obje strane.</p>
-				<p>Slijedom toga, naša je misija da kontinuirano radimo na provedbi logističkih rješenja kroz preseljenja, dostave i skladištenja, služeći se specijaliziranom opremom te vodeći brigu o propisanim standardima i unutar dogovorenog roka – što je apsolutni imperativ.</p>
+				<p id="textONamap1">Pro Moving Company d.o.o. je osnovan kao rezultat višegodišnjeg znanja i iskustva njenih osnivača u sektoru korporativnih i međunarodnih preseljenja te prijevoza teških tereta čime smo specijalizirani upravo za takvu vrstu djelatnosti. </p>
+				<p id="textONamap2">Čine je pristupačni i stručni ljudi osposobljeni prema tradicijskim europskim standardima koje u praksi primijenjuju na domaćem i inozemnom tržištu.</p>
+				<p id="textONamap3">Želja za samostalnošću te radom na drugačiji i učinkovitiji - nama jedini prihvatljiv način - bile su nam vodilje pri osnivanju tvrtke. To znači da kontinuirano primijenjujemo stečena znanja za dobrobit klijenta čime želimo graditi odnose međusobnog poštovanja i polagati temelje dugogodišnje suradnje.</p>
+				<p id="textONamap4">Svako preseljenje je posebno i zahtjevi klijenata se jako razlikuju pa je stoga naša vizija pružanje logističkih usluga krojenih prema specifičnim potrebama svakog klijenta kroz savjetovanja te etapno planiranje posla, povećavajući efikasnost i pritom umanjujući ukupne troškove za obje strane.</p>
+				<p id="textONamap5">Slijedom toga, naša je misija da kontinuirano radimo na provedbi logističkih rješenja kroz preseljenja, dostave i skladištenja, služeći se specijaliziranom opremom te vodeći brigu o propisanim standardima i unutar dogovorenog roka – što je apsolutni imperativ.</p>
 			</div>
 			<!-- /.page-text -->
 			<div class="page-media col-md-7">
-				<div class="row">
+				<div class="row hidden">
 					<div class="progress-stats col-sm-6">
-						<p class="progress-title">preseljenih ormara</p>
 						<h1 class="progress-number" id="progress-ormara">0</h1>
+						<p class="progress-title" id="textONamaStat1">preseljenih ormara</p>
 					</div>
 					<!-- /.progress -->
 					<div class="progress-stats col-sm-6">
-						<p class="progress-title">preseljenih kutija</p>
 						<h1 class="progress-number" id="progress-kutija">0</h1>
+						<p class="progress-title" id="textONamaStat2">preseljenih kutija</p>
 					</div>
 					<!-- /.progress -->
 					<div class="progress-stats col-sm-6">
-						<p class="progress-title">preseljenih stolaca</p>
 						<h1 class="progress-number" id="progress-stolica">0</h1>
+						<p class="progress-title" id="textONamaStat3">preseljenih stolaca</p>
 					</div>
 					<!-- /.progress -->
 					<div class="progress-stats col-sm-6">
-						<p class="progress-title">preseljenih cvijetova</p>
 						<h1 class="progress-number" id="progress-cvijeca">0</h1>
+						<p class="progress-title" id="textONamaStat4">preseljenih cvijetova</p>
 					</div>
 					<!-- /.progress -->
 				</div>
@@ -730,7 +732,7 @@
 		</div>
 		<!-- /.page-split -->
 
-		
+		<div class="bg-image page-bg-image page-media-image" style="background-image: url(assets/images/bg/page-about-us.jpg);"></div>
 
 	</section>
 	<!-- /.page page-about-us -->
@@ -740,9 +742,9 @@
 		<!-- PAGE SPLIT -->
 
 		<!-- PAGE HEADING -->
-		<header class="page-heading @@page-class @@page-status">
-			<h1 class="page-title">Kontaktirajte nas</h1>
-			<p class="page-lead lead">Stojimo Vam na raspolaganju</p>
+		<header class="page-heading  ">
+			<h1 class="page-title" id="pageTitleKontakt">Kontaktirajte nas</h1>
+			<p class="page-lead lead" id="pageLeadKontakt">Stojimo Vam na raspolaganju</p>
 		</header>
 		<!-- /.page-heading -->
 
@@ -754,15 +756,15 @@
 				<address>
 					<strong>Pro Moving Company d.o.o.</strong><br>
 					Družice 12<br>
-					Zagreb 10000, Hrvatska EU<br>
+					Zagreb 10000, <span id="kontaktDrzava">Hrvatska</span> EU<br>
 					<abbr title="Mobile">M:</abbr> +385 99 750 1801<br>
 					<abbr title="Mobile">M:</abbr> +385 99 750 1603<br>
 					<abbr title="Email">E:</abbr> <a href="mailto:info@promc.hr">info@promc.hr</a><br><br>
-					<abbr title="OIB">OIB:</abbr> 48758091861<br>
+					<abbr title="OIB" id="kontaktOIB">OIB:</abbr> 48758091861<br>
 					<abbr title="VAT">VAT:</abbr> HR48758091861<br>
-					BANKA: Zagrebačka banka d.d.<br>
-					<abbr title="IBAN">IBAN:</abbr> HR2423600001102185815<br>
-					<abbr title="SWIFT">SWIFT:</abbr> ESBCHR22
+					<span id="kontaktBanka">BANKA</span>: Zagrebačka banka d.d.<br>
+					<abbr title="IBAN" id="kontaktIBAN">IBAN:</abbr> HR2423600001102185815<br>
+					<abbr title="SWIFT" id="kontaktSWIFT">SWIFT:</abbr> ESBCHR22
 				</address>
 				<a href="#" target="_blank" class="contact-linkedin">
 					<span class="icon fa-stack">
@@ -786,7 +788,7 @@
 				<img class="icon" src="assets/images/icons/facebook.svg" alt="Facebook">
 			</a>
 			<div class="facebook-body">
-				<h2 class="facebook-title">Posjetite nas na Facebooku</h2>
+				<h2 class="facebook-title" id="kontaktSocialFacebook">Posjetite nas na Facebooku</h2>
 				<a class="lead btn-facebook" href="https://www.facebook.com/promovingcompany" target="_blank">
 					fb.com/PROMovingCompany
 				</a>
@@ -794,7 +796,7 @@
 		</div>
 		<!-- /.facebook-card -->
 
-		
+		<div class="bg-image page-bg-image page-media-image" style="background-image: url(assets/images/bg/page-contact.jpg);"></div>
 	
 	</section>
 	<!-- /.page page-contact -->
@@ -811,6 +813,7 @@
 	<script src="assets/js/vendors/plugins/animation.gsap.min.js"></script>
 	<script src="assets/js/vendors/ScrollToPlugin.min.js"></script>
 	<script src="assets/js/vendors/jquery.animateNumber.min.js"></script>
+	<script src="assets/js/localization.js"></script>
 	<script src="assets/js/app.js"></script>
 
 </body>

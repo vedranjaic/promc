@@ -116,6 +116,9 @@ $(".btn-send-another").on("click", function(e) {
   $(e.currentTarget).parent().parent().prev().removeClass("hidden"); // form
 });
 
+
+
+
 // --- [ SCROLL TO TOP ]
 // init controller
 var controller = new ScrollMagic.Controller();

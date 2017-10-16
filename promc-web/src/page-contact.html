@@ -4,8 +4,12 @@
 
 	<!-- PAGE HEADING -->
 	@@include('modules/template/_page-heading.html', {
+		"page-class": "",
+		"page-status": "",
 		"page-title": "Kontaktirajte nas", 
-		"page-lead": "Stojimo Vam na raspolaganju"
+		"page-lead": "Stojimo Vam na raspolaganju",
+		"page-titleid": "pageTitleKontakt",
+		"page-leadid": "pageLeadKontakt"
 	})
 
 	<div class="page-content row">
@@ -16,15 +20,15 @@
 			<address>
 				<strong>Pro Moving Company d.o.o.</strong><br>
 				Družice 12<br>
-				Zagreb 10000, Hrvatska EU<br>
+				Zagreb 10000, <span id="kontaktDrzava">Hrvatska</span> EU<br>
 				<abbr title="Mobile">M:</abbr> +385 99 750 1801<br>
 				<abbr title="Mobile">M:</abbr> +385 99 750 1603<br>
 				<abbr title="Email">E:</abbr> <a href="mailto:info@promc.hr">info@promc.hr</a><br><br>
-				<abbr title="OIB">OIB:</abbr> 48758091861<br>
+				<abbr title="OIB" id="kontaktOIB">OIB:</abbr> 48758091861<br>
 				<abbr title="VAT">VAT:</abbr> HR48758091861<br>
-				BANKA: Zagrebačka banka d.d.<br>
-				<abbr title="IBAN">IBAN:</abbr> HR2423600001102185815<br>
-				<abbr title="SWIFT">SWIFT:</abbr> ESBCHR22
+				<span id="kontaktBanka">BANKA</span>: Zagrebačka banka d.d.<br>
+				<abbr title="IBAN" id="kontaktIBAN">IBAN:</abbr> HR2423600001102185815<br>
+				<abbr title="SWIFT" id="kontaktSWIFT">SWIFT:</abbr> ESBCHR22
 			</address>
 			<a href="#" target="_blank" class="contact-linkedin">
 				<span class="icon fa-stack">
@@ -42,7 +46,7 @@
 
 	@@include('modules/page-media/_facebook-card.html')
 
-	<!-- @@include('modules/page-media/_about-us-image.html') -->
+	@@include('modules/page-media/_bgimage-contact.html')
 	
 </section>
 <!-- /.page page-contact -->

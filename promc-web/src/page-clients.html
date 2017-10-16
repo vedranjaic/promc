@@ -2,8 +2,12 @@
 	
 	<!-- PAGE HEADING -->
 	@@include('modules/template/_page-heading.html', {
+		"page-class": "",
+		"page-status": "",
 		"page-title": "Naši klijenti", 
-		"page-lead": "Preselite se među naše klijente"
+		"page-lead": "Preselite se među naše klijente",
+		"page-titleid": "pageTitleKlijenti",
+		"page-leadid": "pageLeadKlijenti"
 	})
 
 	@@include('modules/page-media/_clients-grid.html')
@@ -20,7 +24,7 @@
 
 	@@include('modules/template/_page-split.html')
 
-	<!-- @@include('modules/page-media/_about-us-image.html') -->
+	@@include('modules/page-media/_bgimage-clients.html')
 	
 </section>
 <!-- /.page page-clients -->
