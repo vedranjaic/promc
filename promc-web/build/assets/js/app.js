@@ -313,3 +313,32 @@ $(".scroll-to").click(function() {
 	$('#navbar-main-collapse').collapse('hide')
 	return $(".navbar-toggle").toggleClass("cross");
 });
+
+
+// --- [ Clients grid ]
+$(function(){
+    function random(n) {
+        return Math.floor(Math.random() * n);
+    }
+    var transition_time = 500;
+    var waiting_time = 3000;
+    var images = $('.client-logo-set').hide();
+    var n = images.length;
+    var current = random(n);
+    images.hide();
+    images.eq(current).show();
+
+    var interval_id = setInterval(function () {
+        images.eq(current).fadeOut(transition_time, function () {
+            current = random(n);
+            images.eq(current).fadeIn(transition_time);
+        });
+    }, 2 * transition_time + waiting_time);
+})
+
+
+
+
+
+
+

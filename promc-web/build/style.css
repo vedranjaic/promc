@@ -8618,54 +8618,6 @@ a:hover, a:focus, a:active {
     width: 33%;
   }
 }
-.page-clients .client-logos .client-logo-set:nth-of-type(1) .logo-client:nth-of-type(1) {
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
-}
-.page-clients .client-logos .client-logo-set:nth-of-type(1) .logo-client:nth-of-type(2) {
-  -webkit-animation-delay: 13s;
-  animation-delay: 13s;
-}
-.page-clients .client-logos .client-logo-set:nth-of-type(2) .logo-client:nth-of-type(1) {
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-}
-.page-clients .client-logos .client-logo-set:nth-of-type(2) .logo-client:nth-of-type(2) {
-  -webkit-animation-delay: 11s;
-  animation-delay: 11s;
-}
-.page-clients .client-logos .client-logo-set:nth-of-type(3) .logo-client:nth-of-type(1) {
-  -webkit-animation-delay: 5s;
-  animation-delay: 5s;
-}
-.page-clients .client-logos .client-logo-set:nth-of-type(3) .logo-client:nth-of-type(2) {
-  -webkit-animation-delay: 15s;
-  animation-delay: 15s;
-}
-.page-clients .client-logos .client-logo-set:nth-of-type(4) .logo-client:nth-of-type(1) {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-}
-.page-clients .client-logos .client-logo-set:nth-of-type(4) .logo-client:nth-of-type(2) {
-  -webkit-animation-delay: 12s;
-  animation-delay: 12s;
-}
-.page-clients .client-logos .client-logo-set:nth-of-type(5) .logo-client:nth-of-type(1) {
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-}
-.page-clients .client-logos .client-logo-set:nth-of-type(5) .logo-client:nth-of-type(2) {
-  -webkit-animation-delay: 10s;
-  animation-delay: 10s;
-}
-.page-clients .client-logos .client-logo-set:nth-of-type(6) .logo-client:nth-of-type(1) {
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
-}
-.page-clients .client-logos .client-logo-set:nth-of-type(6) .logo-client:nth-of-type(2) {
-  -webkit-animation-delay: 14s;
-  animation-delay: 14s;
-}
 .page-clients .client-logos .client-logo-set .item {
   background-color: rgba(255, 255, 255, 0.6);
   width: 100%;
@@ -8688,18 +8640,9 @@ a:hover, a:focus, a:active {
   display: block;
   width: 100%;
   height: 100%;
-  opacity: 0;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-animation-name: clients-grid;
-  animation-name: clients-grid;
-  -webkit-animation-duration: 20s;
-  animation-duration: 20s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
 }
 .page-clients .client-logos .client-logo-set .item .logo-client img {
   position: absolute;
@@ -8724,45 +8667,6 @@ a:hover, a:focus, a:active {
   }
 }
 
-@-webkit-keyframes clients-grid {
-  0% {
-    opacity: 0;
-    z-index: 10;
-  }
-  5% {
-    opacity: 1;
-  }
-  45% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-    z-index: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes clients-grid {
-  0% {
-    opacity: 0;
-    z-index: 10;
-  }
-  5% {
-    opacity: 1;
-  }
-  45% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-    z-index: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 .page-about-us .progress-number,
 .page-about-us .progress-title {
   text-align: center;
