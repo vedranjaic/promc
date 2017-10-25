@@ -316,25 +316,148 @@ $(".scroll-to").click(function() {
 
 
 // --- [ Clients grid ]
-$(function(){
-    function random(n) {
-        return Math.floor(Math.random() * n);
-    }
-    var transition_time = 500;
-    var waiting_time = 3000;
-    var images = $('.client-logo-set').hide();
-    var n = images.length;
-    var current = random(n);
-    images.hide();
-    images.eq(current).show();
+// $(function(){
+//     function random(n) {
+//         return Math.floor(Math.random() * n);
+//     }
+//     var transition_time = 500;
+//     var waiting_time = 3000;
+//     var images = $('.client-logo-set').hide();
+//     var n = images.length;
+//     var current = random(n);
+//     images.hide();
+//     images.eq(current).show();
 
-    var interval_id = setInterval(function () {
-        images.eq(current).fadeOut(transition_time, function () {
-            current = random(n);
-            images.eq(current).fadeIn(transition_time);
-        });
-    }, 2 * transition_time + waiting_time);
-})
+//     var interval_id = setInterval(function () {
+//         images.eq(current).fadeOut(transition_time, function () {
+//             current = random(n);
+//             images.eq(current).fadeIn(transition_time);
+//         });
+//     }, 2 * transition_time + waiting_time);
+// });
+
+$(function() {
+	var clientLogosFolder = 'assets/images/clients/';
+	var clientLogos = [
+		{
+			url: 'https://www.zemljiste.mps.hr/',
+			image: 'logo-apz.png',
+			title: 'Agencija za poljoprivredno zemljište'
+		}, 
+		{
+			url: 'http://www.argentum.hr/',
+			image: 'logo-argentum.png',
+			title: 'Argentum'
+		}, 
+		{
+			url: 'https://atalian.hr/',
+			image: 'logo-atalian.svg',
+			title: 'Atalian Global Services Croatia'
+		}, 
+		{
+			url: 'http://www.crosig.hr/hr/',
+			image: 'logo-croatia-osiguranje.svg',
+			title: 'Croatia Osiguranje'
+		}, 
+		{
+			url: 'https://www.ericsson.hr/',
+			image: 'logo-ericsson.svg',
+			title: 'Ericsson Nikola Tesla'
+		}, 
+		{
+			url: 'https://www.erstecardclub.hr/hr/',
+			image: 'logo-erste-card-club.svg',
+			title: 'ERSTE Card Club'
+		}, 
+		{
+			url: 'http://www.generali.hr/',
+			image: 'logo-generali-osiguranje.svg',
+			title: 'Generali Osiguranje'
+		}, 
+		{
+			url: 'https://www.addiko.hr/',
+			image: 'logo-hypo-aab.svg',
+			title: 'Hypo Alpe Adria Bank'
+		}, 
+		{
+			url: 'http://www.the-eurogroup.com/',
+			image: 'logo-international-movers.svg',
+			title: 'Eurogroup International Movers'
+		}, 
+		{
+			url: 'https://www.konzum.hr/',
+			image: 'logo-konzum.svg',
+			title: 'Konzum'
+		}, 
+		{
+			url: 'https://www.lidl.hr/hr/',
+			image: 'logo-lidl.svg',
+			title: 'LIDL'
+		}, 
+		{
+			url: 'http://www.lr.org/en/',
+			image: 'logo-lloyds-register.png',
+			title: 'Lloyd\'s Register'
+		}, 
+		{
+			url: 'http://www.multiservis.hr/en/',
+			image: 'logo-luxor-multiservis.png',
+			title: 'Luxor multiservis'
+		}, 
+		{
+			url: 'http://www.metus.hr/',
+			image: 'logo-metus.png',
+			title: 'Metus dizala'
+		}, 
+		{
+			url: 'http://www.moderna-galerija.hr/',
+			image: 'logo-moderna-galerija.png',
+			title: 'Moderna galerija'
+		}, 
+		{
+			url: 'http://www.omega-software.hr/',
+			image: 'logo-omega-software.svg',
+			title: 'Omega software'
+		}, 
+		{
+			url: 'http://www.panasonic.com/hr/',
+			image: 'logo-panasonic.svg',
+			title: 'Panasonic Hrvatska'
+		}, 
+		{
+			url: 'http://rexpo.hr/',
+			image: 'logo-rexpo.svg',
+			title: 'Rexpo'
+		}, 
+		{
+			url: 'http://w5.siemens.com/web/hr/hr/corporate/portal/siemens_hrvatska/Pages/Default.aspx',
+			image: 'logo-siemens-wind-power.gif',
+			title: 'Siemens Wind Power'
+		}, 
+		{
+			url: 'http://www.smart-net.hr/',
+			image: 'logo-smart-net.png',
+			title: 'Smart net'
+		}, 
+		{
+			url: 'http://www.strabag.hr/',
+			image: 'logo-strabag.svg',
+			title: 'STRABAG'
+		}, 
+		{
+			url: 'http://www.studio-moderna.com/',
+			image: 'logo-studio-moderna.png',
+			title: 'Studio moderna'
+		}
+	];
+	var randomMath = Math.floor(Math.random() * clientLogos.length);
+	var selectedImage = clientLogos[randomMath];
+	var imagePath = clientLogosFolder + selectedImage.image;
+	console.log(imagePath);
+});
+
+
+
 
 
 
