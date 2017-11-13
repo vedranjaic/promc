@@ -336,126 +336,188 @@ $(".scroll-to").click(function() {
 //     }, 2 * transition_time + waiting_time);
 // });
 
-$(function() {
-	var clientLogosFolder = 'assets/images/clients/';
-	var clientLogos = [
+
+
+function setArrayOfNumbers() {
+	arrayOfNumbers = [
+		1, 2, 3, 4, 5, 6
+	]
+}
+
+function setStartArrayOfImages() {
+
+	arrayOfNumbers = [
+		1, 2, 3, 4, 5, 6
+	],
+	arrayOfImages = [
 		{
 			url: 'https://www.zemljiste.mps.hr/',
-			image: 'logo-apz.png',
+			image: 'assets/images/clients/logo-apz.png',
 			title: 'Agencija za poljoprivredno zemljište'
 		}, 
 		{
 			url: 'http://www.argentum.hr/',
-			image: 'logo-argentum.png',
+			image: 'assets/images/clients/logo-argentum.png',
 			title: 'Argentum'
 		}, 
 		{
 			url: 'https://atalian.hr/',
-			image: 'logo-atalian.svg',
+			image: 'assets/images/clients/logo-atalian.svg',
 			title: 'Atalian Global Services Croatia'
 		}, 
 		{
 			url: 'http://www.crosig.hr/hr/',
-			image: 'logo-croatia-osiguranje.svg',
+			image: 'assets/images/clients/logo-croatia-osiguranje.svg',
 			title: 'Croatia Osiguranje'
 		}, 
 		{
 			url: 'https://www.ericsson.hr/',
-			image: 'logo-ericsson.svg',
+			image: 'assets/images/clients/logo-ericsson.svg',
 			title: 'Ericsson Nikola Tesla'
 		}, 
 		{
 			url: 'https://www.erstecardclub.hr/hr/',
-			image: 'logo-erste-card-club.svg',
+			image: 'assets/images/clients/logo-erste-card-club.svg',
 			title: 'ERSTE Card Club'
 		}, 
 		{
 			url: 'http://www.generali.hr/',
-			image: 'logo-generali-osiguranje.svg',
+			image: 'assets/images/clients/logo-generali-osiguranje.svg',
 			title: 'Generali Osiguranje'
 		}, 
 		{
 			url: 'https://www.addiko.hr/',
-			image: 'logo-hypo-aab.svg',
+			image: 'assets/images/clients/logo-hypo-aab.svg',
 			title: 'Hypo Alpe Adria Bank'
 		}, 
 		{
 			url: 'http://www.the-eurogroup.com/',
-			image: 'logo-international-movers.svg',
+			image: 'assets/images/clients/logo-international-movers.svg',
 			title: 'Eurogroup International Movers'
 		}, 
 		{
 			url: 'https://www.konzum.hr/',
-			image: 'logo-konzum.svg',
+			image: 'assets/images/clients/logo-konzum.svg',
 			title: 'Konzum'
 		}, 
 		{
 			url: 'https://www.lidl.hr/hr/',
-			image: 'logo-lidl.svg',
+			image: 'assets/images/clients/logo-lidl.svg',
 			title: 'LIDL'
 		}, 
 		{
 			url: 'http://www.lr.org/en/',
-			image: 'logo-lloyds-register.png',
+			image: 'assets/images/clients/logo-lloyds-register.png',
 			title: 'Lloyd\'s Register'
 		}, 
 		{
 			url: 'http://www.multiservis.hr/en/',
-			image: 'logo-luxor-multiservis.png',
+			image: 'assets/images/clients/logo-luxor-multiservis.png',
 			title: 'Luxor multiservis'
 		}, 
 		{
 			url: 'http://www.metus.hr/',
-			image: 'logo-metus.png',
+			image: 'assets/images/clients/logo-metus.png',
 			title: 'Metus dizala'
 		}, 
 		{
 			url: 'http://www.moderna-galerija.hr/',
-			image: 'logo-moderna-galerija.png',
+			image: 'assets/images/clients/logo-moderna-galerija.png',
 			title: 'Moderna galerija'
 		}, 
 		{
 			url: 'http://www.omega-software.hr/',
-			image: 'logo-omega-software.svg',
+			image: 'assets/images/clients/logo-omega-software.svg',
 			title: 'Omega software'
 		}, 
 		{
 			url: 'http://www.panasonic.com/hr/',
-			image: 'logo-panasonic.svg',
+			image: 'assets/images/clients/logo-panasonic.svg',
 			title: 'Panasonic Hrvatska'
 		}, 
 		{
 			url: 'http://rexpo.hr/',
-			image: 'logo-rexpo.svg',
+			image: 'assets/images/clients/logo-rexpo.svg',
 			title: 'Rexpo'
 		}, 
 		{
 			url: 'http://w5.siemens.com/web/hr/hr/corporate/portal/siemens_hrvatska/Pages/Default.aspx',
-			image: 'logo-siemens-wind-power.gif',
+			image: 'assets/images/clients/logo-siemens-wind-power.gif',
 			title: 'Siemens Wind Power'
 		}, 
 		{
 			url: 'http://www.smart-net.hr/',
-			image: 'logo-smart-net.png',
+			image: 'assets/images/clients/logo-smart-net.png',
 			title: 'Smart net'
 		}, 
 		{
 			url: 'http://www.strabag.hr/',
-			image: 'logo-strabag.svg',
+			image: 'assets/images/clients/logo-strabag.svg',
 			title: 'STRABAG'
 		}, 
 		{
 			url: 'http://www.studio-moderna.com/',
-			image: 'logo-studio-moderna.png',
+			image: 'assets/images/clients/logo-studio-moderna.png',
 			title: 'Studio moderna'
 		}
 	];
-	var randomMath = Math.floor(Math.random() * clientLogos.length);
-	var selectedImage = clientLogos[randomMath];
-	var imagePath = clientLogosFolder + selectedImage.image;
-	console.log(imagePath);
-});
+	
+	setStartImagesAndStartCircle();
 
+	// var clientLogosFolder = 'assets/images/clients/';
+
+	// var randomMath = Math.floor(Math.random() * arrayOfImages.length);
+	// var selectedImage = arrayOfImages[randomMath];
+	// var imagePath = clientLogosFolder + selectedImage.image;
+}
+
+function setStartImagesAndStartCircle() {
+	for (i=0;i<6;i++) {
+	    var randomIndexFromCurrentArray = Math.floor(Math.random() * arrayOfImages.length);
+	    document.getElementById("link-".toString() + (i +1).toString()).href = arrayOfImages[randomIndexFromCurrentArray].url;
+	    document.getElementById("logo-".toString() + (i +1).toString()).src = arrayOfImages[randomIndexFromCurrentArray].image;
+	    document.getElementById("logo-".toString() + (i +1).toString()).alt = arrayOfImages[randomIndexFromCurrentArray].title;
+	    document.getElementById("logo-".toString() + (i +1).toString()).title = arrayOfImages[randomIndexFromCurrentArray].title;
+	    arrayOfImages.splice(randomIndexFromCurrentArray, 1);
+	}
+  setOneRandomImage();
+}
+
+function setOneRandomImage() {
+    period = 2;
+    if (arrayOfImages.length > 0) {
+    	if (arrayOfNumbers.length > 0) {
+		    var randomNumber = Math.floor(Math.random() * arrayOfNumbers.length);
+		    // var randomIdFromOneToSix = Math.floor(Math.random() * 6) + 1;
+		    var randomIndexFromCurrentArray = Math.floor(Math.random() * arrayOfImages.length);
+		    document.getElementById("link-".toString() + (arrayOfNumbers[randomNumber]).toString()).href = arrayOfImages[randomIndexFromCurrentArray].url;
+		    document.getElementById("logo-".toString() + (arrayOfNumbers[randomNumber]).toString()).src = arrayOfImages[randomIndexFromCurrentArray].image;
+		    document.getElementById("logo-".toString() + (arrayOfNumbers[randomNumber]).toString()).alt = arrayOfImages[randomIndexFromCurrentArray].title;
+		    document.getElementById("logo-".toString() + (arrayOfNumbers[randomNumber]).toString()).title = arrayOfImages[randomIndexFromCurrentArray].title;
+		    arrayOfImages.splice(randomIndexFromCurrentArray, 1);
+		    arrayOfNumbers.splice(randomNumber, 1);
+		    setTimeout(setOneRandomImage, period*1000);
+
+    	} else {
+    		setArrayOfNumbers();
+    		var randomNumber = Math.floor(Math.random() * arrayOfNumbers.length);
+		    // var randomIdFromOneToSix = Math.floor(Math.random() * 6) + 1;
+		    var randomIndexFromCurrentArray = Math.floor(Math.random() * arrayOfImages.length);
+		    document.getElementById("link-".toString() + (arrayOfNumbers[randomNumber]).toString()).href = arrayOfImages[randomIndexFromCurrentArray].url;
+		    document.getElementById("logo-".toString() + (arrayOfNumbers[randomNumber]).toString()).src = arrayOfImages[randomIndexFromCurrentArray].image;
+		    document.getElementById("logo-".toString() + (arrayOfNumbers[randomNumber]).toString()).alt = arrayOfImages[randomIndexFromCurrentArray].title;
+		    document.getElementById("logo-".toString() + (arrayOfNumbers[randomNumber]).toString()).title = arrayOfImages[randomIndexFromCurrentArray].title;
+		    arrayOfImages.splice(randomIndexFromCurrentArray, 1);
+		    arrayOfNumbers.splice(randomNumber, 1);
+		    setTimeout(setOneRandomImage, period*1000);
+    	}
+    } else {
+      setStartArrayOfImages();
+    }
+}
+
+var arrayOfImages;
+setStartArrayOfImages();
 
 
 
