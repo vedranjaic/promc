@@ -23,32 +23,31 @@ String.toLocaleString({
 				"office": {
 					"title": "Corporate relocation",
 					"lead": "Specialists in corporate removals",
-					"p1": "Here at Pro Moving Company we pay special attention to developing logistics plans for corporate and office moves, in coordination with representatives of your company.",
+					"p1": "Here at Pro Moving Company we pay special attention to developing logistic plans for corporate and office moves, in coordination with representatives of your company.",
 					"p2": "Moving a large number of employees in a short period of time from one work place to another is our specialty. Regardless of the scope of the project, we guarantee that all electronic equipment and office furniture as well as the corridors and elevators which would be used during the process is prefessionally packed, protected and handled with care.",
 					"p3": "We put speed and quality of our service, as well as flexible working hours at the top of our priority list in order to fulfill clients expectations without compromise. Because we believe that our work is done only with the satisfaction of our customer, until the last carefully grown office plant finds its new place under the sun."
 				},
 				"home": {
 					"title": "Household moving",
 					"lead": "Precise and safe",
-					"p1": "Whether you are moving privately or your company is relocating you and your family to another part of  the country , that't the moment to contact us with full confidence.",
-					"p2": "Using the latest packaging materials and equipment, we can offer you professional packing and protection of personal belongings, furniture and artwork with transportation and unpacking. And after we bring the last item through your front door our handyman can  offer you assembly services, regardless of whether it is electrical, plumbing or carpentry work.",
+					"p1": "Whether you are moving privately or your company is relocating you and your family to another part of  the country , that's the moment to contact us with full confidence.",
+					"p2": "Using the latest packaging materials and equipment, we can offer you professional packing and protection of personal belongings, furniture and artwork with transportation and unpacking. And after we bring the last item through your front door our handyman can  offer you assembly services, whether it is electrical, plumbing or carpentry work.",
 					"p3": "Finally, thorough cleaning of your new home is  the last stage of the removing process that we can assist you with, making such a big life change less stressful.",
-					"p4": "Moving from one home to another is never easy, but we try very hard to look that way."
+					"p4": "Moving from one home to another is never easy, but we try very hard to make it look that way."
 				},
 				"international": {
 					"title": "International moving",
 					"lead": "Moving without borders",
-					"p1": "Nowdays, Europeans are moving more than ever before. If you're one of many people in need of relocation services, regardless of whether it's just a couple of boxes or entire household, we can offer a comprehensive service from door to door, in one stroke without reloading, reducing the number of handling of your goods, and thus the risk of damage. Thanks to our experienced and professional staff all your assets would be carefully packed and protected throughout the entire process of relocation. We are aproaching every personal item with utmost respect of it's uniqueness and special bond that people have with their belongings.",
+					"p1": "Nowdays, people of all nations are moving more than ever before. If you're one of many people in need of relocation services, regardless of whether it's just a couple of boxes or entire household, we can offer a comprehensive service from door to door, in one stroke without reloading, reducing the number of handling of your goods, and thus the risk of damage. Thanks to our experienced and professional staff all your assets would be carefully packed and protected throughout the entire process of relocation. We are aproaching every personal item with utmost respect of it's uniqueness and special bond that people have with their belongings.",
 					"p2": "Prior to the move we make a detailed relocation plan tailored to your specific needs stating all the details before and after the relocation. We can help you with properly filing all documents and through our partners network assist you with any customs issues, and can also provide you with useful information about the process of moving and preparations that should be done before arrival of our staff.",
-					"p3": "We can offer a temporary or long-term storage for your belongings in our secure storage facility if you don't need to move them and use at the new location.",
-					"p4": "Contact us with confidence."
+					"p3": "Contact us with confidence."
 				},
 				"archive": {
 					"title": "Safe storage",
 					"lead": "Carefully stored and protected",
-					"p1": "The problem of storing the archives is common among companies due to expencive leases or inadequate and not sufficiently large spaces. At Pro Moving  we have just what you need. Within our secured warehouses we have separate rooms built especially for archive storage with the capacity of several thousand files, which reduces the possibility of loss or damage to your documents.",
+					"p1": "The problem of storing the archives is common among companies due to expensive leases or inadequate and not sufficiently large spaces. At Pro Moving  we have just what you need. Within our secured warehouses we have separate rooms built especially for archive storage with the capacity of several thousand files, which reduces the possibility of loss or damage to your documents.",
 					"p2": "During storage your files are available only to you at any time as if they are stored in your office space but without paying the high cost of rent.",
-					"p3": "Also, we can offer safe long or short term storage for your furniture and personal effects depending on your needs. We make sure all your items are properly packed and protected from outside influences so that one day you can collect them in the same state in which they were stored."
+					"p3": "Also, we can offer safe long or short term storage for your furniture and personal effects depending on your needs. We make sure all your items are properly packed and protected from outside influences so that you can collect them in the same state in which they were once stored."
 				}
 			},
 			"clients": {
@@ -71,11 +70,11 @@ String.toLocaleString({
 				}
 			},
 			"contact": {
-				"title": "Feel free to contact us",
+				"title": "Contact us",
 				"lead": "We are at your service",
 				"addressCountry": "Croatia",
 				"detailsOIB": "VAT",
-				"detailsBank": "Bank",
+				"detailsBank": "BANK",
 				"detailsIBAN": "IBAN",
 				"detailsSWIFT": "SWIFT",
 				"social": {
@@ -92,7 +91,7 @@ String.toLocaleString({
 				"details": " Moving details",
 				"additionalDetails": " Additional details",
 				"loading": "Please wait...",
-				"submit": "Contact me",
+				"submit": "Contact us",
 				"successAlert": "Your message was sent successfully!",
 				"successTitle": "Thank you for your inquiry",
 				"successMessage": "Our agent will contact you soon. The copy of this message was sent to your e-mail address.",
@@ -106,7 +105,7 @@ String.toLocaleString({
 					"formAddressStart": "Moving from",
 					"formDateStart": "Move date",
 					"formAddressFinish": "Moving to",
-					"formEmployees": "Number of employees"
+					"formEmployees": "Number of workstations"
 				},
 				"home": {
 					"formAlertTitle": "Required fields!",
@@ -182,11 +181,10 @@ String.toLocaleString({
 					"lead": "Umzüge ohne Grenzen",
 					"p1": "Die Mitglieder der Europäischen Union ziehen heute öfters um, als jemals zuvor. Falls sie zu jenen dazu gehören, die nach Europa umziehen, egal ob es sich nur um ein paar Kartons oder den ganzen Haushalt handelt, können wir ihnen den kompletten Service Tür-zu-Tür auf einmal, ohne Umladung anbieten. Damit wird das Risiko einer Beschädigung auf das Minimum gebracht. Dank unserem erfahrenen und professionellen Personal werden ihr Besitz und Wertsachen sorgfältig verpackt und während des ganzen Transports gut abgesichert. Wir garantieren ihnen diesen zuverlässigen Umgang mit ihren Gegenständen, und respektieren ihren Wert und die Emotionen, die sie als Besitzer damit verbinden.",
 					"p2": "Kurz vor dem Umzug arbeiten wir mit ihnen zusammen einen detaillierten Plan aus, der auf ihre Bedürfnisse zugeschnitten ist, mit allen Einzelheiten vor und nach dem Umzug. Wir füllen für sie alle notwendigen Dokumente aus und helfen ihnen mit unseren Außenmitarbeitern in allen Zollfragen. Ferner verschaffen wir ihnen alle nützlichen Informationen über den Umzugsprozess und eventuelle Vorarbeiten, die vor unserer Ankunft zu erledigen wären.",
-					"p3": "Falls nötig, ermöglichen wir ihnen eine kurz- oder langfristige Lagerung ihres Besitzes in unserem bewachten Lagerhaus, wenn sie nicht alles auf einmal in ihrer neuen Bleibe brauchen oder benutzen können.",
-					"p4": "Wenden sie sich vertrauensvoll an uns." 
+					"p3": "Wenden sie sich vertrauensvoll an uns."
 				},
 				"archive": {
-					"title": "Lagerung von Archiven, Möbel und persönlichem Eigentum",
+					"title": "Lagerung von Archiven und persönlichem Eigentum",
 					"lead": "Abgesichert, sicher und sorgfältig aufbewahrt", 
 					"p1": "Das Problem der Aufbewahrung von Archiven ist bei großen Firmen oft präsent, teils wegen der hohen Mietkosten, teils durch unpassende oder zu kleine Lagerräume. Wir im ProMC haben wir gerade das, was sie brauchen. Innerhalb unseres abgesicherten Lagers haben wir einen besonderen Bereich nur für Archive, der einige tausend Ordner umfassen kann, womit ein Verlust oder Beschädigung ihrer Dokumentation minimal ist.",
 					"p2": "Ihr Archiv ist immer nur für sie vollkommen zugängig, ohne hohe Mietkosten, wie in ihren eigenen Geschäftsräumen",
@@ -217,7 +215,7 @@ String.toLocaleString({
 				"lead": "Wir stehen ihnen zur Verfügung",
 				"addressCountry": "Kroatien",
 				"detailsOIB": "OIB",
-				"detailsBank": "Bank",
+				"detailsBank": "BANK",
 				"detailsIBAN": "IBAN",
 				"detailsSWIFT": "SWIFT",
 				"social": {
@@ -234,7 +232,7 @@ String.toLocaleString({
 				"details": "Umzugsdetails",
 				"additionalDetails": " Zusätzliche Informationen",
 				"loading": "Bitte warten sie...",
-				"submit": "Kontaktieren sie mich",
+				"submit": "Kontaktieren sie uns",
 				"successAlert": "Ihre Nachricht wurde erfolgreich abgeschickt!",
 				"successTitle": "Wir danken für ihre Anfrage",
 				"successMessage": "Unsere Mitarbeiter werden sie in kürzester Zeit kontaktieren. Die Kopie dieser Nachricht wurde auch an ihre E-Mail Adresse geschickt.",
@@ -259,7 +257,7 @@ String.toLocaleString({
 					"formAddressStart": "Umzug von",
 					"formDateStart": "Umzugsdatum",
 					"formAddressFinish": "Umzug nach",
-					"formEmployees": "Fläche in m2"
+					"formEmployees": "Fläche in"
 				},
 				"international": {
 					"formAlertTitle": "Pflichtfelder!",
@@ -270,7 +268,7 @@ String.toLocaleString({
 					"formAddressStart": "Umzug von",
 					"formDateStart": "Umzugsdatum",
 					"formAddressFinish": "Umzug nach",
-					"formEmployees": "Fläche in m2"
+					"formEmployees": "Fläche in"
 				},
 				"archive": {
 					"formAlertTitle": "Pflichtfelder!",
@@ -295,7 +293,7 @@ String.toLocaleString({
 		},
 		"page": {
 			"intro": {
-				"title": "Professionalne selidbe",
+				"title": "Profesionalne selidbe",
 				"lead": "Profesionalan i korektan odnos prema klijentima za nas je stabilan i održiv način poslovanja.",
 				"office": "Selidba ureda",
 				"home": "Selidba stana",
@@ -307,8 +305,8 @@ String.toLocaleString({
 				"office": {
 					"title": "Selidbe ureda i arhive",
 					"lead": "Specijalisti za korporativne selidbe",
-					"p1": "U ProMC-u posebnu pažnju poklanjamo logističkoj razradi planova korporativnih i uredskih preseljenja, u koordinaciji s predstavnicima Vaše tvrtke.",
-					"p2": "Preseljenje velikog broja zaposlenika u kratkom vremenskom roku iz jednog poslovnog prostora u drugi, uključujući arhivu naša je specijalnost. Bez obzira na opseg projekta garantiramo profesionalnu zaštitu sve elektroničke opreme, uredskog namještaja te svih koridora i liftova kojima bismo se prilikom preseljenja služili.",
+					"p1": "U Pro Movingu posebnu pažnju poklanjamo logističkoj razradi planova korporativnih i uredskih preseljenja, u koordinaciji s predstavnicima Vaše tvrtke.",
+					"p2": "Preseljenje velikog broja zaposlenika u kratkom vremenskom roku iz jednog poslovnog prostora u drugi, naša je specijalnost. Bez obzira na opseg projekta garantiramo profesionalnu zaštitu sve elektroničke opreme, uredskog namještaja te svih koridora i liftova kojim se prilikom preseljenja služimo.",
 					"p3": "Fleksibilnost radnog vremena te brzinu i kvalitetu usluge stavljamo na prvo mjesto i ispunjavamo sva Vaša očekivanja bez kompromisa jer smatramo da je naš posao završen tek sa zadovoljstvom našeg klijenta, sve dok i posljednja pomno uzgajana uredska biljka ne nađe svoje novo mjesto pod suncem."
 				},
 				"home": {
@@ -316,21 +314,20 @@ String.toLocaleString({
 					"lead": "Pedantno i sigurno",
 					"p1": "Neovisno da li se selite privatno ili zbog promjene radnog mjesta te sami ili s obitelji obratite nam se s punim povjerenjem.",
 					"p2": "Služeći se najnovnijim pakirnim materijalima i opremom, pružit ćemo Vam uslugu profesionalnog pakiranja i zaštite osobnih stvari, namještaja i umjetnina, prijevoz te raspakiravanje. A nakon što i posljednja Vaša stvar uđe u novi prostor možemo Vam ponudit uslugu montaže koju obavlja naš domar, bez obzira radi li se o električarskim, vodointalaterskim ili stolarskim poslovima.",
-					"p3": "Naposlijetku, uslugu detaljnog čišćenja Vašeg novog doma nudimo kao posljednju etapu procesa kroz koji Vam uz uslugu  želimo takvu veliku životnu promjenu učiniti što manje stresnom.",
-					"p4": "Jer za nas nije važno selite li na drugi kraj ulice ili zemlje. Naš je cilj da Vas na kraju uselimo u prostor koji nećete nazivati stanom ili kućom već domom."
+					"p3": "Naposlijetku, uslugu detaljnog čišćenja Vašeg novog doma nudimo kao posljednju etapu procesa kroz kojim Vam želimo takvu veliku životnu promjenu učiniti što manje stresnom.",
+					"p4": "Jer za nas nije važno selite li na drugi kraj ulice ili zemlje. Naš je cilj da Vas na kraju uselimo u prostor koji nećete nazivati stanom ili kućom već svojim domom."
 				},
 				"international": {
 					"title": "Međunarodna selidba",
 					"lead": "Selidbe bez granica",
-					"p1": "Stanovnici Europske Unije sele se danas više nego ikada prije. Ako ste i Vi jedan od mnogih koji sele u Europu, neovisno radi li se o nekoliko kutija ili cijelom kućanstvu,  možemo Vam ponuditi sveobuhvatnu uslugu od vrata do vrata, u jednom potezu bez pretovara umanjujući broj rukovanja s Vašom robom, a time i rizik od oštećenja.  Zahvaljujući našem iskusnom i profesionalnom osoblju sva Vaša imovina i dragocjenosti biti će pažljivo zapakirane te zaštićene tijekom cijelog procesa preseljenja. To garantiramo svojim pristupom prema Vašim osobnim stvarima poštujući njihovu jedinstvenost i emociju koja vlasnika često veže u pojedine predmete.",
+					"p1": "Ljudi svih nacija sele se danas više nego ikada prije. Ako ste i Vi jedan od mnogih koji sele u Europu, neovisno radi li se o nekoliko kutija ili cijelom kućanstvu,  možemo Vam ponuditi sveobuhvatnu uslugu od vrata do vrata, u jednom potezu bez pretovara umanjujući broj rukovanja s Vašom robom, a time i rizik od oštećenja.  Zahvaljujući našem iskusnom i profesionalnom osoblju sva Vaša imovina i dragocjenosti biti će pažljivo zapakirane te zaštićene tijekom cijelog procesa preseljenja. To garantiramo svojim pristupom prema Vašim osobnim stvarima poštujući njihovu jedinstvenost i emociju koja vlasnika često veže u pojedine predmete.",
 					"p2": "Prije samog preseljena u dogovoru s Vama izrađujemo deteljan plan prilagođen Vašim potrebama navodeći sve pojedinosti prije i nakon preseljenja. Za Vas ćemo se pobrinuti za rješavanje i pravilno ispunjavanje sve popratne dokumentacije te u suradnji s našim vanjskim partnerima pomoći s carinskim pitanjima. Pružit ćemo Vam korisne informacije o samom procesu preseljenja te predradnjama koje bi bilo dobro odraditi prije dolaska našeg osoblja.",
-					"p3": "Omogućit ćemo Vam i privremeno ili dugotrajno pohranjivanje Vaših stvari u našem sigurnom skladištu ukoliko ih nemate potrebu sve preseliti i koristiti na novoj lokaciji.",
-					"p4": "Obratite nam se s povjerenjem."
+					"p3": "Obratite nam se s povjerenjem."
 				},
 				"archive": {
-					"title": "Skladištenje arhive, namještaja i osobnih stvari",
+					"title": "Skladištenje arhive i osobnih stvari",
 					"lead": "Zaštićeno, sigurno i brižno pohranjeno",
-					"p1": "Problem pohranjivanja arhive čest je među tvrtkama zbog visokih cijena najma poslovnih prostora ili neadekvatnog  i nedovoljno velikog prostora. U ProMC-u imamo upravo ono što Vam treba.  Unutar našeg zaštićenog skladišta imamo posebno odvojen prostor samo za pohranu arhive kapaciteta nekoliko tisuća registratora čime je mogućnost gubitka ili oštećenja Vaše dokumentacije svedena na minimum.",
+					"p1": "Problem pohranjivanja arhive čest je među tvrtkama zbog visokih cijena najma poslovnih prostora ili neadekvatnog  i nedovoljno velikog prostora. U Pro Movingu imamo upravo ono što Vam treba.  Unutar našeg zaštićenog skladišta imamo posebno odvojen prostor samo za pohranu arhive kapaciteta nekoliko tisuća registratora čime je mogućnost gubitka ili oštećenja Vaše dokumentacije svedena na minimum.",
 					"p2": "Vaša arhiva cijelo je vrijeme potpuno dostupna samo Vama u bilo koje doba dana kao da se nalazi u Vašem poslovnom prostoru samo bez plaćanja visoke cijene najma.",
 					"p3": "U našem skladištu možete potpuno sigurno i bez ikakve brige pohraniti namještaj te osobne stvari na dulje ili kraće periode, ovisno o Vašim potrebama. Pritom su sve pohranjene stvari adekvatno zapakirane i zaštićene od vanjskih utjecaja kako bi Vas dočekale u jednakom stanju u kakvom su pohranjene."
 				}
@@ -341,7 +338,7 @@ String.toLocaleString({
 			},
 			"aboutus": {
 				"title": "O nama",
-				"lead": "Professional movers",
+				"lead": "Profesionalne selidbe",
 				"p1": "Pro Moving Company d.o.o. je osnovan kao rezultat višegodišnjeg znanja i iskustva njenih osnivača u sektoru korporativnih i međunarodnih preseljenja te prijevoza teških tereta čime smo specijalizirani upravo za takvu vrstu djelatnosti.",
 				"p2": "Čine je pristupačni i stručni ljudi osposobljeni prema tradicijskim europskim standardima koje u praksi primijenjuju na domaćem i inozemnom tržištu.",
 				"p3": "Želja za samostalnošću te radom na drugačiji i učinkovitiji - nama jedini prihvatljiv način - bile su nam vodilje pri osnivanju tvrtke. To znači da kontinuirano primijenjujemo stečena znanja za dobrobit klijenta čime želimo graditi odnose međusobnog poštovanja i polagati temelje dugogodišnje suradnje.",
@@ -359,7 +356,7 @@ String.toLocaleString({
 				"lead": "Stojimo Vam na raspolaganju",
 				"addressCountry": "Hrvatska",
 				"detailsOIB": "OIB",
-				"detailsBank": "Banka",
+				"detailsBank": "BANKA",
 				"detailsIBAN": "IBAN",
 				"detailsSWIFT": "SWIFT",
 				"social": {
@@ -376,7 +373,7 @@ String.toLocaleString({
 				"details": "Detalji selidbe",
 				"additionalDetails": " Dodatne informacije",
 				"loading": "Molimo pričekajte...",
-				"submit": "Kontaktirajte me",
+				"submit": "Kontaktirajte nas",
 				"successAlert": "Vaša poruka uspješno je poslana!",
 				"successTitle": "Zahvaljujemo na upitu",
 				"successMessage": "Naš agent će Vas kontaktirati u najskorijem mogućem roku. Kopija ove poruke poslana je i na Vašu e-mail adresu.",
@@ -401,7 +398,7 @@ String.toLocaleString({
 					"formAddressStart": "Preseljenje iz",
 					"formDateStart": "Datum preseljenja",
 					"formAddressFinish": "Preseljenje u",
-					"formEmployees": "Površina m2"
+					"formEmployees": "Površina"
 				},
 				"international": {
 					"formAlertTitle": "Obvezna polja!",
@@ -412,7 +409,7 @@ String.toLocaleString({
 					"formAddressStart": "Preseljenje iz",
 					"formDateStart": "Datum preseljenja",
 					"formAddressFinish": "Preseljenje u",
-					"formEmployees": "Površina m2"
+					"formEmployees": "Površina"
 				},
 				"archive": {
 					"formAlertTitle": "Obvezna polja!",

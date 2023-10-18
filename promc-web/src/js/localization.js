@@ -1,6 +1,9 @@
 // --- [ l10n.js ]
 // On first load set language in cookie to 'hr'
-// setCookie("promcLocale", "hr");
+if (!getCookie("promcLocale")) {
+	setCookie("promcLocale", "hr");
+}
+
 // Change language on dropdown
 $('#lang-hr').click(function() {
 	setCookie("promcLocale", $(this).text().toLowerCase(), 365);
@@ -100,7 +103,7 @@ document.getElementById('pageLeadSelidbeInternational').innerText = l('page')['s
 document.getElementById('textSelidbeInternationalp1').innerText = l('page')['services']['international']['p1'];
 document.getElementById('textSelidbeInternationalp2').innerText = l('page')['services']['international']['p2'];
 document.getElementById('textSelidbeInternationalp3').innerText = l('page')['services']['international']['p3'];
-document.getElementById('textSelidbeInternationalp4').innerText = l('page')['services']['international']['p4'];
+// document.getElementById('textSelidbeInternationalp4').innerText = l('page')['services']['international']['p4'];
 // Arhiva
 document.getElementById('pageTitleSelidbeArhiva').innerText = l('page')['services']['archive']['title'];
 document.getElementById('pageLeadSelidbeArhiva').innerText = l('page')['services']['archive']['lead'];
