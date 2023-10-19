@@ -1,0 +1,40 @@
+.modal {
+	&.in {
+		display: flex !important;
+		background-color: rgba($black, 0.5);
+	}
+
+	.modal-dialog {
+		margin: auto;
+	}
+
+	.modal-content {
+		border-radius: 0;
+		background-color: rgba($black, 0.95);
+	}
+
+	.modal-header {
+		border-bottom-color: $grey;
+
+		.modal-close {
+			span {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.5em;
+				font-weight: 300;
+				line-height: 0.75;
+				color: $white;
+				text-shadow: none;
+			}
+		}
+	}
+
+	.modal-body {
+		max-height: 70vh;
+		overflow: auto;
+	}
+
+	.modal-footer {
+		border-top-color: $grey;
+	}
+
+}

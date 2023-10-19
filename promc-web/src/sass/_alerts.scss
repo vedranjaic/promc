@@ -1,0 +1,18 @@
+// Alerts
+.alert {
+	@include transition;
+	margin: -1.5em -1.5em 1em -1.5em;
+	border: 0;
+	border-radius: 0;
+	padding-left: 1.5em;
+	@include breakpoint(sm) {
+		margin: -2em -2em 1em -2em;
+		padding-left: 2em;
+	}
+	&-danger {
+		background-color: lighten($brand-red, 30%);
+	}
+	.close {
+		font-size: 24px;
+	}
+}

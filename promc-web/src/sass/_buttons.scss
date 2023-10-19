@@ -1,0 +1,20 @@
+// Buttons
+.btn {
+	@include transition;
+	border: 0;
+	border-radius: 2px;
+	&-primary {
+		background-color: $brand-red;
+		&:hover,
+		&:focus {
+			background-color: $brand-red-dark;
+		}
+	}
+}
+.btn-lg {
+	padding: 8px 25px;
+}
+.btn-default {
+	color: #fff;
+	background-color: #333;
+}

@@ -1,0 +1,12 @@
+.panel {
+	border: 0;
+	border-radius: 0;
+	background-color: rgba($black, 0.95);
+	box-shadow: none;
+
+	.panel-footer {
+		padding: 15px;
+		border-top: 0;
+		background-color: transparent;
+	}
+}
