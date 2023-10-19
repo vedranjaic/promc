@@ -533,10 +533,21 @@ setStartArrayOfImages();
 
 
 
+// Modal for privacy policy show/hide
+$(".privacy-policy-link").click(function(e) {
+	e.preventDefault();
+	$("body").toggleClass("modal-open");
+	$(".modal-privacy-policy").toggleClass("in");
+});
+$(".modal-close").click(function() {
+	$("body").toggleClass("modal-open");
+	$(".modal-privacy-policy").toggleClass("in");
+});
 
-
-
-
+// Show privacy policy modal if you access via URL
+if(window.location.href.indexOf('#privacypolicy') != -1) {
+	$('#privacypolicy').modal('show');
+}
 
 
 
