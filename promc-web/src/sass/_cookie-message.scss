@@ -1,0 +1,151 @@
+.panel-cookie-message {
+	position: fixed;
+	bottom: 2rem;
+	left: 2rem;
+	right: 2rem;
+	z-index: 1000;
+	flex-direction: column;
+	overflow: hidden;
+	opacity: 1;
+	@include transition();
+	// display: none;
+
+	&.invisible {
+		transform: scale(0.9);
+		opacity: 0;
+		pointer-events: none;
+	}
+	
+	
+	.panel-body {
+		a {
+			text-decoration: underline;
+		}
+
+		.cookie-settings {
+			@include transition();
+			max-height: 0;
+			opacity: 0;
+		}
+
+		.form-group {
+			display: flex;
+			align-items: center;
+			margin-bottom: 0;
+			margin-top: 15px;
+
+			label {
+				margin-bottom: 0;
+			}
+
+			.checkbox-toggle--label {
+				flex: 1;
+				color: $white;
+				// font-size: 1.3em;
+
+				small {
+					display: block;
+					font-weight: normal;
+				}
+			}
+		}
+	}
+
+	.panel-footer {
+		padding: 0;
+		justify-content: flex-end;
+		z-index: 1;
+	}
+	
+	.panel-footer--actions {
+		padding: 0;
+		list-style-type: none;
+		flex-direction: row;
+		width: 100%;
+
+		li {
+			flex: 1;
+		}
+		
+		.btn {
+			width: 100%;
+			border-radius: 0;
+		}
+	}
+	
+	@include breakpoint(sm) {
+		max-width: 40vw;
+	}
+	
+	@include breakpoint(md) {
+		max-width: 30vw;
+	}
+
+	&.cookie-settings--open {
+		.cookie-settings {
+			max-height: 90px;
+			opacity: 1;
+		}
+	}
+}
+
+
+// Checkbox toggle
+.checkbox-toggle {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 24px;
+
+	input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+
+		&:checked {
+			& + .slider {
+				background-color: $func-green;
+
+				&::before {
+					transform: translateX(16px);
+				}
+			}
+
+			&[disabled] {
+				& + .slider {
+					background-color: $grey;
+				}
+			}
+		}
+
+		&:focus {
+			& + .slider {
+				box-shadow: 0 0 1px $func-green;
+			}
+		}
+	}
+
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $grey;
+		-webkit-transition: .4s;
+		transition: .4s;
+
+		&::before {
+			position: absolute;
+			content: "";
+			height: 16px;
+			width: 16px;
+			left: 4px;
+			bottom: 4px;
+			background-color: white;
+			-webkit-transition: .4s;
+			transition: .4s;
+		}
+	}
+}

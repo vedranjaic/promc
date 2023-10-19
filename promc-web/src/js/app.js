@@ -135,12 +135,24 @@ var scene = new ScrollMagic.Scene({
 .addTo(controller);
 
 // change behaviour of controller to animate scroll instead of jump
-controller.scrollTo(function (newpos) {
-	TweenMax.to(window, 0.5, {
-		scrollTo: {
-			y: newpos
-		}
-	});
+// controller.scrollTo(function (newpos) {
+// 	TweenMax.to(window, 0.5, {
+// 		scrollTo: {
+// 			y: newpos
+// 		}
+// 	});
+// });
+
+controller.scrollTo(function(target) {
+
+  TweenMax.to(window, 0.5, {
+    scrollTo : {
+      y : target, // scroll position of the target along y axis
+      autoKill : true // allows user to kill scroll action smoothly
+    },
+    ease : Cubic.easeInOut
+  });
+
 });
 
 // bind scroll to anchor links
@@ -527,3 +539,60 @@ setStartArrayOfImages();
 
 
 
+
+// Cookie settings show/hide
+$("#cookie-settings--btn").click(function(e) {
+	e.preventDefault();
+	$(".panel-cookie-message").toggleClass("cookie-settings--open");
+});
+
+
+
+// Cookie consent
+/////////////////////////////////////////////////////////////////////
+// Function to check if the user has accepted cookies
+function hasUserAcceptedCookies() {
+	return document.cookie.includes('cookieConsent=accepted');
+}
+
+// Function to set cookies
+function setCookie(name, value, days) {
+	var expires = new Date();
+	expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+	document.cookie = name + '=' + value + ';expires=' + expires.toUTCString();
+}
+
+// Function to close the banner
+function closeCookieBanner() {
+	document.getElementById('panel-cookie-message').classList.toggle("invisible");
+}
+
+// Function to handle the "Accept" button click
+function handleAcceptClick() {
+	if (document.getElementById('gaCookieCB').checked) {
+		setCookie('cookieConsent', 'accepted', 365); // Set a cookie to record consent
+		initializeGoogleAnalytics(); // Initialize Google Analytics
+		closeCookieBanner();
+	} else {
+		closeCookieBanner();
+	}
+}
+
+// Function to initialize Google Analytics
+function initializeGoogleAnalytics() {
+	// Replace 'YOUR_GA_MEASUREMENT_ID' with your actual Measurement ID
+	gtag('config', 'G-6PV0LBVV14');
+}
+
+// Event listener for the "Accept" button
+document.getElementById('cookie-accept').addEventListener('click', handleAcceptClick);
+
+// Show the banner when the page loads (if the user hasn't accepted yet)
+window.addEventListener('load', function() {
+	const cookieBanner = document.getElementById('panel-cookie-message');
+	if (!hasUserAcceptedCookies()) {
+		cookieBanner.classList.toggle("invisible");
+	}
+});
+/////////////////////////////////////////////////////////////////////
+// End Cookie consent
