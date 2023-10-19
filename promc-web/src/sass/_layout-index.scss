@@ -62,7 +62,7 @@
 				text-decoration: none;
 				&:after {
 					color: $white;
-					transform: translate3d(0, -10px, 0);
+					transform: translate3d(0, -30px, 0);
 					.touch & {
 						transform: translate3d(0, 5px, 0);
 					}
