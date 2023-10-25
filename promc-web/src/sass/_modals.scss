@@ -37,4 +37,44 @@
 		border-top-color: $grey;
 	}
 
+	&.modal-privacy-policy {
+		.privacy-policy {
+			.privacy-policy--policies {
+				padding: 10px 25px;
+
+				& > li {
+					margin-bottom: 20px;
+
+					&::marker {
+						font-size: 18px;
+					}
+				}
+			}
+
+			ul {
+				margin-bottom: 2rem;
+
+				li {
+					position: relative;
+					list-style-type: none;
+					
+					&::before {
+						content: '';
+						width: 3px;
+						height: 12px;
+						transform: skew(-12deg);
+						background-color: $brand-red;
+						display: inline-block;
+						top: 4px;
+						position: absolute;
+						left: -1.5rem;
+					}
+				}
+			}
+
+			h4, h5 {
+				font-weight: 700;
+			}
+		}
+	}
 }
