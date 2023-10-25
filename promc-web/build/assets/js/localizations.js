@@ -77,6 +77,7 @@ String.toLocaleString({
 				"detailsBank": "BANK",
 				"detailsIBAN": "IBAN",
 				"detailsSWIFT": "SWIFT",
+				"privacyModal": "Privacy policy",
 				"social": {
 					"facebook": "Visit us on Facebook"
 				}
@@ -338,6 +339,7 @@ String.toLocaleString({
 				"detailsBank": "BANK",
 				"detailsIBAN": "IBAN",
 				"detailsSWIFT": "SWIFT",
+				"privacyModal": "Datenschutzrichtlinie",
 				"social": {
 					"facebook": "Besuchen sie uns auf Facebook"
 				}
@@ -599,6 +601,7 @@ String.toLocaleString({
 				"detailsBank": "BANKA",
 				"detailsIBAN": "IBAN",
 				"detailsSWIFT": "SWIFT",
+				"privacyModal": "Pravila privatnosti",
 				"social": {
 					"facebook": "Posjetite nas na Facebooku"
 				}

@@ -133,6 +133,7 @@ document.getElementById('kontaktOIB').innerText = l('page')['contact']['detailsO
 document.getElementById('kontaktBanka').innerText = l('page')['contact']['detailsBank'];
 document.getElementById('kontaktIBAN').innerText = l('page')['contact']['detailsIBAN'];
 document.getElementById('kontaktSWIFT').innerText = l('page')['contact']['detailsSWIFT'];
+document.getElementById('link-privacy-modal').innerText = l('page')['contact']['privacyModal'];
 document.getElementById('kontaktSocialFacebook').innerText = l('page')['contact']['social']['facebook'];
 // Questionnaire
 // Tabs
